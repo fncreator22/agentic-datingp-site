@@ -50,6 +50,12 @@
   - `npm run build` -> Compiled successfully across all 13 routes.
 - [x] **Phase 7: Continuous Oversight Active**
   - Monitoring repository actively for any net-new changes, regressions, or file modifications.
+- [x] **Phase 8: Physical Profile Verification & Reality Audit (Playwright + HTTP Inspection)**
+  - Audited all 25 seeded profiles in `data/seeds.ts`.
+  - Captured full-page screenshots of local Kindred UI (`home`, `people_directory`, `person_01_profile`, `person_02_profile`, `person_01_matches`, `demo_showcase`, `dates_log`).
+  - Physically audited external LinkedIn and Instagram profile URLs using automated headless Chromium browser sessions.
+  - **Audit Finding:** Confirmed that all 25 seeded personas are synthetic archetypes using stock photos from Unsplash (`images.unsplash.com`). External Instagram URLs return "Profile isn't available" error pages (`person_02_instagram.png`), and LinkedIn URLs redirect to authwalls.
+  - Raised **BUG-024 / SPEC-01 (CRITICAL)** in `quality/BUGS.md` and documented remediation architecture in `PLAYBOOK.md`.
 
 ---
 
@@ -57,11 +63,13 @@
 
 | Total Discrepancies Logged | Resolved & Verified | Active Open Defects | Deferred |
 |---|---|---|---|
-| **23** | **23** (100% of all defects) | **0** | **0** |
+| **24** | **23** | **1 (BUG-024: Synthetic Cohort)** | **0** |
 
 ---
 
-## Current Status: CONTINUOUS MONITORING ACTIVE (`/goal`)
+## Current Status: AUDIT LOGGED — AWAITING DOWNSTREAM TERMINAL AGENT INGESTION (`/goal`)
+- Defect BUG-024 logged in `quality/BUGS.md` and `PLAYBOOK.md`.
+- Visual proof and screenshots preserved in `quality/audit_verification/screenshots/`.
 - Zero credential leakage in URL query parameters or logs.
 - Strict two-source domain whitelist & anti-SSRF protections active.
 - Private Instagram profile guard enforced.
