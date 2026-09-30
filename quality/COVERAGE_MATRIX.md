@@ -32,6 +32,11 @@
 | **REQ-022** | Telemetry Projection Sanitization | Tier 3 (Sec) | Information Disclosure Contract | `app/api/people/[id]/route.ts` | Assert `consent_ip_hash` absent from public JSON | **Verified Pass** (BUG-029) |
 | **REQ-023** | Centralized 156 Dates Hub | Tier 2 (UX) | Directory Contract | `app/dates/page.tsx`, `app/not-found.tsx` | All 156 dates browsable with search and filters | **Verified Pass** (BUG-030) |
 | **REQ-024** | Zero-Overflow Mobile Layout | Tier 2 (UX) | Responsive Contract | `components/Navbar.tsx`, `app/` | Playwright 375px audit: 0px horizontal overflow | **Verified Pass** (BUG-031) |
+| **REQ-025** | Anti-Referer Spoofing Sealing | Tier 1 (Sec) | Privacy & Sealing Contract | `app/api/dates/[id]/route.ts` | Disallow spoofed `Referer` to bypass sealed verdicts | **Open / Directive Logged** (BUG-032 / SEC-19) |
+| **REQ-026** | Scraper Output Data Sanitization | Tier 1 (Sec) | Data Ingestion Contract | `lib/scrapers/*`, `app/api/people/` | Strip HTML tags from external Apify responses | **Open / Directive Logged** (BUG-033 / SEC-20) |
+| **REQ-027** | Rate Limiter Garbage Collection | Tier 2 (Sec) | Memory Stability Contract | `app/api/people/`, `app/api/dates/` | Prune expired IP rate limit keys (>1000 items) | **Open / Directive Logged** (BUG-034 / SEC-21) |
+| **REQ-028** | Match Rankings Caching & Guard | Tier 2 (Sec) | Compute Bounds Contract | `app/api/people/[id]/matches/` | Cache rankings and return HTTP Cache-Control | **Open / Directive Logged** (BUG-035 / SEC-22) |
+
 
 
 

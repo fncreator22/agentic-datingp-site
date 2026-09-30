@@ -3,20 +3,73 @@
 > **Project:** Kindred (Agentic Dating Network)  
 > **Source:** `quality-playbook` Phases 3–5 Security & Specification Audit  
 > **Rule:** Every bug must have reproduction steps, spec basis, vulnerability classification, and remediation disposition.  
-> **Total Logged Defects:** 31  
-> **Resolved & Mechanically Verified:** 31 (100% of all defects)  
-> **Active Open Defects:** 0  
+> **Total Logged Defects:** 36  
+> **Resolved & Mechanically Verified:** 32 (88.9%)  
+> **Active Open Defects:** 4 (Pending Implementation by External Agents)  
 > **Deferred:** 0  
 
 ---
 
-## 1. Active Open Defects
+## 1. Active Open Defects (For Implementing Agents)
 
-*(None. All 29 defects and security restrictions are 100% resolved and verified.)*
+### BUG-032 / SEC-19: Evaluation Chamber Verdict Sealing Bypass via Insecure Referer Header Spoofing (CWE-285 / CWE-290)
+- **Target File:** `app/api/dates/[id]/route.ts:19-23`
+- **Severity:** HIGH (Confidentiality & Access Control Bypass)
+- **Spec Basis:** REQ-005, SEC-08, SEC-15
+- **Reproduction Steps:**
+  1. Pick any non-demo date ID (e.g. `curl -s -H "Referer: https://attacker.com/dates/" http://localhost:3000/api/dates/date_person_03_person_04_...`).
+  2. Observe `isInternalReferer = req.headers.get('referer')?.includes('/dates/')` evaluates to `true`.
+  3. The API returns full unsealed evaluation chamber verdicts, private qualitative critiques, and red flags to an unauthenticated caller.
+- **Security Impact:**
+  Exfiltrates private agent critiques and red flags across all 156 dates in the database, defeating the bilateral confidentiality chamber.
+- **Required Remediation:**
+  Remove `isInternalReferer` check. For unauthenticated public callers, strictly return `verdicts: { sealed: true }` unless `isDemoPair` is true.
+
+### BUG-033 / SEC-20: Unsanitized External Scraper Output Stored in State Leading to Stored XSS / HTML Injection (CWE-79 / CWE-116)
+- **Target Files:** `lib/scrapers/linkedin.ts:47-60`, `lib/scrapers/instagram.ts:55-65`, `app/api/people/route.ts:160-188`
+- **Severity:** HIGH (Integrity & Stored Cross-Site Scripting)
+- **Spec Basis:** REQ-010, SEC-10
+- **Reproduction Steps:**
+  1. Ingest a profile where external LinkedIn headline or Instagram bio contains `<script>alert(1)</script>` or `<svg onload=...>`.
+  2. Apify returns raw unsanitized strings in `item.headline` or `first.ownerBio`.
+  3. Strings are stored unmodified in `source_bundle` and rendered on `/people/[id]`.
+- **Security Impact:**
+  Stored XSS or layout breakage if profile fields are ever rendered in HTML/markdown contexts.
+- **Required Remediation:**
+  Sanitize all extracted strings in `scrapeLinkedIn` and `scrapeInstagram` via `replace(/[<>]/g, '')` and character length limits before returning.
+
+### BUG-034 / SEC-21: In-Memory Rate Limiter Map Unbounded Memory Growth & Slow Denial of Service (CWE-400 / CWE-770)
+- **Target Files:** `app/api/people/route.ts:12`, `app/api/dates/route.ts:8`
+- **Severity:** MEDIUM (Resource Exhaustion / Memory Leak)
+- **Spec Basis:** REQ-014, SEC-09, SEC-17
+- **Reproduction Steps:**
+  1. Send requests from 100,000 unique simulated IP addresses to `POST /api/people` or `POST /api/dates`.
+  2. Observe `ipRequests` and `dateSimRequests` maps continuously grow in memory without deleting expired keys.
+- **Security Impact:**
+  V8 heap exhaustion under distributed traffic, causing Node.js process termination.
+- **Required Remediation:**
+  Prune expired entries when `map.size > 1000` or enforce an LRU bounded cache.
+
+### BUG-035 / SEC-22: Unbounded Resource Exhaustion on Dynamic Match Calculations (CWE-400)
+- **Target Files:** `app/api/people/[id]/matches/route.ts:14`, `lib/db.ts:232-236`
+- **Severity:** MEDIUM (CPU Spikes & Performance Degradation)
+- **Spec Basis:** REQ-006, REQ-014
+- **Reproduction Steps:**
+  1. Concurrently send 500 requests to `GET /api/people/person_01/matches`.
+  2. Observe server CPU spike as `getRankingsForPerson` re-runs `calculateRankings` across all 156 dates on every request synchronously.
+- **Security Impact:**
+  Event loop blocking and high latency for legitimate users.
+- **Required Remediation:**
+  Add HTTP `Cache-Control: public, s-maxage=60, stale-while-revalidate=300` header and memoize rankings in `lib/db.ts`.
 
 ---
 
-## 2. Resolved & Mechanically Verified Defects (29 Closed)
+## 2. Resolved & Mechanically Verified Defects (32 Closed)
+
+### BUG-036 / SPEC-02: Playbook Section 3 Directory Desynchronization with Real 25 Individuals Cohort [RESOLVED]
+- **Target File:** `PLAYBOOK.md: Section 3`
+- **Severity:** MEDIUM (Specification Governance)
+- **Resolution:** Updated Section 3 directory table with the authentic 25 public figures, authentic LinkedIn and Instagram URLs, headlines, needs, and hobbies matching `data/seeds.ts`. Verified 100% single source of truth alignment.
 
 ### BUG-024 / SPEC-01: Seeded Cohort Uses Fictional Archetypes & Stock Photography Instead of 25 Real Verified People [RESOLVED]
 - **Location:** `data/seeds.ts`, `PLAYBOOK.md: Section 3, Section 14`, `lib/scrapers/linkedin.ts`, `lib/scrapers/instagram.ts`

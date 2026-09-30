@@ -44,16 +44,16 @@
 | **Credential Isolation (CWE-598 / CWE-200)** | 4 | 4 (BUG-011, BUG-012, BUG-013, BUG-014) | 0 | 0 |
 | **Source Restriction & SSRF (CWE-918)** | 2 | 2 (BUG-015, BUG-016) | 0 | 0 |
 | **LLM Sandboxing & Injection (CWE-77)** | 1 | 1 (BUG-017) | 0 | 0 |
-| **Privacy & Verdict Isolation (CWE-200)** | 2 | 2 (BUG-018, BUG-026) | 0 | 0 |
-| **DoS & Rate Limiting (CWE-400)** | 3 | 3 (BUG-019, BUG-027, BUG-028) | 0 | 0 |
-| **Schema Validation & XSS (CWE-79)** | 1 | 1 (BUG-020) | 0 | 0 |
+| **Privacy & Verdict Isolation (CWE-200 / CWE-285)** | 3 | 2 (BUG-018, BUG-026) | 1 (BUG-032 / SEC-19) | 0 |
+| **DoS & Rate Limiting (CWE-400 / CWE-770)** | 5 | 3 (BUG-019, BUG-027, BUG-028) | 2 (BUG-034 / SEC-21, BUG-035 / SEC-22) | 0 |
+| **Schema Validation & XSS (CWE-79 / CWE-116)** | 2 | 1 (BUG-020) | 1 (BUG-033 / SEC-20) | 0 |
 | **HTTP Security Headers (CWE-1021)** | 1 | 1 (BUG-021) | 0 | 0 |
 | **Privacy Lifecycle & Erasure (GDPR / CWE-284)** | 2 | 2 (BUG-022, BUG-025) | 0 | 0 |
 | **Telemetry & Info Disclosure (CWE-200)** | 1 | 1 (BUG-029) | 0 | 0 |
 | **UI Performance / LCP** | 1 | 1 (BUG-010) | 0 | 0 |
-| **Grounding & Profile Reality (SPEC-01)** | 1 | 1 (BUG-024) | 0 | 0 |
+| **Grounding & Profile Reality (SPEC-01 / SPEC-02)** | 2 | 2 (BUG-024, BUG-036) | 0 | 0 |
 | **Mobile Responsive Design / Taste** | 2 | 2 (BUG-030, BUG-031) | 0 | 0 |
-| **TOTAL** | **31** | **31 (100%)** | **0** | **0** |
+| **TOTAL** | **36** | **32 (88.9%)** | **4 (Pending Implementation)** | **0** |
 
 ---
 

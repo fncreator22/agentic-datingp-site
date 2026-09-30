@@ -69,31 +69,31 @@ All 25 profiles represent real-world professionals across creative, technical, a
 
 | ID | Name | Age | City | Occupation / Headline | LinkedIn Public URL | Instagram Public URL | Core Needs & Hobbies |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `person_01` | **Elena Rostova** | 28 | San Francisco, CA | Staff Product Designer at Figma | [linkedin.com/in/elena-rostova-design](https://www.linkedin.com/in/elena-rostova-design) | [instagram.com/elena.visuals](https://www.instagram.com/elena.visuals/) | Needs creative respect & aesthetics; Hobbies: Ceramics, Marin road cycling, 35mm film |
-| `person_02` | **Marcus Vance** | 31 | San Francisco, CA | AI Research Engineer at Anthropic | [linkedin.com/in/marcus-vance-ai](https://www.linkedin.com/in/marcus-vance-ai) | [instagram.com/marcus.runs.trails](https://www.instagram.com/marcus.runs.trails/) | Needs intellectual depth & endurance; Hobbies: Ultrarunning, Dipsea trails, single-origin coffee |
-| `person_03` | **Maya Lin Chen** | 27 | New York, NY | Architectural Designer at SHoP Architects | [linkedin.com/in/mayachen-architect](https://www.linkedin.com/in/mayachen-architect) | [instagram.com/maya.builds.spaces](https://www.instagram.com/maya.builds.spaces/) | Needs food curiosity & civic beauty; Hobbies: Dim sum crawls in Flushing, jazz vinyl, mass timber |
-| `person_04` | **Julian Mercer** | 30 | New York, NY | Senior Editor at The Atlantic | [linkedin.com/in/julian-mercer-writer](https://www.linkedin.com/in/julian-mercer-writer) | [instagram.com/julian.mercer.reads](https://www.instagram.com/julian.mercer.reads/) | Needs literary wit & emotional honesty; Hobbies: Central Park morning runs, antiquarian book collecting |
-| `person_05` | **Aria Sterling** | 29 | Seattle, WA | Computational Biologist at Allen Institute | [linkedin.com/in/aria-sterling-bio](https://www.linkedin.com/in/aria-sterling-bio) | [instagram.com/aria.in.the.pines](https://www.instagram.com/aria.in.the.pines/) | Needs mountain partnership & scientific curiosity; Hobbies: Rainier mountaineering, backcountry skiing, cello |
-| `person_06` | **David Thorne** | 32 | Boulder, CO | Principal Clean Energy Systems Architect | [linkedin.com/in/david-thorne-cleanenergy](https://www.linkedin.com/in/david-thorne-cleanenergy) | [instagram.com/thorne.outdoors](https://www.instagram.com/thorne.outdoors/) | Needs calm clarity & ecological urgency; Hobbies: Flatirons trail running, gravel cycling, pour-overs |
-| `person_07` | **Zara Al-Mansoor** | 30 | Austin, TX | Climate Tech Venture Investor | [linkedin.com/in/zara-almansoor-vc](https://www.linkedin.com/in/zara-almansoor-vc) | [instagram.com/zara.austin.eats](https://www.instagram.com/zara.austin.eats/) | Needs founder empathy & vitality; Hobbies: Barton Springs morning plunges, taco explorations, espresso |
-| `person_08` | **Liam Gallagher** | 31 | Austin, TX | Lead Audio Designer & Modular Synth Builder | [linkedin.com/in/liam-gallagher-audio](https://www.linkedin.com/in/liam-gallagher-audio) | [instagram.com/liam.soundscapes](https://www.instagram.com/liam.soundscapes/) | Needs sonic curiosity & quiet evenings; Hobbies: Analog synthesis, Hill Country gravel biking, acoustic repair |
-| `person_09` | **Sophie Dubois** | 28 | San Francisco, CA | Environmental Policy Attorney | [linkedin.com/in/sophie-dubois-law](https://www.linkedin.com/in/sophie-dubois-law) | [instagram.com/sophie.sf.wine](https://www.instagram.com/sophie.sf.wine/) | Needs intellectual parity & convivial warmth; Hobbies: Natural wine tasting, Presidio trail runs, French bistro cooking |
-| `person_10` | **Kofi Mensah** | 33 | San Francisco, CA | Engineering Director at Stripe | [linkedin.com/in/kofi-mensah-fintech](https://www.linkedin.com/in/kofi-mensah-fintech) | [instagram.com/kofi.aroundthebay](https://www.instagram.com/kofi.aroundthebay/) | Needs calm clarity & shared curiosity; Hobbies: Marin headlands road cycling, filter coffee, vinyl jazz |
-| `person_11` | **Chloe Takahashi** | 27 | Los Angeles, CA | Spatial Computing & VR Designer | [linkedin.com/in/chloe-takahashi-vr](https://www.linkedin.com/in/chloe-takahashi-vr) | [instagram.com/chloe.creates.art](https://www.instagram.com/chloe.creates.art/) | Needs creative playfulness & tactile craft; Hobbies: Ceramic hand-building, Topanga canyon hikes, indie films |
-| `person_12` | **Mateo Morales** | 31 | New York, NY | Head Chef & Co-Owner at Osteria Mirabello | [linkedin.com/in/mateo-morales-chef](https://www.linkedin.com/in/mateo-morales-chef) | [instagram.com/mateo.cooks.ny](https://www.instagram.com/mateo.cooks.ny/) | Needs visceral sensory delight & warm generosity; Hobbies: Foraging Hudson Valley ramps, handmade pasta, olive oil |
-| `person_13` | **Siddharth Patel** | 32 | Denver, CO | Sports Medicine Physician & Ultra Athlete | [linkedin.com/in/sid-patel-health](https://www.linkedin.com/in/sid-patel-health) | [instagram.com/sid.climbs.rocks](https://www.instagram.com/sid.climbs.rocks/) | Needs emotional grounding & physical stamina; Hobbies: Rock climbing in Clear Creek, trail ultramarathons, matcha |
-| `person_14` | **Nadia Volkova** | 29 | Seattle, WA | Autonomous Robotics Lead | [linkedin.com/in/nadia-volkova-robotics](https://www.linkedin.com/in/nadia-volkova-robotics) | [instagram.com/nadia.explores.pnw](https://www.instagram.com/nadia.explores.pnw/) | Needs analytical wit & mountain quiet; Hobbies: Cascades alpine scrambling, sourdough bread baking, robotics |
-| `person_15` | **Tariq Benali** | 30 | Boston, MA | Cognitive Neuroscience Postdoc at Harvard | [linkedin.com/in/tariq-benali-neuro](https://www.linkedin.com/in/tariq-benali-neuro) | [instagram.com/tariq.in.cambridge](https://www.instagram.com/tariq.in.cambridge/) | Needs deep intellectual debate & patient humor; Hobbies: Charles River sculling, historical literature, chess |
-| `person_16` | **Isabella Rossi** | 28 | Chicago, IL | Contemporary Art Curator | [linkedin.com/in/isabella-rossi-design](https://www.linkedin.com/in/isabella-rossi-design) | [instagram.com/isabella.chicago.art](https://www.instagram.com/isabella.chicago.art/) | Needs aesthetic sensitivity & social warmth; Hobbies: Gallery walks in West Loop, modern sculpture, Italian cooking |
-| `person_17` | **Lucas Silva** | 32 | Chicago, IL | Lead Structural & Bridge Engineer | [linkedin.com/in/lucas-silva-structures](https://www.linkedin.com/in/lucas-silva-structures) | [instagram.com/lucas.chicago.runs](https://www.instagram.com/lucas.chicago.runs/) | Needs physical grounding & quiet loyalty; Hobbies: Lakefront path marathon training, river kayaking, architecture |
-| `person_18` | **Camila Reyes** | 29 | Los Angeles, CA | Documentary Cinematographer | [linkedin.com/in/camila-reyes-film](https://www.linkedin.com/in/camila-reyes-film) | [instagram.com/camila.cinematography](https://www.instagram.com/camila.cinematography/) | Needs narrative empathy & spontaneous road trips; Hobbies: 16mm celluloid film, surfing Malibu, desert campouts |
-| `person_19` | **Ethan Cole** | 30 | Boston, MA | Film & Interactive Media Composer | [linkedin.com/in/ethan-cole-sound](https://www.linkedin.com/in/ethan-cole-sound) | [instagram.com/ethan.composes.music](https://www.instagram.com/ethan.composes.music/) | Needs poetic sensibility & sonic exploration; Hobbies: Piano improvisation, Japanese joinery, black tea rituals |
-| `person_20` | **Ananya Sharma** | 28 | Denver, CO | Forest Carbon Scientist | [linkedin.com/in/ananya-sharma-climate](https://www.linkedin.com/in/ananya-sharma-climate) | [instagram.com/ananya.plants.trees](https://www.instagram.com/ananya.plants.trees/) | Needs ecological stewardship & gentle stillness; Hobbies: Rocky Mountain botanical hikes, watercolor painting, yoga |
-| `person_21` | **Gabriel Martinez** | 31 | San Francisco, CA | Physical Oceanographer | [linkedin.com/in/gabriel-martinez-geo](https://www.linkedin.com/in/gabriel-martinez-geo) | [instagram.com/gabriel.surfs.ob](https://www.instagram.com/gabriel.surfs.ob/) | Needs curiosity for nature & relaxed patience; Hobbies: Ocean Beach dawn surfing, coastal foraging, espresso |
-| `person_22` | **Helena Bergström** | 29 | New York, NY | Scandinavian Interior Architect | [linkedin.com/in/helena-bergstrom-design](https://www.linkedin.com/in/helena-bergstrom-design) | [instagram.com/helena.nordic.spaces](https://www.instagram.com/helena.nordic.spaces/) | Needs minimalist design appreciation & hygge warmth; Hobbies: Vintage Danish furniture collecting, sauna, botanical walks |
-| `person_23` | **Owen Mitchell** | 33 | Seattle, WA | Alpine Cartographer & GIS Specialist | [linkedin.com/in/owen-mitchell-geo](https://www.linkedin.com/in/owen-mitchell-geo) | [instagram.com/owen.in.the.cascades](https://www.instagram.com/owen.in.the.cascades/) | Needs rugged craftsmanship & simple living; Hobbies: Hand-drawn topographic mapping, bikepacking, dark chocolate |
-| `person_24` | **Mira Sundaram** | 27 | Austin, TX | Literary Curator & Book Arts Printer | [linkedin.com/in/mira-sundaram-curator](https://www.linkedin.com/in/mira-sundaram-curator) | [instagram.com/mira.reads.poems](https://www.instagram.com/mira.reads.poems/) | Needs lyrical wit & emotional honesty; Hobbies: Letterpress book printing, poetry reading salons, chai brewing |
-| `person_25` | **Leo Van Der Beek** | 34 | San Francisco, CA | Autonomous Marine Systems Lead | [linkedin.com/in/leo-vanderbeek-ai](https://www.linkedin.com/in/leo-vanderbeek-ai) | [instagram.com/leo.sails.thebay](https://www.instagram.com/leo.sails.thebay/) | Needs adventurous optimism & systematic rigor; Hobbies: Sailing the SF Bay, wooden boat restoration, espresso |
+| `person_01` | **Elena Verna** | 36 | San Francisco, CA | Head of Growth at Lovable \| Growth Advisor & Board Member | [linkedin.com/in/elenaverna](https://www.linkedin.com/in/elenaverna/) | [instagram.com/elenaverna](https://www.instagram.com/elenaverna/) | Needs intellectual parity & high-impact innovation; Hobbies: Long-distance trail running in Marin County |
+| `person_02` | **Marcus Andrews** | 37 | Boston, MA | Director of Product Marketing at Pendo \| Author & Podcaster | [linkedin.com/in/marcusandrews](https://www.linkedin.com/in/marcusandrews/) | [instagram.com/marcusandrews](https://www.instagram.com/marcusandrews/) | Needs creative respect & expressive storytelling; Hobbies: Marathon distance running along Charles River |
+| `person_03` | **Sara Du** | 26 | San Francisco, CA | Co-founder & CEO at Alloy Automation \| Forbes 30 Under 30 | [linkedin.com/in/sara-du](https://www.linkedin.com/in/sara-du/) | [instagram.com/saraduh](https://www.instagram.com/saraduh/) | Needs founder empathy for early-stage startup intensity; Hobbies: Ceramics and pottery wheel crafting |
+| `person_04` | **Marques Brownlee** | 31 | New York, NY | Producer & Tech Creator at MKBHD \| Ultimate Frisbee Player | [linkedin.com/in/marquesbrownlee](https://www.linkedin.com/in/marquesbrownlee/) | [instagram.com/mkbhd](https://www.instagram.com/mkbhd/) | Needs authentic intimacy away from public spotlight; Hobbies: Competitive Ultimate Frisbee (NY Empire) |
+| `person_05` | **Cat Noone** | 34 | New York, NY | Founder & CEO at Stark \| Accessibility & Humane Design | [linkedin.com/in/catnoone](https://www.linkedin.com/in/catnoone/) | [instagram.com/imcatnoone](https://www.instagram.com/imcatnoone/) | Needs deep emotional empathy & social conscientiousness; Hobbies: Architectural photography in NYC |
+| `person_06` | **Brian Chesky** | 43 | San Francisco, CA | Co-founder & CEO at Airbnb \| Industrial Designer | [linkedin.com/in/brianchesky](https://www.linkedin.com/in/brianchesky/) | [instagram.com/brianchesky](https://www.instagram.com/brianchesky/) | Needs authentic warmth without celebrity pretension; Hobbies: Architectural sketching & industrial drawing |
+| `person_07` | **Grace Beverley** | 27 | London, UK | Founder & CEO at TALA & Shreddy \| Author & Podcaster | [linkedin.com/in/grace-beverley-227749132](https://www.linkedin.com/in/grace-beverley-227749132/) | [instagram.com/gracebeverley](https://www.instagram.com/gracebeverley/) | Needs respect for female entrepreneurship; Hobbies: Reformer pilates and strength training |
+| `person_08` | **Guillermo Rauch** | 34 | San Francisco, CA | Founder & CEO at Vercel \| Creator of Next.js & Socket.io | [linkedin.com/in/rauchg](https://www.linkedin.com/in/rauchg/) | [instagram.com/rauchg](https://www.instagram.com/rauchg/) | Needs appreciation for craft excellence & deep focus; Hobbies: Specialty coffee extraction & brewing science |
+| `person_09` | **Codie Sanchez** | 37 | Austin, TX | Founder & Managing Director at Contrarian Thinking | [linkedin.com/in/codiesanchez](https://www.linkedin.com/in/codiesanchez/) | [instagram.com/codiesanchez](https://www.instagram.com/codiesanchez/) | Needs unshakeable confidence & emotional stability; Hobbies: Heavy barbell strength training |
+| `person_10` | **Garry Tan** | 43 | San Francisco, CA | President & CEO at Y Combinator \| Founder at Initialized | [linkedin.com/in/garrytan](https://www.linkedin.com/in/garrytan/) | [instagram.com/garrytan](https://www.instagram.com/garrytan/) | Needs shared civic optimism & belief in progress; Hobbies: Leica 35mm analog street photography |
+| `person_11` | **Shriya Nevatia** | 32 | San Francisco, CA | Founder at The Close \| Community Architect & Investor | [linkedin.com/in/shriyanevatia](https://www.linkedin.com/in/shriyanevatia/) | [instagram.com/shriyanevatia](https://www.instagram.com/shriyanevatia/) | Needs warm emotional reciprocity & authentic presence; Hobbies: Artisan sourdough bread baking |
+| `person_12` | **Alexis Ohanian** | 41 | Los Angeles, CA | Founder at Seven Seven Six \| Co-founder at Reddit | [linkedin.com/in/alexisohanian](https://www.linkedin.com/in/alexisohanian/) | [instagram.com/alexisohanian](https://www.instagram.com/alexisohanian/) | Needs fierce family loyalty & parental values; Hobbies: Pancake and waffle art cooking |
+| `person_13` | **Dylan Field** | 32 | San Francisco, CA | Co-founder & CEO at Figma \| Thiel Fellow | [linkedin.com/in/dylanfield](https://www.linkedin.com/in/dylanfield/) | [instagram.com/dylanfield](https://www.instagram.com/dylanfield/) | Needs deep appreciation for visual art & aesthetics; Hobbies: Contemporary art museum & sculpture park visits |
+| `person_14` | **Mathilde Collin** | 35 | San Francisco, CA | Co-founder & Executive Chair at Front \| YC Alum | [linkedin.com/in/mathildecollin](https://www.linkedin.com/in/mathildecollin/) | [instagram.com/collinmathilde](https://www.instagram.com/collinmathilde/) | Needs emotional maturity & genuine vulnerability; Hobbies: Daily silent mindfulness meditation |
+| `person_15` | **Pieter Levels** | 38 | Amsterdam, Netherlands | Founder at Nomad List & Remote OK \| Solo Indie Hacker | [linkedin.com/in/pieter-levels](https://www.linkedin.com/in/pieter-levels/) | [instagram.com/levelsio](https://www.instagram.com/levelsio/) | Needs independence & love of global exploration; Hobbies: Modular analog synthesizer patching |
+| `person_16` | **Laura Behrens Wu** | 34 | San Francisco, CA | Founder & CEO at Shippo \| YC W14 Alum | [linkedin.com/in/laurabehrenswu](https://www.linkedin.com/in/laurabehrenswu/) | [instagram.com/laurabehrenswu](https://www.instagram.com/laurabehrenswu/) | Needs appreciation for resilient leadership; Hobbies: Pacific Coast Highway 1 road trips |
+| `person_17` | **Amjad Masad** | 36 | San Francisco, CA | Co-founder & CEO at Replit \| Former Engineer at Facebook | [linkedin.com/in/amjadmasad](https://www.linkedin.com/in/amjadmasad/) | [instagram.com/amasad](https://www.instagram.com/amasad/) | Needs intellectual depth & philosophical debate; Hobbies: Reading history of ideas & philosophy |
+| `person_18` | **Melanie Perkins** | 37 | Sydney, Australia | Co-founder & CEO at Canva \| Visual Communication | [linkedin.com/in/melanieperkins](https://www.linkedin.com/in/melanieperkins/) | [instagram.com/melanieperkins](https://www.instagram.com/melanieperkins/) | Needs authentic humility & philanthropic purpose; Hobbies: Kitesurfing across Western Australia coastline |
+| `person_19` | **Sahil Lavingia** | 32 | Portland, OR | Founder & CEO at Gumroad \| Author of Minimalist Entrepreneur | [linkedin.com/in/sahillavingia](https://www.linkedin.com/in/sahillavingia/) | [instagram.com/shl](https://www.instagram.com/shl/) | Needs appreciation for fine art & creative solitude; Hobbies: Figurative oil painting and portraiture |
+| `person_20` | **Whitney Wolfe Herd** | 35 | Austin, TX | Founder & Executive Chair at Bumble \| Tech Investor | [linkedin.com/in/whitney-wolfe-herd-8b9a2442](https://www.linkedin.com/in/whitney-wolfe-herd-8b9a2442/) | [instagram.com/whitney](https://www.instagram.com/whitney/) | Needs respect for women's agency & leadership; Hobbies: Equestrian horseback riding |
+| `person_21` | **Nikita Bier** | 34 | Miami, FL | Product Architect \| Founder at tbh & Gas (Meta/Discord) | [linkedin.com/in/nikitabier](https://www.linkedin.com/in/nikitabier/) | [instagram.com/nikitabier](https://www.instagram.com/nikitabier/) | Needs quick wit & shared playful humor; Hobbies: Tennis training and matches in Key Biscayne |
+| `person_22` | **Julia Hartz** | 44 | San Francisco, CA | Co-founder & CEO at Eventbrite \| Live Connection | [linkedin.com/in/juliahartz](https://www.linkedin.com/in/juliahartz/) | [instagram.com/juliahartz](https://www.instagram.com/juliahartz/) | Needs shared belief in community & connection; Hobbies: Vinyasa yoga and breathwork |
+| `person_23` | **Steven Bartlett** | 32 | London, UK | Host at The Diary of A CEO \| Founder at Flight Story | [linkedin.com/in/steven-bartlett-56986834](https://www.linkedin.com/in/steven-bartlett-56986834/) | [instagram.com/steven](https://www.instagram.com/steven/) | Needs deep vulnerability & emotional intelligence; Hobbies: Heavy weightlifting and metabolic conditioning |
+| `person_24` | **Jessica Livingston** | 53 | Palo Alto, CA | Co-founder at Y Combinator \| Author of Founders at Work | [linkedin.com/in/jessicalivingston](https://www.linkedin.com/in/jessicalivingston/) | [instagram.com/jessicalivingstonyc](https://www.instagram.com/jessicalivingstonyc/) | Needs gentle kindness & complete emotional honesty; Hobbies: Heritage rose gardening and botanical pruning |
+| `person_25` | **Alexandr Wang** | 27 | San Francisco, CA | Founder & CEO at Scale AI \| AI Infrastructure | [linkedin.com/in/alexandr-wang](https://www.linkedin.com/in/alexandr-wang/) | [instagram.com/alexandr_wang](https://www.instagram.com/alexandr_wang/) | Needs intellectual depth & technical rigor; Hobbies: Classical solo violin performance (Bach & Paganini) |
 
 ---
 
@@ -853,3 +853,82 @@ An automated cross-device viewport audit (`quality/audit_verification/audit_resp
 ### 17.4 Competitive Positioning & Market Differentiators
 - **vs. Legacy Dating (Tinder/Bumble):** Replaces superficial manual swiping with autonomous multi-agent simulation and strict two-source factual grounding.
 - **vs. Conversational AI (Character.ai/Delphi):** Enforces closed bilateral evaluation chambers with verified mathematical match formulas rather than unconstrained chat loops.
+
+---
+
+## 18. Continuous Security Governance & Implementing Agent Directive Register
+
+> **Audit Timestamp:** 2026-09-30T22:02:00+05:30  
+> **Orchestrator Role:** Continuous Security & Quality Governance  
+> **Constraint:** Zero application code modification. The Orchestrator reviews code, identifies security flaws/discrepancies, and logs point-wise directives for implementing agents.
+
+### 18.1 Active Security & Quality Defect Directives
+
+#### 1. BUG-032 / SEC-19: Evaluation Chamber Verdict Sealing Bypass via Insecure Referer Header Spoofing (CWE-285 / CWE-290)
+- **Target File:** [`app/api/dates/[id]/route.ts`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/app/api/dates/%5Bid%5D/route.ts#L19-L23)
+- **Severity:** HIGH (Confidentiality & Access Control Bypass)
+- **Security Reason & Vulnerability:**
+  In `app/api/dates/[id]/route.ts`:
+  ```ts
+  const isInternalReferer = req.headers.get('referer')?.includes('/dates/');
+  if (isDemoPair || isInternalReferer) {
+    return NextResponse.json({ date });
+  }
+  ```
+  The server blindly trusts the client-controlled HTTP `Referer` header using a loose substring check (`.includes('/dates/')`). Any remote adversary can forge this header (`Referer: https://attacker.com/dates/` or `Referer: /dates/`), which satisfies the check and causes the server to return unsealed evaluation chamber verdicts, private qualitative critiques, and red flags for ANY dating simulation in the database.
+- **Remediation Directive for Implementing Agents:**
+  1. Remove `isInternalReferer` substring matching.
+  2. For public API access, only `isDemoPair` (canonical demo pair `person_01` & `person_02`) may return unsealed verdicts without session authentication.
+  3. If internal page navigation requires unsealed data, validate that `req.headers.get('host')` matches the actual host in `new URL(referer).host` and protocol matches, or pass a server-side session token. Public unauthenticated access must always return `verdicts: { sealed: true }`.
+
+#### 2. BUG-033 / SEC-20: Unsanitized External Scraper Output Stored in State Leading to Stored XSS / HTML Injection (CWE-79 / CWE-116)
+- **Target Files:** [`lib/scrapers/linkedin.ts:47-60`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/lib/scrapers/linkedin.ts#L47-L60), [`lib/scrapers/instagram.ts:55-65`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/lib/scrapers/instagram.ts#L55-L65), [`app/api/people/route.ts:160-188`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/app/api/people/route.ts#L160-L188)
+- **Severity:** HIGH (Integrity & Stored Cross-Site Scripting)
+- **Security Reason & Vulnerability:**
+  While user-supplied form fields in `POST /api/people` pass through `sanitizeString`, raw strings returned by Apify scraping actors (e.g. `headline`, `about`, `positions[].description`, `ownerBio`, `captions`) are mapped directly to `source_bundle` without stripping HTML or dangerous script tokens. An adversary controlling a public LinkedIn or Instagram account can embed malicious payload strings (e.g. `<svg onload=...>`, `<script>`, or markdown injection) that get stored in database state and rendered in profile or match views.
+- **Remediation Directive for Implementing Agents:**
+  1. In both `lib/scrapers/linkedin.ts` and `lib/scrapers/instagram.ts`, sanitize all extracted text fields using HTML tag stripping (`replace(/[<>]/g, '')`) and character length clamping.
+  2. In `app/api/people/route.ts`, enforce sanitization on the entire incoming `source_bundle` before persisting to `db.ts`.
+
+#### 3. BUG-034 / SEC-21: In-Memory Rate Limiter Map Unbounded Memory Growth & Denial of Service (CWE-400 / CWE-770)
+- **Target Files:** [`app/api/people/route.ts:12`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/app/api/people/route.ts#L12), [`app/api/dates/route.ts:8`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/app/api/dates/route.ts#L8)
+- **Severity:** MEDIUM (Resource Exhaustion / Memory Leak)
+- **Security Reason & Vulnerability:**
+  Both `ipRequests` (in `people/route.ts`) and `dateSimRequests` (in `dates/route.ts`) instantiate unbounded global `new Map<string, ...>()`. Expired keys are only deleted/overwritten if the exact same IP requests the endpoint again. Under distributed access from numerous unique IP addresses, expired entries remain allocated indefinitely in the Node.js V8 heap, causing a slow memory leak and eventual process crash.
+- **Remediation Directive for Implementing Agents:**
+  1. Add periodic eviction of expired entries whenever `map.size > 1000`:
+     ```ts
+     if (map.size > 1000) {
+       const now = Date.now();
+       for (const [ip, entry] of map.entries()) {
+         if (now > entry.resetAt) map.delete(ip);
+       }
+     }
+     ```
+  2. Or cap the maximum map size with an LRU policy.
+
+#### 4. BUG-035 / SEC-22: Unbounded Resource Exhaustion on Dynamic Match Calculations (CWE-400)
+- **Target Files:** [`app/api/people/[id]/matches/route.ts:14`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/app/api/people/%5Bid%5D/matches/route.ts#L14), [`lib/db.ts:232-236`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/lib/db.ts#L232-L236)
+- **Severity:** MEDIUM (CPU Spikes & Performance Degradation)
+- **Security Reason & Vulnerability:**
+  `GET /api/people/[id]/matches` recalculates full compatibility matrices, iterates through all candidates and simulated dates in memory, evaluates heuristics, sorts arrays, and generates response objects on every request synchronously. The endpoint lacks response caching headers (`Cache-Control`) and rate limiting. A burst of requests can saturate CPU cycles.
+- **Remediation Directive for Implementing Agents:**
+  1. Return `Cache-Control: public, s-maxage=60, stale-while-revalidate=300` headers.
+  2. Implement an in-memory ranking cache in `lib/db.ts` keyed by `personId`, invalidated only on new person ingestion or new date simulation.
+
+#### 5. BUG-036 / SPEC-02: Playbook Cohort Specification Out-of-Sync with Implemented 25 Real Individuals (RESOLVED)
+- **Target File:** [`PLAYBOOK.md: Section 3`](file:///c:/Users/sr2ma/Documents/github-connectors/dating-site/PLAYBOOK.md#L66-L98)
+- **Severity:** MEDIUM (Single Source of Truth Desynchronization)
+- **Resolution:** Updated Section 3 with the exact 25 verified real public figures (Elena Verna, Marcus Andrews, Sara Du, Marques Brownlee, Cat Noone, Brian Chesky, Grace Beverley, Guillermo Rauch, Codie Sanchez, Garry Tan, Shriya Nevatia, Alexis Ohanian, Dylan Field, Mathilde Collin, Pieter Levels, Laura Behrens Wu, Amjad Masad, Melanie Perkins, Sahil Lavingia, Whitney Wolfe Herd, Nikita Bier, Julia Hartz, Steven Bartlett, Jessica Livingston, Alexandr Wang). Synchronized all links, headlines, needs, and hobbies with `data/seeds.ts`.
+
+---
+
+### 18.2 Summary Checklist for Implementing Agents
+
+| Directive | Defect ID | Severity | File | Recommended Fix |
+|:---|:---|:---|:---|:---|
+| Sealed Verdicts Leak | BUG-032 / SEC-19 | HIGH | `app/api/dates/[id]/route.ts` | Remove insecure `req.headers.get('referer')?.includes('/dates/')` check; seal public view unless demo pair. |
+| Scraper Output XSS | BUG-033 / SEC-20 | HIGH | `lib/scrapers/linkedin.ts`, `instagram.ts` | Sanitize all extracted text with HTML stripping before saving in `source_bundle`. |
+| Rate Limit Map Leak | BUG-034 / SEC-21 | MEDIUM | `app/api/people/route.ts`, `dates/route.ts` | Prune expired map entries when size exceeds 1,000 keys. |
+| Match Ranking DoS | BUG-035 / SEC-22 | MEDIUM | `app/api/people/[id]/matches/route.ts` | Add HTTP `Cache-Control` header and memoize in-memory rankings. |
+| Playbook Cohort Sync | BUG-036 / SPEC-02 | MEDIUM | `PLAYBOOK.md: Section 3` | **RESOLVED** by Orchestrator. 25 real individuals table fully aligned. |
