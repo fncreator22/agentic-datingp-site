@@ -824,6 +824,32 @@ An automated cross-device viewport audit (`quality/audit_verification/audit_resp
 - **Visual:** Filter through the 156 autonomous dates simulated across the cohort. Toggle mobile viewport inspection (375px) in Chrome DevTools to show flawless zero-overflow responsive layout.
 - **Closing:** *"Kindred: agentic pre-dating grounded in verified reality, zero swiping, and proven compatibility."*
 
+---
 
+## 17. UI/UX Architecture, Design System & Multi-Viewport Benchmark (BUG-030 & BUG-031 Sign-Off)
 
+### 17.1 Complete Route & Page Architecture
+| Route | Component File | Key Features & Responsiveness |
+|---|---|---|
+| `/` | `app/page.tsx` | Two-source input form, instant autofill demo button, value pillars. Zero mobile overflow. |
+| `/demo` | `app/demo/page.tsx` | Interactive zero-click walkthrough, Elena & Marcus featured date launch. Zero mobile overflow. |
+| `/dates` | `app/dates/page.tsx` | **Live Replay Hub (BUG-030 Resolved)**: Search 156 dates, filter by match tier (85%+, 80-84%, 70-79%), venue tags. Zero mobile overflow. |
+| `/dates/[id]` | `app/dates/[id]/page.tsx` | 8-turn conversational date transcript replay with speaker badges and evaluation chamber verdicts. Zero mobile overflow. |
+| `/people` | `app/people/page.tsx` | 25 verified profile directory with search, dual links, and candidate cards. Zero mobile overflow. |
+| `/people/[id]` | `app/people/[id]/page.tsx` | Analyst profile analysis with evidence citations (`[LinkedIn]`, `[Instagram]`, `[Cross-Source]`). Zero mobile overflow. |
+| `/people/[id]/matches` | `app/people/[id]/matches/page.tsx` | Candidate compatibility leaderboard with mathematical score breakdowns. Zero mobile overflow. |
+| `/_not-found` | `app/not-found.tsx` | **Branded Dark-Mode Error Recovery (BUG-030 Resolved)**: 404 recovery links without layout flash. Zero mobile overflow. |
 
+### 17.2 Design System & Palette Specification
+- **Color Theme:** Zinc-950 (`#09090b`) background, slate-900/50 glassmorphic card surfaces (`backdrop-blur-md border border-slate-800`), romantic rose/pink/purple gradient accents (`from-rose-500 via-pink-500 to-purple-600`).
+- **Typography:** Display headings (`font-extrabold tracking-tight text-white`), clean slate body copy (`text-slate-400 leading-relaxed`), evidence tag chips with high contrast and explicit line-heights.
+- **Micro-Interactions & Physics:** 200ms ease-out card hover lifts, custom slate scrollbars, smooth tab transitions, and zero layout shift (`CLS = 0.00`).
+
+### 17.3 Multi-Viewport Playwright Responsive Benchmark Proof
+- **Desktop (1280x800):** 8/8 routes verified, `scrollWidth = 1280px`, horizontal overflow = **False**.
+- **Tablet (768x1024):** 8/8 routes verified, `scrollWidth = 768px`, horizontal overflow = **False**.
+- **Mobile (375x812):** 8/8 routes verified, `scrollWidth = 375px`, horizontal overflow = **False (BUG-031 Resolved)**.
+
+### 17.4 Competitive Positioning & Market Differentiators
+- **vs. Legacy Dating (Tinder/Bumble):** Replaces superficial manual swiping with autonomous multi-agent simulation and strict two-source factual grounding.
+- **vs. Conversational AI (Character.ai/Delphi):** Enforces closed bilateral evaluation chambers with verified mathematical match formulas rather than unconstrained chat loops.
