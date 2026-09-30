@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Sparkles,
   ExternalLink,
@@ -12,11 +13,9 @@ import {
   Briefcase,
   Compass,
   Smile,
-  Flame,
   AlertTriangle,
   Info,
   Trash2,
-  Layers,
   ArrowLeft,
 } from 'lucide-react';
 import { Person, TraitWithEvidence } from '@/lib/types';
@@ -107,9 +106,11 @@ export default function ProfilePage() {
       {/* Header Profile Card */}
       <section className="p-6 sm:p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-xl relative overflow-hidden">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <img
+          <Image
             src={person.avatar}
             alt={person.name}
+            width={112}
+            height={112}
             className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-rose-500/30 shadow-lg shrink-0"
           />
           <div className="space-y-2 flex-1">

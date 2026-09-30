@@ -1,15 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { getAllPeople, getAllDates } from '@/lib/db';
+import Image from 'next/image';
 import {
-  Sparkles,
   Users,
-  Heart,
   MessageCircle,
-  ExternalLink,
   Award,
   ChevronRight,
-  TrendingUp,
 } from 'lucide-react';
 
 export default function DemoPage() {
@@ -32,7 +29,7 @@ export default function DemoPage() {
           Pre-Computed Grader Showcase (Zero Typing Required)
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          25 People · 300+ Agent Dates · Evidence-Backed Rankings
+          25 People · 156 Mutual Agent Dates (All Compatible Pairs) · Evidence-Backed Rankings
         </h1>
         <p className="text-sm sm:text-base text-slate-400 max-w-3xl">
           Everything is already ingested from public LinkedIn and Instagram profiles, analyzed by the profile agent, dated across the pool, and ranked. Explore the profiles first, then watch the dates and see the rankings!
@@ -87,9 +84,11 @@ export default function DemoPage() {
             {/* Person A card */}
             <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={spotlightDate.personA_avatar}
                   alt={spotlightDate.personA_name}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full object-cover border border-slate-700"
                 />
                 <div>
@@ -115,9 +114,11 @@ export default function DemoPage() {
             {/* Person B card */}
             <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img
+                <Image
                   src={spotlightDate.personB_avatar}
                   alt={spotlightDate.personB_name}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full object-cover border border-slate-700"
                 />
                 <div>
@@ -166,9 +167,11 @@ export default function DemoPage() {
                 className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col justify-between space-y-4"
               >
                 <div className="flex items-start gap-3">
-                  <img
+                  <Image
                     src={person.avatar}
                     alt={person.name}
+                    width={56}
+                    height={56}
                     className="w-14 h-14 rounded-full object-cover border border-slate-700 shrink-0"
                   />
                   <div className="min-w-0">

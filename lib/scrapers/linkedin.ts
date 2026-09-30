@@ -11,9 +11,12 @@ export async function scrapeLinkedIn(linkedinUrl: string): Promise<LinkedInData>
     try {
       // Direct call to Apify Actor harvestapi/linkedin-profile-scraper
       const actorId = 'harvestapi~linkedin-profile-scraper';
-      const response = await fetch(`https://api.apify.com/v2/acts/${actorId}/runs?token=${token}`, {
+      const response = await fetch(`https://api.apify.com/v2/acts/${actorId}/runs`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
         body: JSON.stringify({
           profileScraperMode: 'Profile details no email ($4 per 1k)',
           urls: [linkedinUrl],
@@ -29,33 +32,39 @@ export async function scrapeLinkedIn(linkedinUrl: string): Promise<LinkedInData>
           // Wait up to 10s for quick finish
           await new Promise((resolve) => setTimeout(resolve, 3000));
           const itemsRes = await fetch(
-            `https://api.apify.com/v2/datasets/${datasetId}/items?token=${token}&limit=1`
+            `https://api.apify.com/v2/datasets/${datasetId}/items?limit=1`,
+            {
+              headers: {
+                'Authorization': `Bearer ${token}`,
+              },
+            }
           );
           if (itemsRes.ok) {
             const items = await itemsRes.json();
             if (Array.isArray(items) && items.length > 0) {
-              const item = items[0];
+              const item = items[0] as Record<string, unknown>;
               return {
-                headline: item.headline || item.occupation || 'Professional',
-                about: item.summary || item.about || 'Passionate professional driven by growth and innovation.',
-                positions: (item.experience || item.positions || []).slice(0, 4).map((p: any) => ({
-                  role: p.title || p.role || 'Team Member',
-                  company: p.companyName || p.company || 'Tech / Design Co',
-                  duration: p.timePeriod || '2 yrs',
-                  description: p.description || '',
+                headline: String(item.headline || item.occupation || 'Professional'),
+                about: String(item.summary || item.about || 'Passionate professional driven by growth and innovation.'),
+                positions: (Array.isArray(item.experience) ? item.experience : Array.isArray(item.positions) ? item.positions : []).slice(0, 4).map((p: Record<string, unknown>) => ({
+                  role: String(p.title || p.role || 'Team Member'),
+                  company: String(p.companyName || p.company || 'Tech / Design Co'),
+                  duration: String(p.timePeriod || '2 yrs'),
+                  description: String(p.description || ''),
                 })),
-                skills: (item.skills || ['Leadership', 'Problem Solving', 'Strategic Thinking', 'Collaboration']).slice(0, 8),
-                education: (item.education || []).slice(0, 2).map((e: any) => ({
-                  school: e.schoolName || e.school || 'University',
-                  degree: e.degree || 'Degree',
+                skills: (Array.isArray(item.skills) ? item.skills.map(String) : ['Leadership', 'Problem Solving', 'Strategic Thinking', 'Collaboration']).slice(0, 8),
+                education: (Array.isArray(item.education) ? item.education : []).slice(0, 2).map((e: Record<string, unknown>) => ({
+                  school: String(e.schoolName || e.school || 'University'),
+                  degree: String(e.degree || 'Degree'),
                 })),
               };
             }
           }
         }
       }
-    } catch (err) {
-      console.warn('Apify LinkedIn scraper call failed, using graceful fallback:', err);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message.replace(/token=[a-zA-Z0-9_\-]+/gi, 'token=[REDACTED]') : 'Network failure';
+      console.warn('Apify LinkedIn scraper call failed, using graceful fallback:', msg);
     }
   }
 

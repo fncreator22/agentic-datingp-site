@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Users, Search, ChevronRight, Sparkles, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import { Users, Search, ChevronRight, ExternalLink } from 'lucide-react';
 import { Person } from '@/lib/types';
 
 export default function PeopleDirectoryPage() {
@@ -90,9 +91,11 @@ export default function PeopleDirectoryPage() {
               className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700/80 transition-all flex flex-col justify-between space-y-4"
             >
               <div className="flex items-start gap-3">
-                <img
+                <Image
                   src={person.avatar}
                   alt={person.name}
+                  width={56}
+                  height={56}
                   className="w-14 h-14 rounded-full object-cover border border-slate-700 shrink-0"
                 />
                 <div className="min-w-0">

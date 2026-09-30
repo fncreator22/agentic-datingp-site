@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import Navbar from '../components/Navbar';
 
@@ -26,19 +27,19 @@ export default function RootLayout({
               DualAgent: Autonomous AI Dating Site · Two-Source Constraint (LinkedIn + Public Instagram)
             </p>
             <div className="flex items-center gap-4 text-slate-400">
-              <a
+              <Link
                 href="/demo"
                 className="hover:text-rose-400 transition-colors"
               >
                 Zero-Click Demo
-              </a>
+              </Link>
               <span>·</span>
-              <a
+              <Link
                 href="/people"
                 className="hover:text-rose-400 transition-colors"
               >
                 25 Seeded Profiles
-              </a>
+              </Link>
               <span>·</span>
               <a
                 href="https://github.com/fncreator22/agentic-datingp-site"

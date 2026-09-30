@@ -6,11 +6,7 @@ import Link from 'next/link';
 import {
   Sparkles,
   ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
   Users,
-  HeartHandshake,
-  ExternalLink,
   Loader2,
 } from 'lucide-react';
 
@@ -93,8 +89,8 @@ export default function HomePage() {
 
       // Navigate to the newly created person's profile page
       router.push(`/people/${data.person.id}`);
-    } catch (err: any) {
-      setErrorMsg(err.message || 'Error running pipeline');
+    } catch (err: unknown) {
+      setErrorMsg(err instanceof Error ? err.message : 'Error running pipeline');
       setLoading(false);
     }
   };
@@ -246,7 +242,7 @@ export default function HomePage() {
               <label className="block text-xs font-medium text-slate-300 mb-1">I am a</label>
               <select
                 value={gender}
-                onChange={(e: any) => setGender(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setGender(e.target.value as 'man' | 'woman' | 'non-binary')}
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-rose-500"
               >
                 <option value="woman">Woman</option>
@@ -258,7 +254,7 @@ export default function HomePage() {
               <label className="block text-xs font-medium text-slate-300 mb-1">Seeking</label>
               <select
                 value={seeking}
-                onChange={(e: any) => setSeeking(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setSeeking(e.target.value as 'man' | 'woman' | 'everyone')}
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-rose-500"
               >
                 <option value="man">Men</option>

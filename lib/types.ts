@@ -70,6 +70,7 @@ export interface Person {
   instagram_url: string;
   is_synthetic: boolean;
   consent_at: string;
+  consent_ip_hash?: string;
   source_bundle: SourceBundle;
   analysis?: ProfileAnalysis;
   created_at: string;

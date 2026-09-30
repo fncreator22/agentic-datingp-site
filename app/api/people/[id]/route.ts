@@ -22,5 +22,8 @@ export async function DELETE(
   if (!deleted) {
     return NextResponse.json({ error: 'Person not found' }, { status: 404 });
   }
-  return NextResponse.json({ success: true, message: `Person ${id} deleted.` });
+  return NextResponse.json({
+    success: true,
+    message: 'Profile and all associated agent simulation records permanently erased.',
+  });
 }

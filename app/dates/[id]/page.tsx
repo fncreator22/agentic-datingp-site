@@ -3,17 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   MessageCircle,
   ArrowLeft,
   Sparkles,
-  Heart,
-  ShieldCheck,
-  Flame,
   CheckCircle2,
   XCircle,
   Award,
-  ChevronRight,
 } from 'lucide-react';
 import { DateSimulation } from '@/lib/types';
 
@@ -25,7 +22,7 @@ export default function DateSimulationPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`/api/dates/${dateId}`)
+    fetch(`/api/dates/${dateId}?include_verdicts=true`)
       .then((res) => res.json())
       .then((data) => {
         if (data.date) setDate(data.date);
@@ -101,9 +98,11 @@ export default function DateSimulationPage() {
 
         <div className="flex items-center justify-center gap-6 py-2">
           <div className="flex flex-col items-center gap-2 text-center">
-            <img
+            <Image
               src={date.personA_avatar}
               alt={date.personA_name}
+              width={80}
+              height={80}
               className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-rose-500/40 shadow-lg"
             />
             <span className="font-bold text-white text-sm">{date.personA_name}</span>
@@ -117,9 +116,11 @@ export default function DateSimulationPage() {
           </div>
 
           <div className="flex flex-col items-center gap-2 text-center">
-            <img
+            <Image
               src={date.personB_avatar}
               alt={date.personB_name}
+              width={80}
+              height={80}
               className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-purple-500/40 shadow-lg"
             />
             <span className="font-bold text-white text-sm">{date.personB_name}</span>
@@ -148,9 +149,11 @@ export default function DateSimulationPage() {
                 className={`flex gap-3 sm:gap-4 ${isA ? 'justify-start' : 'justify-end'}`}
               >
                 {isA && (
-                  <img
+                  <Image
                     src={date.personA_avatar}
                     alt={date.personA_name}
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full object-cover border border-rose-500/40 shrink-0 mt-1"
                   />
                 )}
@@ -174,9 +177,11 @@ export default function DateSimulationPage() {
                 </div>
 
                 {!isA && (
-                  <img
+                  <Image
                     src={date.personB_avatar}
                     alt={date.personB_name}
+                    width={32}
+                    height={32}
                     className="w-8 h-8 rounded-full object-cover border border-purple-500/40 shrink-0 mt-1"
                   />
                 )}

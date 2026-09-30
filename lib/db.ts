@@ -23,14 +23,30 @@ if (!global.__datingDbDates) {
         const pA = people[i];
         const pB = people[j];
         const dateId = `date_${pA.id}_${pB.id}`;
-
         const sharedCity = pA.city.toLowerCase() === pB.city.toLowerCase();
-        const baseChem = 75 + Math.floor(((i * 7 + j * 13) % 20));
-        const valFit = 76 + Math.floor(((i * 11 + j * 5) % 19));
-        const lifeFit = sharedCity ? 85 + (i % 10) : 74 + (j % 12);
+        const isElenaAndMarcus =
+          (pA.id === 'person_01' && pB.id === 'person_02') ||
+          (pA.id === 'person_02' && pB.id === 'person_01');
 
-        const scoreA = Math.min(98, Math.round(baseChem * 0.4 + valFit * 0.35 + lifeFit * 0.25));
-        const scoreB = Math.min(97, Math.round(baseChem * 0.38 + valFit * 0.37 + lifeFit * 0.25));
+        let baseChem: number;
+        let valFit: number;
+        let lifeFit: number;
+        let scoreA: number;
+        let scoreB: number;
+
+        if (isElenaAndMarcus) {
+          baseChem = 92;
+          valFit = 90;
+          lifeFit = 88;
+          scoreA = 87;
+          scoreB = 87;
+        } else {
+          baseChem = 70 + Math.floor(((i * 7 + j * 13) % 18));
+          valFit = 72 + Math.floor(((i * 11 + j * 5) % 17));
+          lifeFit = sharedCity ? 80 + (i % 8) : 70 + (j % 10);
+          scoreA = Math.min(85, Math.round(baseChem * 0.4 + valFit * 0.35 + lifeFit * 0.25));
+          scoreB = Math.min(85, Math.round(baseChem * 0.38 + valFit * 0.37 + lifeFit * 0.25));
+        }
 
         const turn1Topic = 'Icebreaker';
         const aHobby = pA.analysis?.hobbies[0]?.value || 'trail walks';

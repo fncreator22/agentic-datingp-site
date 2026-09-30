@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Sparkles, Users, Play, PlusCircle, HeartHandshake } from 'lucide-react';
+import { Users, Play, PlusCircle, HeartHandshake } from 'lucide-react';
 
 export default function Navbar() {
   const pathname = usePathname();

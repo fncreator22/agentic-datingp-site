@@ -10,9 +10,12 @@ export async function scrapeInstagram(instagramUrl: string): Promise<InstagramDa
   if (token) {
     try {
       const actorId = 'apify~instagram-scraper';
-      const response = await fetch(`https://api.apify.com/v2/acts/${actorId}/runs?token=${token}`, {
+      const response = await fetch(`https://api.apify.com/v2/acts/${actorId}/runs`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
         body: JSON.stringify({
           resultsType: 'posts',
           directUrls: [instagramUrl],
@@ -27,20 +30,31 @@ export async function scrapeInstagram(instagramUrl: string): Promise<InstagramDa
         if (datasetId) {
           await new Promise((resolve) => setTimeout(resolve, 3000));
           const itemsRes = await fetch(
-            `https://api.apify.com/v2/datasets/${datasetId}/items?token=${token}&limit=6`
+            `https://api.apify.com/v2/datasets/${datasetId}/items?limit=6`,
+            {
+              headers: {
+                'Authorization': `Bearer ${token}`,
+              },
+            }
           );
           if (itemsRes.ok) {
             const items = await itemsRes.json();
             if (Array.isArray(items) && items.length > 0) {
-              const first = items[0];
-              const captions = items.map((i: any) => i.caption || '').filter(Boolean);
-              const hashtags = items.flatMap((i: any) => i.hashtags || []).slice(0, 10);
-              const locations = items.map((i: any) => i.locationName || '').filter(Boolean);
+              const first = (items[0] || {}) as Record<string, unknown>;
+
+              // Strict Requirement Enforcement: Reject private Instagram accounts
+              if (first.isPrivate === true || first.is_private === true) {
+                throw new Error('PRIVATE_INSTAGRAM_PROFILE: Only public Instagram profiles can be ingested.');
+              }
+
+              const captions = items.map((i: Record<string, unknown>) => String(i.caption || '')).filter(Boolean);
+              const hashtags = items.flatMap((i: Record<string, unknown>) => (Array.isArray(i.hashtags) ? i.hashtags.map(String) : [])).slice(0, 10);
+              const locations = items.map((i: Record<string, unknown>) => String(i.locationName || '')).filter(Boolean);
 
               return {
-                bio: first.ownerBio || first.biography || 'Coffee explorer, design nerd, weekend trail runner. Always finding good spots.',
-                postsCount: first.ownerPostsCount || items.length,
-                followersCount: first.ownerFollowersCount || 1200,
+                bio: String(first.ownerBio || first.biography || 'Coffee explorer, design nerd, weekend trail runner. Always finding good spots.'),
+                postsCount: Number(first.ownerPostsCount) || items.length,
+                followersCount: Number(first.ownerFollowersCount) || 1200,
                 captions: captions.length > 0 ? captions : [
                   'Sunday morning pour over and film scans ☕🎞️',
                   'Trail run summit — crisp morning air hits different 🌲🏔️',
@@ -53,8 +67,12 @@ export async function scrapeInstagram(instagramUrl: string): Promise<InstagramDa
           }
         }
       }
-    } catch (err) {
-      console.warn('Apify Instagram scraper call failed, using graceful fallback:', err);
+    } catch (err: unknown) {
+      if (err instanceof Error && err.message.startsWith('PRIVATE_INSTAGRAM_PROFILE')) {
+        throw err;
+      }
+      const msg = err instanceof Error ? err.message.replace(/token=[a-zA-Z0-9_\-]+/gi, 'token=[REDACTED]') : 'Network failure';
+      console.warn('Apify Instagram scraper call failed, using graceful fallback:', msg);
     }
   }
 

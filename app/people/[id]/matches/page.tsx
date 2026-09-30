@@ -3,17 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   Trophy,
   ArrowLeft,
   MessageCircle,
-  ExternalLink,
-  Flame,
   CheckCircle2,
   AlertCircle,
   Sparkles,
-  ChevronRight,
-  TrendingUp,
 } from 'lucide-react';
 import { Person, MatchRanking } from '@/lib/types';
 
@@ -120,9 +117,11 @@ export default function MatchesPage() {
                     >
                       #{rank.rank}
                     </div>
-                    <img
+                    <Image
                       src={rank.candidateAvatar}
                       alt={rank.candidateName}
+                      width={56}
+                      height={56}
                       className="w-14 h-14 rounded-2xl object-cover border border-slate-700 shrink-0"
                     />
                     <div>

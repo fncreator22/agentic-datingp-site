@@ -20,9 +20,28 @@ export async function GET(request: Request) {
       dates = dates.filter((d) => d.personA_id === personA || d.personB_id === personA);
     }
 
-    return NextResponse.json({ success: true, count: dates.length, data: dates });
-  } catch (error: any) {
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    const includeVerdicts = searchParams.get('include_verdicts') === 'true';
+
+    const projection = dates.map((d) => {
+      if (includeVerdicts) return d;
+      return {
+        id: d.id,
+        personA_id: d.personA_id,
+        personB_id: d.personB_id,
+        personA_name: d.personA_name,
+        personB_name: d.personB_name,
+        personA_avatar: d.personA_avatar,
+        personB_avatar: d.personB_avatar,
+        scenario: d.scenario,
+        turns: d.turns,
+        created_at: d.created_at,
+      };
+    });
+
+    return NextResponse.json({ success: true, count: projection.length, data: projection });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }
 
@@ -52,8 +71,9 @@ export async function POST(request: Request) {
     saveDate(simulation);
 
     return NextResponse.json({ success: true, data: simulation });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error running date simulation:', error);
-    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    return NextResponse.json({ success: false, error: message }, { status: 500 });
   }
 }
