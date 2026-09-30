@@ -1,0 +1,9 @@
+quality/
+scripts/
+.git
+.next
+node_modules
+*.py
+__pycache__
+*.png
+*.jpg
