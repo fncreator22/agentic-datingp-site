@@ -110,39 +110,7 @@ No synthetic third-party databases, private emails, phone numbers, or credit rec
 
 ---
 
-## Directory of 25 Real Individuals
 
-The pre-seeded cohort consists of 25 real individuals across design, software engineering, climate science, neuroscience, architecture, and creative industries. Every profile contains two verified public links:
-
-| ID | Name | Age | City | Role / Profession | Public LinkedIn | Public Instagram | Core Needs and Hobbies |
-|---|---|---|---|---|---|---|---|
-| `person_01` | Elena Rostova | 28 | San Francisco, CA | Staff Product Designer at Figma | [Profile](https://www.linkedin.com/in/elena-rostova-design) | [Profile](https://www.instagram.com/elena.visuals/) | Needs creative respect; ceramics, cycling, 35mm film |
-| `person_02` | Marcus Vance | 31 | San Francisco, CA | AI Research Engineer at Anthropic | [Profile](https://www.linkedin.com/in/marcus-vance-ai) | [Profile](https://www.instagram.com/marcus.runs.trails/) | Needs intellectual depth; ultrarunning, single-origin coffee |
-| `person_03` | Maya Lin Chen | 27 | New York, NY | Architectural Designer at SHoP | [Profile](https://www.linkedin.com/in/mayachen-architect) | [Profile](https://www.instagram.com/maya.builds.spaces/) | Needs civic curiosity; dim sum crawls, jazz vinyl, timber architecture |
-| `person_04` | Julian Mercer | 30 | New York, NY | Senior Editor at The Atlantic | [Profile](https://www.linkedin.com/in/julian-mercer-writer) | [Profile](https://www.instagram.com/julian.mercer.reads/) | Needs literary wit; Central Park morning runs, antiquarian books |
-| `person_05` | Sophia Rodriguez | 29 | Austin, TX | Founder and CEO at Verve Health | [Profile](https://www.linkedin.com/in/sophia-rodriguez-bio) | [Profile](https://www.instagram.com/sophia.atx.eats/) | Needs founder empathy; cold plunges, sourdough, food trucks |
-| `person_06` | David Thorne | 32 | Seattle, WA | Director of Grid Engineering at TerraPower | [Profile](https://www.linkedin.com/in/david-thorne-energy) | [Profile](https://www.instagram.com/david.woodcraft.sea/) | Needs calm craftsmanship; Japanese joinery, mountaineering |
-| `person_07` | Aria Montgomery | 26 | Seattle, WA | Marine Ecologist at Ocean Conservancy | [Profile](https://www.linkedin.com/in/aria-montgomery-marine) | [Profile](https://www.instagram.com/aria.underwater/) | Needs ecological stewardship; scuba diving, sea kayaking |
-| `person_08` | Kenji Sato | 34 | San Francisco, CA | Principal Autonomous Systems Architect | [Profile](https://www.linkedin.com/in/kenji-sato-systems) | [Profile](https://www.instagram.com/kenji.bay.cycles/) | Needs grounded patience; endurance cycling, pour-over coffee |
-| `person_09` | Chloe Dupont | 29 | Los Angeles, CA | Documentary Cinematographer | [Profile](https://www.linkedin.com/in/chloe-dupont-film) | [Profile](https://www.instagram.com/chloe.lens.la/) | Needs narrative empathy; 16mm analog film, surf culture |
-| `person_10` | Tariq Al-Mansoor | 34 | Los Angeles, CA | Sustainable Urban Planning Fellow | [Profile](https://www.linkedin.com/in/tariq-al-mansoor) | [Profile](https://www.instagram.com/tariq.explores/) | Needs cultural curiosity; culinary history, motorcycle touring |
-| `person_11` | Dr. Naomi Klein-Ross | 30 | Boston, MA | Pediatric Neurologist at Children's | [Profile](https://www.linkedin.com/in/naomi-klein-ross-md) | [Profile](https://www.instagram.com/naomi.boston.walks/) | Needs high empathy; Charles River rowing, classical piano |
-| `person_12` | Ethan Brooks | 29 | Boston, MA | Quantum Software Engineer at MIT QuArc | [Profile](https://www.linkedin.com/in/ethan-brooks-quantum) | [Profile](https://www.instagram.com/ethan.bouldering/) | Needs philosophical depth; bouldering, board game design |
-| `person_13` | Zoe Kravitz-Wong | 27 | San Francisco, CA | Battery Hardware Lead at Redwood | [Profile](https://www.linkedin.com/in/zoe-kravitz-hardware) | [Profile](https://www.instagram.com/zoe.plants.circuits/) | Needs planetary stewardship; balcony botany, modular synths |
-| `person_14` | Mateo Morales | 31 | New York, NY | Head Chef at Mirabello | [Profile](https://www.linkedin.com/in/mateo-morales-chef) | [Profile](https://www.instagram.com/mateo.cooks.ny/) | Needs sensory generosity; Hudson Valley foraging, handmade pasta |
-| `person_15` | Tariq Benali | 33 | Boston, MA | Associate Professor of Neuroscience | [Profile](https://www.linkedin.com/in/tariq-benali-neuro) | [Profile](https://www.instagram.com/tariq.sails.charles/) | Needs academic balance; small-boat sailing, oud performance |
-| `person_16` | Lucas Thorne | 30 | Boulder, CO | Outdoor Gear Designer at Trailcraft | [Profile](https://www.linkedin.com/in/lucas-thorne-design) | [Profile](https://www.instagram.com/lucas.trailcraft/) | Needs rugged honesty; ultralight backpack sewing, bikepacking |
-| `person_17` | Lucas Silva | 32 | Chicago, IL | Senior Structural Engineer at SOM | [Profile](https://www.linkedin.com/in/lucas-silva-civil) | [Profile](https://www.instagram.com/lucas.runs.chicago/) | Needs physical grounding; marathon training, kayaking |
-| `person_18` | Nora Lindqvist | 29 | Boulder, CO | Atmospheric Climate Modeler at NCAR | [Profile](https://www.linkedin.com/in/nora-lindqvist-climate) | [Profile](https://www.instagram.com/nora.flatirons.hike/) | Needs scientific curiosity; backcountry ski touring, watercolor |
-| `person_19` | Camille Laurent | 29 | San Francisco, CA | Sommelier and Natural Wine Importer | [Profile](https://www.linkedin.com/in/camille-laurent-wine) | [Profile](https://www.instagram.com/camille.vin.nature/) | Needs culinary appreciation; organic vineyards, vinyl records |
-| `person_20` | Ananya Sengupta | 31 | San Francisco, CA | Head of Forest Carbon Science at Pachama | [Profile](https://www.linkedin.com/in/ananya-sengupta-forest) | [Profile](https://www.instagram.com/ananya.plants.trees/) | Needs environmental passion; High Sierra backpacking, flora painting |
-| `person_21` | Gabriel Martinez | 30 | San Francisco, CA | Lead Ocean Data Scientist at Saildrone | [Profile](https://www.linkedin.com/in/gabriel-martinez-geo) | [Profile](https://www.instagram.com/gabriel.surfs.ob/) | Needs ocean reverence; Ocean Beach cold-water surf, fingerstyle guitar |
-| `person_22` | Helena Bergstrom | 29 | New York, NY | Senior Interior Architect at Snohetta | [Profile](https://www.linkedin.com/in/helena-bergstrom-design) | [Profile](https://www.instagram.com/helena.nordic.spaces/) | Needs biophilic design; cardamom bun baking, ocean cold plunge |
-| `person_23` | Owen Mitchell | 33 | Seattle, WA | Principal Glaciologist at USGS | [Profile](https://www.linkedin.com/in/owen-mitchell-geo) | [Profile](https://www.instagram.com/owen.in.the.cascades/) | Needs alpine dedication; glacier skiing, fly fishing |
-| `person_24` | Mira Sundaram | 28 | New York, NY | Curator of Literary Programs at BPL | [Profile](https://www.linkedin.com/in/mira-sundaram-curator) | [Profile](https://www.instagram.com/mira.reads.poems/) | Needs literary presence; public poetry, Bharatanatyam dance |
-| `person_25` | Leo Van Der Beek | 31 | San Francisco, CA | Staff Simulation Engineer at Waymo | [Profile](https://www.linkedin.com/in/leo-vanderbeek-ai) | [Profile](https://www.instagram.com/leo.sails.thebay/) | Needs adventurous discipline; keelboat sailing, stroopwafel baking |
-
----
 
 ## Mathematical Compatibility Model
 
@@ -158,18 +126,6 @@ $$\text{Final Score} = \operatorname{clamp}_{0}^{100}\Big(\text{Mutual Base} + \
 
 ---
 
-## Three-Minute Video Demonstration Script
-
-This table outlines the presentation structure for evaluators and demonstration recordings:
-
-| Timestamp | Phase and Target Screen | Primary On-Screen Action | Voiceover Narration |
-|---|---|---|---|
-| **0:00 - 0:40** | Profile Analysis Page (`/people/person_01`) | Open Elena Rostova's profile page. Hover over trait chips. Open the raw source bundle drawer. | "Modern dating swiping is broken. This is Kindred, an agentic dating platform where AI agents date on your behalf. There are exactly two sources of information for every person: their public LinkedIn and their public Instagram. Looking at Elena Rostova, her agent extracts her design leadership at Figma from LinkedIn, and her ceramics and Marin road cycling from Instagram. Every trait is accompanied by an exact citation snippet." |
-| **0:40 - 1:40** | Live Date Simulation (`/dates/date_person_01_person_02`) | Navigate to the date between Elena Rostova and Marcus Vance. Click 'Play Dialogue'. Highlight friction test. Reveal verdicts. | "Now let's watch the agents actually go out and date. Elena's agent meets Marcus Vance's agent at an espresso bar. Over eight alternating turns, they discuss sprint cycles, trail running in the redwoods, and values around integrity. In the friction test beat, they probe Sunday schedules and work-life balance. When the date concludes, each agent enters a private evaluation chamber and issues confidential chemistry, values, and lifestyle scores." |
-| **1:40 - 2:25** | Mutual Rankings Leaderboard (`/people/person_01/matches`) | Open Elena's match rankings. Inspect Marcus Vance at #1 with 92% score. Review lower ranks and reasons. | "Following dates across the cohort, here is Elena's personalized leaderboard. Ranked number one is Marcus Vance with a 92% mutual score. Both agents gave each other green lights, with strong alignment on creative craft and outdoor decompression. Below Marcus, you can see every other candidate ranked with transcript quotes and score breakdowns." |
-| **2:25 - 3:00** | Live Intake and Showcase Hub (`/` and `/demo`) | Show the live URL intake form. Click 'Fill Sample Data'. Deploy agent. Navigate to `/demo` to show the full 25-person matrix. | "Evaluators can visit `/demo` for a zero-click experience with all 25 people and 156 simulated dates, or paste any real public LinkedIn and Instagram profile on the homepage to deploy their own dating agent in real time. 25 real people, strictly two sources, autonomous dating, and mutual rankings." |
-
----
 
 ## Repository Structure
 
