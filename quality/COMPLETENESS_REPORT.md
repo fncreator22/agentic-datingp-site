@@ -52,8 +52,8 @@
 | **Telemetry & Info Disclosure (CWE-200)** | 1 | 1 (BUG-029) | 0 | 0 |
 | **UI Performance / LCP** | 1 | 1 (BUG-010) | 0 | 0 |
 | **Grounding & Profile Reality (SPEC-01)** | 1 | 1 (BUG-024) | 0 | 0 |
-| **Mobile Responsive Design / Taste** | 1 | 1 (BUG-030) | 0 | 0 |
-| **TOTAL** | **30** | **30 (100%)** | **0** | **0** |
+| **Mobile Responsive Design / Taste** | 2 | 2 (BUG-030, BUG-031) | 0 | 0 |
+| **TOTAL** | **31** | **31 (100%)** | **0** | **0** |
 
 ---
 

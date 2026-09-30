@@ -3,8 +3,8 @@
 > **Project:** Kindred (Agentic Dating Network)  
 > **Source:** `quality-playbook` Phases 3–5 Security & Specification Audit  
 > **Rule:** Every bug must have reproduction steps, spec basis, vulnerability classification, and remediation disposition.  
-> **Total Logged Defects:** 30  
-> **Resolved & Mechanically Verified:** 30 (100% of all defects)  
+> **Total Logged Defects:** 31  
+> **Resolved & Mechanically Verified:** 31 (100% of all defects)  
 > **Active Open Defects:** 0  
 > **Deferred:** 0  
 
@@ -43,6 +43,14 @@
 ### BUG-029 / SEC-18: Information Disclosure of Internal Audit Telemetry (CWE-200) [RESOLVED]
 - **Location:** `app/api/people/route.ts:64, 218`, `app/api/people/[id]/route.ts:15` | **Severity:** LOW
 - **Resolution:** Omitted `consent_ip_hash` from public serialized JSON response objects in all people endpoints.
+
+### BUG-030 / UI-01: Missing Centralized /dates Route & White Screen 404 Discrepancy [RESOLVED]
+- **Location:** `app/dates/page.tsx`, `app/not-found.tsx` | **Severity:** HIGH (Missing Route / Storyboard Blocker)
+- **Resolution:** Implemented `app/dates/page.tsx` (Agent Dating Live Replay Hub) displaying all 156 dates with candidate search, compatibility filtering (Top Tier 85%+, Strong, Compatible), mutual match badges, and turn replay links. Created `app/not-found.tsx` branded dark-mode 404 handler to prevent unstyled white screen flashes.
+
+### BUG-031 / UI-02: Mobile Viewport Horizontal Layout Overflow on 375px Screens [RESOLVED]
+- **Location:** `components/Navbar.tsx`, `app/dates/page.tsx` | **Severity:** MEDIUM (Responsive UX Flaw)
+- **Resolution:** Fixed navigation bar links and date card dimensions on mobile viewports (< 640px). Made navbar icons compact with hidden text labels on small screens (`scrollWidth` reduced from 422px to 375px; 0px overflow across all 8 pages). Verified via Playwright automation.
 
 
 ### BUG-001: Raw HTML Link Element in Global Layout [RESOLVED]

@@ -81,7 +81,7 @@
 
 | Total Discrepancies Logged | Resolved & Verified | Active Open Defects | Deferred |
 |---|---|---|---|
-| **30** | **30 (100%)** | **0** | **0** |
+| **31** | **31 (100%)** | **0** | **0** |
 
 ---
 
