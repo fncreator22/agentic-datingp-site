@@ -50,7 +50,8 @@
 | **HTTP Security Headers (CWE-1021)** | 1 | 1 (BUG-021) | 0 | 0 |
 | **Privacy Lifecycle & Erasure (GDPR)** | 1 | 1 (BUG-022) | 0 | 0 |
 | **UI Performance / LCP** | 1 | 1 (BUG-010) | 0 | 0 |
-| **TOTAL** | **23** | **23 (100%)** | **0** | **0** |
+| **Grounding & Profile Reality (SPEC-01)** | 1 | 0 | 1 (BUG-024) | 0 |
+| **TOTAL** | **24** | **23 (95.8%)** | **1** | **0** |
 
 ---
 
