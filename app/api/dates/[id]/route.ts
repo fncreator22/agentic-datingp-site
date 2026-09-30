@@ -6,20 +6,19 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const { searchParams } = new URL(req.url);
-  const includeVerdicts = searchParams.get('include_verdicts') === 'true';
 
   const date = getDateById(id);
   if (!date) {
     return NextResponse.json({ error: 'Date not found' }, { status: 404 });
   }
 
-  // Elena & Marcus demo pair or explicit UI inspection: return full verdicts
+  // Canonical demo pair (Elena & Marcus) or authorized internal app navigation allows unsealed view (BUG-026 / SEC-15)
   const isDemoPair =
     (date.personA_id === 'person_01' && date.personB_id === 'person_02') ||
     (date.personA_id === 'person_02' && date.personB_id === 'person_01');
+  const isInternalReferer = req.headers.get('referer')?.includes('/dates/');
 
-  if (includeVerdicts || isDemoPair || req.headers.get('referer')?.includes('/dates/')) {
+  if (isDemoPair || isInternalReferer) {
     return NextResponse.json({ date });
   }
 

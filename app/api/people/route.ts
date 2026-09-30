@@ -60,11 +60,26 @@ function sanitizeString(input: unknown, maxLength: number): string {
 
 export async function GET() {
   const people = getAllPeople();
-  return NextResponse.json({ people, count: people.length });
+  // Omit sensitive consent_ip_hash from public serialized response (BUG-029 / SEC-18)
+  const safePeople = people.map((p) => {
+    const copy = { ...p };
+    delete (copy as Partial<typeof p>).consent_ip_hash;
+    return copy;
+  });
+  return NextResponse.json({ people: safePeople, count: safePeople.length });
 }
 
 export async function POST(req: NextRequest) {
   try {
+    // Body size limit defense (BUG-027 / SEC-16)
+    const contentLength = req.headers.get('content-length');
+    if (contentLength && parseInt(contentLength, 10) > 10240) {
+      return NextResponse.json(
+        { error: 'Payload too large. Maximum request body size is 10 KB.' },
+        { status: 413 }
+      );
+    }
+
     const clientIp =
       req.headers.get('x-forwarded-for')?.split(',')[0].trim() ||
       req.headers.get('x-real-ip') ||
@@ -204,8 +219,10 @@ export async function POST(req: NextRequest) {
     // Simulate dates against compatible existing candidates
     const createdDates = await runDatesForPerson(newPerson.id);
 
+    const safeNewPerson = { ...newPerson };
+    delete (safeNewPerson as Partial<typeof newPerson>).consent_ip_hash;
     return NextResponse.json({
-      person: newPerson,
+      person: safeNewPerson,
       simulatedDatesCount: createdDates.length,
     });
   } catch (err: unknown) {

@@ -8,23 +8,23 @@ def extract_profiles():
     with open('data/seeds.ts', 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Regex to extract each profile block
-    profile_blocks = re.findall(r"\{\s*id:\s*'([^']+)',\s*name:\s*'([^']+)',\s*age:\s*(\d+),\s*city:\s*'([^']+)',[\s\S]*?avatar:\s*'([^']+)',[\s\S]*?relationship_goal:\s*'([^']+)',\s*linkedin_url:\s*'([^']+)',\s*instagram_url:\s*'([^']+)',\s*is_synthetic:\s*([a-z]+)", content)
-    
-    profiles = []
-    for b in profile_blocks:
-        profiles.append({
-            'id': b[0],
-            'name': b[1],
-            'age': int(b[2]),
-            'city': b[3],
-            'avatar': b[4],
-            'relationship_goal': b[5],
-            'linkedin_url': b[6],
-            'instagram_url': b[7],
-            'is_synthetic_flag': b[8] == 'true',
-        })
-    return profiles
+    idx = content.find('[', content.find('='))
+    end_idx = content.rfind(']') + 1
+    if idx != -1 and end_idx != -1:
+        data = json.loads(content[idx:end_idx])
+        return [{
+            'id': p['id'],
+            'name': p['name'],
+            'age': p['age'],
+            'city': p['city'],
+            'avatar': p['avatar'],
+            'relationship_goal': p.get('relationship_goal', ''),
+            'linkedin_url': p.get('linkedin_url', ''),
+            'instagram_url': p.get('instagram_url', ''),
+            'is_synthetic_flag': p.get('is_synthetic', False),
+        } for p in data]
+
+    return []
 
 def main():
     os.makedirs('quality/audit_verification/screenshots/kindred_ui', exist_ok=True)

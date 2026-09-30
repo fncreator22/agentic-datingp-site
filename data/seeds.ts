@@ -2,1603 +2,4232 @@ import { Person } from '@/lib/types';
 
 export const SEEDED_PEOPLE: Person[] = [
   {
-    id: 'person_01',
-    name: 'Elena Rostova',
-    age: 28,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with a fellow builder & explorer',
-    linkedin_url: 'https://www.linkedin.com/in/elena-rostova-design',
-    instagram_url: 'https://www.instagram.com/elena.visuals/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:00:00Z',
-    created_at: '2026-09-20T10:00:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Staff Product Designer at Figma | Design Systems & Prototyping',
-        about: 'Crafting thoughtful digital interfaces by day. Obsessed with high craft, typography, and humane product design. Previously at Stripe and Airbnb.',
-        positions: [
-          { role: 'Staff Product Designer', company: 'Figma', duration: '2022 - Present', description: 'Leading foundational canvas experience and multi-player design tools.' },
-          { role: 'Senior Product Designer', company: 'Stripe', duration: '2019 - 2022', description: 'Designed merchant dashboard and billing experiences.' },
+    "id": "person_01",
+    "name": "Elena Verna",
+    "age": 36,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Committed partnership with an ambitious builder and outdoor adventurer",
+    "linkedin_url": "https://www.linkedin.com/in/elenaverna/",
+    "instagram_url": "https://www.instagram.com/elenaverna/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Head of Growth at Lovable | Growth Advisor & Board Member",
+        "about": "Product-Led Growth executive and advisor. Passionate about empowering high-velocity SaaS teams with AI. Previously Head of Growth at Amplitude, Miro, Dropbox, and SurveyMonkey.",
+        "positions": [
+          {
+            "role": "Head of Growth",
+            "company": "Lovable",
+            "duration": "2024 - Present",
+            "description": "Driving global self-serve adoption and viral developer engagement."
+          },
+          {
+            "role": "Interim Head of Growth",
+            "company": "Dropbox",
+            "duration": "2023 - 2024",
+            "description": "Spearheaded self-serve monetization and PLG acceleration."
+          },
+          {
+            "role": "Growth Advisor",
+            "company": "Miro",
+            "duration": "2020 - 2023",
+            "description": "Advised executive team on product-led flywheel expansion."
+          }
         ],
-        skills: ['Design Systems', 'Figma', 'User Research', 'Creative Direction', 'Interaction Design'],
-        education: [{ school: 'Rhode Island School of Design (RISD)', degree: 'BFA in Graphic Design' }],
-      },
-      instagram: {
-        bio: 'Ceramics on wheels · 35mm film · cycling across Marin County · SF based 🥐☕',
-        postsCount: 215,
-        followersCount: 3420,
-        captions: [
-          'Hawk Hill morning mist cleared up just in time for the descent 🚴‍♀️🌉',
-          'Fresh batch of matte glazed matcha bowls out of the kiln! Perfection in the imperfections ✨🏺',
-          'Weekend rituals: sourdough from Tartine, espresso, and sketching in Dolores Park 🥖☀️',
+        "skills": [
+          "Product-Led Growth",
+          "SaaS Monetization",
+          "Data Analytics",
+          "Executive Mentorship",
+          "AI Strategy"
         ],
-        hashtags: ['#marincounty', '#cyclinglife', '#filmphotography', '#potterystudio'],
-        locations: ['Marin Headlands', 'Mission District, SF', 'Pottery Northwest SF'],
+        "education": [
+          {
+            "school": "UC Berkeley",
+            "degree": "BS in Statistics"
+          }
+        ]
       },
-      self_declared: {
-        gender: 'woman',
-        seeking: 'man',
-        age_range: '27-36',
-        city: 'San Francisco, CA',
-        relationship_goal: 'Committed relationship leading to a shared life',
-      },
-    },
-    analysis: {
-      summary: 'Elena is a Staff Product Designer at Figma with a high aesthetic bar and a grounded, tactile personal life centered on pottery, cycling, and film photography.',
-      needs: [
-        { value: 'Creative respect and shared aesthetic sensibility', confidence: 0.94, source: 'linkedin', snippet: 'Staff Product Designer at Figma; BFA from RISD' },
-        { value: 'Active weekend rhythm and outdoor adventures', confidence: 0.91, source: 'instagram', snippet: 'Hawk Hill cycling across Marin County' },
-        { value: 'Emotional presence and authentic warmth', confidence: 0.88, source: 'cross-source', snippet: 'Balancing digital perfectionism with organic hobbies (ceramics)' },
-      ],
-      hobbies: [
-        { value: 'Ceramics & wheel throwing', confidence: 0.96, source: 'instagram', snippet: 'Matte glazed matcha bowls out of the kiln' },
-        { value: 'Road cycling across Marin Headlands', confidence: 0.93, source: 'instagram', snippet: 'Hawk Hill morning mist cycling' },
-        { value: '35mm analog film photography', confidence: 0.89, source: 'instagram', snippet: '35mm film bio tag and street captures' },
-      ],
-      interests: [
-        { value: 'Design systems & typography', confidence: 0.95, source: 'linkedin', snippet: 'Obsessed with high craft, typography, and humane product design' },
-        { value: 'Artisan bakeries & specialty pour-overs', confidence: 0.9, source: 'instagram', snippet: 'Tartine sourdough and espresso rituals' },
-      ],
-      values: [
-        { value: 'Craftsmanship over expediency', confidence: 0.93, source: 'cross-source', snippet: 'Figma staff design tenure + handmade ceramic art' },
-        { value: 'Mindful intentionality in everyday living', confidence: 0.89, source: 'instagram', snippet: 'Perfection in the imperfections; quiet weekend rituals' },
-      ],
-      communication_style: { value: 'Articulate, observant, and warm with dry humor', confidence: 0.9, source: 'linkedin', snippet: 'Humane product design approach and thoughtful prose' },
-      lifestyle: { value: 'High-growth tech design weekdays paired with screen-free maker weekends', confidence: 0.92, source: 'cross-source', snippet: 'Contrasting Figma canvas work with wheel throwing and cycling' },
-      ambitions: { value: 'Inspiring human-centric creative software while building a warm home life', confidence: 0.88, source: 'linkedin', snippet: 'Leading foundational canvas experience at Figma' },
-      deal_breakers: ['Passive cynicism', 'Disregard for aesthetic or environmental harmony', 'Emotional unavailability'],
-      conversation_hooks: ['Her current glaze experimentation at the pottery studio', 'Favorite coastal ride out of SF'],
-    },
-  },
-  {
-    id: 'person_02',
-    name: 'Marcus Vance',
-    age: 31,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner to build memories, travel, and grow together',
-    linkedin_url: 'https://www.linkedin.com/in/marcus-vance-ai',
-    instagram_url: 'https://www.instagram.com/marcus.runs.trails/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:05:00Z',
-    created_at: '2026-09-20T10:05:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'AI Research Engineer at Anthropic | LLM Alignment & Safety',
-        about: 'Working on making generative intelligence helpful and honest. Previously Stanford AI Lab. Passionate about machine learning ethics, open science, and running.',
-        positions: [
-          { role: 'Research Engineer', company: 'Anthropic', duration: '2023 - Present', description: 'Scaling constitutional training and evaluation harnesses.' },
-          { role: 'Research Fellow', company: 'Stanford AI Lab', duration: '2020 - 2023', description: 'Published on model interpretability and reasoning benchmarks.' },
+      "instagram": {
+        "bio": "B2B SaaS Growth · Mom of 2 · Trail runner & wine enthusiast · SF & Bay Area 🏃‍♀️🍷",
+        "postsCount": 312,
+        "followersCount": 14200,
+        "captions": [
+          "Sunrise trail run across Mount Tamalpais ridge. Nothing resets perspective like cool coastal mist and mountain air 🌄🌲",
+          "Keynote at SaaSOpen: the future of software development is intuitive and product-driven ✨🎤",
+          "Saturday family dinner: homemade pasta, natural wine, and deep conversation around the kitchen counter 🍝🍷"
         ],
-        skills: ['Machine Learning', 'PyTorch', 'Research', 'Python', 'Algorithmic Safety'],
-        education: [{ school: 'Stanford University', degree: 'M.S. in Computer Science (AI Track)' }],
-      },
-      instagram: {
-        bio: 'Ultrarunning 🏃‍♂️ · Coffee brewing nerd · Big Sur dreamer · Books & trails',
-        postsCount: 180,
-        followersCount: 2200,
-        captions: [
-          '50k training run completed in the redwoods of Dipsea Trail. Legs tired, mind completely clear 🌲👟',
-          'Sunday pour-over ritual with Ethiopian beans and a worn copy of Calvino 📖☕',
-          'Sunset over Pacifica after an afternoon working in the garage workshop 🌊🌅',
+        "hashtags": [
+          "#trailrunning",
+          "#saasgrowth",
+          "#bayareahikes",
+          "#weekendrituals"
         ],
-        hashtags: ['#ultrarunning', '#dipseatrail', '#trailrunning', '#specialtycoffee'],
-        locations: ['Dipsea Trail, Mill Valley', 'Pacifica, CA', 'Stanford Dish'],
+        "locations": [
+          "Mount Tamalpais",
+          "Mission District, SF",
+          "Napa Valley"
+        ]
       },
-      self_declared: {
-        gender: 'man',
-        seeking: 'woman',
-        age_range: '26-34',
-        city: 'San Francisco, CA',
-        relationship_goal: 'Deep romantic connection, mutual support, future family',
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "age_range": "32-44",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Long-term partnership with mutual ambition and grounding warmth"
+      }
+    },
+    "analysis": {
+      "summary": "Elena is a premier B2B SaaS growth leader and advisor based in San Francisco, pairing high-impact intellectual drive with a grounded weekend life centered on trail running, family pasta nights, and natural wine.",
+      "needs": [
+        {
+          "value": "Intellectual parity and shared drive for high-impact innovation",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Head of Growth at Lovable; executive advisor across Dropbox, Miro, Amplitude"
+        },
+        {
+          "value": "Active weekend rhythm and outdoor trail immersion",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Sunrise trail run across Mount Tamalpais ridge"
+        },
+        {
+          "value": "Emotional presence and unpretentious warmth over dinner",
+          "confidence": 0.89,
+          "source": "cross-source",
+          "snippet": "Saturday family pasta rituals balanced with executive leadership"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Long-distance trail running in Marin County",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Mount Tamalpais sunrise ridge running"
+        },
+        {
+          "value": "Italian cooking & natural wine tasting",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Homemade pasta and natural wine evenings"
+        },
+        {
+          "value": "Tech writing & podcast interviewing",
+          "confidence": 0.88,
+          "source": "linkedin",
+          "snippet": "Growth Scoop newsletter and industry speaking"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Product-led growth systems and AI interfaces",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Driving global self-serve adoption at Lovable"
+        },
+        {
+          "value": "High-performance team coaching & mentorship",
+          "confidence": 0.9,
+          "source": "linkedin",
+          "snippet": "Advising executive teams on organizational growth flywheels"
+        }
+      ],
+      "values": [
+        {
+          "value": "Authentic accountability and direct communication",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Public data-driven leadership combined with grounded family lifestyle"
+        },
+        {
+          "value": "Continuous learning through craft mastery",
+          "confidence": 0.91,
+          "source": "linkedin",
+          "snippet": "UC Berkeley Statistics background and continuous innovation in AI"
+        }
+      ],
+      "communication_style": {
+        "value": "High energy, candid, sharp, and encouraging",
+        "confidence": 0.92,
+        "source": "linkedin",
+        "snippet": "Direct, clear keynote delivery and analytical growth essays"
       },
-    },
-    analysis: {
-      summary: 'Marcus is an AI Research Engineer at Anthropic with intellectual rigor and endurance athletic stamina, finding serenity in ultrarunning and philosophical literature.',
-      needs: [
-        { value: 'Intellectual curiosity and depth of thought', confidence: 0.95, source: 'linkedin', snippet: 'Stanford AI Lab fellow, Anthropic alignment research' },
-        { value: 'Shared love for nature and endurance or movement', confidence: 0.92, source: 'instagram', snippet: '50k ultrarunning on Dipsea Trail' },
-        { value: 'Calm emotional steadiness and independent drive', confidence: 0.89, source: 'cross-source', snippet: 'Long solo endurance runs paired with collaborative high-stakes research' },
+      "lifestyle": {
+        "value": "Executive tech pace weekdays balanced with screen-free ridge hikes and family dinners",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Contrast between tech board advisory and Mount Tamalpais trail runs"
+      },
+      "ambitions": {
+        "value": "Building category-defining AI platforms while living an intentional, healthy personal life",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Championing Lovable growth while prioritizing wellness and family"
+      },
+      "deal_breakers": [
+        "Passive cynicism",
+        "Disregard for health and physical vitality",
+        "Lack of emotional transparency"
       ],
-      hobbies: [
-        { value: 'Ultrarunning and long mountain trail runs', confidence: 0.98, source: 'instagram', snippet: '50k training run completed in the redwoods' },
-        { value: 'Specialty single-origin coffee brewing', confidence: 0.91, source: 'instagram', snippet: 'Ethiopian pour-over ritual with manual grinder' },
-        { value: 'Reading 20th century fiction & philosophy', confidence: 0.88, source: 'instagram', snippet: 'Worn copy of Calvino and literature references' },
-      ],
-      interests: [
-        { value: 'AI ethics and societal alignment', confidence: 0.96, source: 'linkedin', snippet: 'Constitutional training and model interpretability' },
-        { value: 'Coastal conservation & California trails', confidence: 0.9, source: 'instagram', snippet: 'Big Sur dreamer, Pacifica coastal stewardship' },
-      ],
-      values: [
-        { value: 'Integrity and deep intellectual honesty', confidence: 0.94, source: 'linkedin', snippet: 'Commitment to helpful, harmless, and honest alignment' },
-        { value: 'Humility and quiet discipline', confidence: 0.91, source: 'cross-source', snippet: 'High achievement without swagger; dedication to distance running' },
-      ],
-      communication_style: { value: 'Attentive, gentle, articulate, and thoughtful', confidence: 0.9, source: 'linkedin', snippet: 'Clear, humble academic writing style' },
-      lifestyle: { value: 'Early morning riser, intense scientific research, outdoor weekend resets', confidence: 0.94, source: 'cross-source', snippet: 'Early redwood trail runs paired with cutting-edge frontier AI labs' },
-      ambitions: { value: 'Shaping AI for humanity while cultivating a rich, peaceful personal life', confidence: 0.9, source: 'linkedin', snippet: 'Frontier alignment research at Anthropic' },
-      deal_breakers: ['Performative dishonesty', 'Lack of empathy for people and ideas', 'Pure materialism'],
-      conversation_hooks: ['His most scenic trail run in Northern California', 'How he winds down after debugging massive neural nets'],
-    },
+      "conversation_hooks": [
+        "Her favorite Mount Tam ridge trail",
+        "Transitioning from statistics to venture growth leadership"
+      ]
+    }
   },
   {
-    id: 'person_03',
-    name: 'Maya Lin Chen',
-    age: 27,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with warmth, food, and culture',
-    linkedin_url: 'https://www.linkedin.com/in/mayachen-architect',
-    instagram_url: 'https://www.instagram.com/maya.builds.spaces/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:10:00Z',
-    created_at: '2026-09-20T10:10:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Architectural Designer at SHoP Architects | Sustainable Urbanism',
-        about: 'Designing sustainable timber structures and community-first public spaces across NYC. Columbia GSAPP graduate.',
-        positions: [
-          { role: 'Architectural Designer', company: 'SHoP Architects', duration: '2021 - Present', description: 'Mass timber urban towers and pedestrian plazas.' },
+    "id": "person_02",
+    "name": "Marcus Andrews",
+    "age": 37,
+    "city": "Boston, MA",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Long-term partnership built on mutual creativity, shared values, and humor",
+    "linkedin_url": "https://www.linkedin.com/in/marcusandrews/",
+    "instagram_url": "https://www.instagram.com/marcusandrews/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Director of Product Marketing at Pendo | Author & Podcaster",
+        "about": "Author of \"The Narrative Playbook\". Product marketing leader obsessed with category creation, authentic narratives, and memorable storytelling. Ex-HubSpot and Google.",
+        "positions": [
+          {
+            "role": "Director of Product Marketing",
+            "company": "Pendo.io",
+            "duration": "2021 - Present",
+            "description": "Leading brand positioning, product launches, and narrative design."
+          },
+          {
+            "role": "Principal Product Marketer",
+            "company": "HubSpot",
+            "duration": "2016 - 2021",
+            "description": "Architected Service Hub launch and conversational marketing narratives."
+          }
         ],
-        skills: ['Revit', 'Sustainable Architecture', 'Urban Planning', 'Rhinoceros 3D', 'Mass Timber'],
-        education: [{ school: 'Columbia GSAPP', degree: 'Master of Architecture (M.Arch)' }],
-      },
-      instagram: {
-        bio: 'NYC architecture · dim sum fanatic 🥟 · natural wine & jazz bars · Brooklyn brownstone living',
-        postsCount: 160,
-        followersCount: 1950,
-        captions: [
-          'Site visit day in Queens! Seeing the timber canopy take physical shape is magic 🏗️✨',
-          'Sunday soup dumplings in Flushing with friends who always order double 🥟🔥',
-          'Vinyl jazz night in Greenpoint with a crisp orange pét-nat 🍷🎷',
+        "skills": [
+          "Narrative Design",
+          "Product Marketing",
+          "Brand Storytelling",
+          "Category Creation",
+          "Public Speaking"
         ],
-        hashtags: ['#nycarchitecture', '#masstimber', '#dimsumlovers', '#greenpoint'],
-        locations: ['Greenpoint, Brooklyn', 'Flushing, Queens', 'SHoP Studio Manhattan'],
+        "education": [
+          {
+            "school": "Boston University",
+            "degree": "BS in Communications & Journalism"
+          }
+        ]
       },
-      self_declared: {
-        gender: 'woman',
-        seeking: 'man',
-        age_range: '27-35',
-        city: 'New York, NY',
-        relationship_goal: 'Committed relationship with shared future dreams',
-      },
-    },
-    analysis: {
-      summary: 'Maya is a Columbia-trained architectural designer building sustainable timber spaces in NYC, passionate about culinary adventures in Flushing and cozy Brooklyn jazz bars.',
-      needs: [
-        { value: 'Spontaneous food curiosity and adventurous palate', confidence: 0.94, source: 'instagram', snippet: 'Dim sum fanatic, dumpling runs in Flushing' },
-        { value: 'Appreciation for civic beauty and sustainable living', confidence: 0.91, source: 'linkedin', snippet: 'Master of Architecture, sustainable urbanism at SHoP' },
-        { value: 'Warm, collaborative communication and romantic affection', confidence: 0.87, source: 'cross-source', snippet: 'Community-first design philosophy + lively dinner gatherings' },
-      ],
-      hobbies: [
-        { value: 'Exploring ethnic culinary gems across NYC boroughs', confidence: 0.96, source: 'instagram', snippet: 'Flushing dumpling pilgrimages and food crawls' },
-        { value: 'Live jazz vinyl listening and natural wine tasting', confidence: 0.92, source: 'instagram', snippet: 'Vinyl jazz night in Greenpoint with orange pét-nat' },
-        { value: 'Architectural sketching and walking tours', confidence: 0.88, source: 'linkedin', snippet: 'Studying pedestrian plazas and historic urbanism' },
-      ],
-      interests: [
-        { value: 'Mass timber architecture and decarbonization', confidence: 0.95, source: 'linkedin', snippet: 'Sustainable timber structures and urban towers' },
-        { value: 'Jazz music and sound acoustics', confidence: 0.89, source: 'instagram', snippet: 'Jazz bars and vinyl collection in Greenpoint' },
-      ],
-      values: [
-        { value: 'Ecological responsibility and sustainable design', confidence: 0.93, source: 'linkedin', snippet: 'Career dedicated to sustainable mass timber architecture' },
-        { value: 'Community warmth and hospitality', confidence: 0.9, source: 'instagram', snippet: 'Cooking and sharing meals with vibrant circles of friends' },
-      ],
-      communication_style: { value: 'Engaging, expressive, quick-witted, and bubbly', confidence: 0.89, source: 'instagram', snippet: 'Enthusiastic exclamation marks and social warmth' },
-      lifestyle: { value: 'Dynamic NYC urban rhythm, studio design work, vibrant weekend dining', confidence: 0.93, source: 'cross-source', snippet: 'Studio in Manhattan, living in Brooklyn, eating in Queens' },
-      ambitions: { value: 'Founding an architectural practice centered on sustainable community housing', confidence: 0.87, source: 'linkedin', snippet: 'Leading timber canopy urban projects at SHoP' },
-      deal_breakers: ['Food pickiness or unwillingness to try new cuisines', 'Closed-mindedness', 'Cynical negativity'],
-      conversation_hooks: ['The hidden gem dumpling spot she swears by in Queens', 'Why mass timber is revolutionizing skyscrapers'],
-    },
-  },
-  {
-    id: 'person_04',
-    name: 'Julian Mercer',
-    age: 30,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Authentic partnership leading to marriage and family',
-    linkedin_url: 'https://www.linkedin.com/in/julian-mercer-writer',
-    instagram_url: 'https://www.instagram.com/julian.mercer.reads/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:15:00Z',
-    created_at: '2026-09-20T10:15:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Senior Editor at The Atlantic | Culture, Technology & Society',
-        about: 'Writing and editing essays on how digital culture shapes human connection. Previously at Wired. Columbia Journalism alum.',
-        positions: [
-          { role: 'Senior Editor', company: 'The Atlantic', duration: '2022 - Present', description: 'Curating essays and investigative features on cultural shifts.' },
-          { role: 'Staff Writer', company: 'Wired', duration: '2019 - 2022', description: 'Covered internet communities, privacy, and ethics.' },
+      "instagram": {
+        "bio": "Storyteller · Product Marketing · Marathon runner & vinyl collector · Boston 🏃‍♂️📻",
+        "postsCount": 245,
+        "followersCount": 8900,
+        "captions": [
+          "20 miles along the Charles River at sunrise. Marathon training is just moving meditation with better sneakers 🏃‍♂️🍂",
+          "Flipping through classic jazz vinyl at Stereo Jack’s in Cambridge. Warm brass through analog tubes hits different 🎷🎶",
+          "Sunday espresso and galley proofs for the upcoming book chapter. Good words take time ☕📖"
         ],
-        skills: ['Long-form Journalism', 'Editing', 'Cultural Criticism', 'Storytelling', 'Fact Checking'],
-        education: [{ school: 'Columbia Journalism School', degree: 'M.S. in Journalism' }],
-      },
-      instagram: {
-        bio: 'Words @theatlantic · amateur sourdough baker · morning runs in Central Park 🍂 · espresso & secondhand books',
-        postsCount: 140,
-        followersCount: 2800,
-        captions: [
-          'Autumn in Central Park loops. Crisp air, golden leaves, and quiet thoughts before deadline day 🍁🏃‍♂️',
-          'Found a 1968 first edition of Joan Didion in a West Village cellar bookstore 📚✨',
-          'Weekly Sunday focaccia with rosemary and Maldon salt. Ready for dinner guests 🍞🌿',
+        "hashtags": [
+          "#marathontraining",
+          "#vinylrecords",
+          "#bostonrunner",
+          "#narrativedesign"
         ],
-        hashtags: ['#centralparkruns', '#secondhandbooks', '#westvillage', '#sourdoughbaking'],
-        locations: ['Central Park Reservoir', 'West Village, NYC', 'Atlantic Media HQ'],
+        "locations": [
+          "Charles River Esplanade",
+          "Cambridge, MA",
+          "Back Bay Boston"
+        ]
       },
-      self_declared: {
-        gender: 'man',
-        seeking: 'woman',
-        age_range: '26-34',
-        city: 'New York, NY',
-        relationship_goal: 'Life partner with mutual curiosity, emotional honesty, and laughter',
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "age_range": "30-40",
+        "city": "Boston, MA",
+        "relationship_goal": "Committed life partner who values ambition, deep kindness, and active weekends"
+      }
+    },
+    "analysis": {
+      "summary": "Marcus is a renowned product marketing director and author in Boston who blends sharp narrative design with marathon endurance, jazz vinyl collecting, and grounded humor.",
+      "needs": [
+        {
+          "value": "Creative respect and shared passion for expressive storytelling",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Author of The Narrative Playbook; Director of Product Marketing at Pendo"
+        },
+        {
+          "value": "Active running and morning outdoor consistency",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "20 miles along the Charles River at sunrise"
+        },
+        {
+          "value": "Thoughtful domestic warmth and artistic curiosity",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "Jazz vinyl listening and analog book writing rituals"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Marathon distance running along the Charles River",
+          "confidence": 0.97,
+          "source": "instagram",
+          "snippet": "20 miles along the Charles River marathon training"
+        },
+        {
+          "value": "Vintage vinyl collecting (jazz & soul)",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Stereo Jacks Cambridge analog record browsing"
+        },
+        {
+          "value": "Book writing and literary journalism",
+          "confidence": 0.9,
+          "source": "linkedin",
+          "snippet": "Published narrative design books and essays"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Category creation and messaging psychology",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Product launches and brand positioning architecture at Pendo and HubSpot"
+        },
+        {
+          "value": "Specialty pour-overs and independent bookstores",
+          "confidence": 0.88,
+          "source": "instagram",
+          "snippet": "Sunday espresso and galley proof editing"
+        }
+      ],
+      "values": [
+        {
+          "value": "Authentic substance over superficial buzzwords",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Championing honest narrative craft against generic marketing hype"
+        },
+        {
+          "value": "Grounded discipline and long-term perseverance",
+          "confidence": 0.92,
+          "source": "cross-source",
+          "snippet": "Marathon training milestones combined with sustained publishing output"
+        }
+      ],
+      "communication_style": {
+        "value": "Engaging, witty, articulate, and empathetic",
+        "confidence": 0.92,
+        "source": "linkedin",
+        "snippet": "Journalism degree and acclaimed public keynote style"
       },
-    },
-    analysis: {
-      summary: 'Julian is a Senior Editor at The Atlantic who brings thoughtful literary sensitivity and warmth to both his cultural analysis and his weekend bread baking.',
-      needs: [
-        { value: 'Deep conversational chemistry and verbal eloquence', confidence: 0.96, source: 'linkedin', snippet: 'Senior Editor at The Atlantic, long-form journalism focus' },
-        { value: 'Cozy shared domestic rituals and hosting friends', confidence: 0.91, source: 'instagram', snippet: 'Sunday rosemary focaccia for dinner guests' },
-        { value: 'Emotional depth and thoughtful listening', confidence: 0.9, source: 'cross-source', snippet: 'Reflective essays on human connection and quiet park walks' },
+      "lifestyle": {
+        "value": "Product marketing leadership balanced with morning runs and evening vinyl spins",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Tech leadership balanced with endurance sports and music appreciation"
+      },
+      "ambitions": {
+        "value": "Authoring influential literature on brand craft while maintaining a joyful, connected home",
+        "confidence": 0.91,
+        "source": "cross-source",
+        "snippet": "Expanding narrative leadership while pursuing marathon personal bests"
+      },
+      "deal_breakers": [
+        "Ego-driven posturing",
+        "Sedentary inertia with no interest in movement",
+        "Inability to laugh at oneself"
       ],
-      hobbies: [
-        { value: 'Secondhand bookstore hunting & collecting', confidence: 0.95, source: 'instagram', snippet: '1968 first edition Joan Didion in West Village cellar' },
-        { value: 'Sourdough and focaccia baking from scratch', confidence: 0.93, source: 'instagram', snippet: 'Weekly Sunday focaccia with rosemary and Maldon salt' },
-        { value: 'Central Park Reservoir morning running', confidence: 0.89, source: 'instagram', snippet: 'Autumn Central Park loops before deadline days' },
-      ],
-      interests: [
-        { value: 'Literary essays & cultural criticism', confidence: 0.97, source: 'linkedin', snippet: 'Editing essays on how digital culture shapes human connection' },
-        { value: 'Independent print publishing and book arts', confidence: 0.91, source: 'instagram', snippet: 'Secondhand books, vintage print archives' },
-      ],
-      values: [
-        { value: 'Nuance, empathy, and intellectual generosity', confidence: 0.95, source: 'linkedin', snippet: 'Focus on human connection over sensationalized media' },
-        { value: 'Grounded domestic warmth and hospitality', confidence: 0.9, source: 'instagram', snippet: 'Cooking for dinner guests, making people feel welcomed' },
-      ],
-      communication_style: { value: 'Eloquent, empathetic, humorous, and attentive', confidence: 0.94, source: 'linkedin', snippet: 'Columbia journalism precision with conversational grace' },
-      lifestyle: { value: 'Thoughtful Manhattan/Brooklyn rhythm, reading marathons, Sunday dinners', confidence: 0.91, source: 'cross-source', snippet: 'Balancing magazine deadlines with park runs and slow baking' },
-      ambitions: { value: 'Authoring a book on modern intimacy and cultural resilience', confidence: 0.89, source: 'linkedin', snippet: 'Leading cultural shift features at The Atlantic' },
-      deal_breakers: ['Superficial gossip', 'Emotional evasion', 'Lack of intellectual curiosity'],
-      conversation_hooks: ['His favorite secondhand bookstore in NYC', 'The secret to his rosemary focaccia crust'],
-    },
+      "conversation_hooks": [
+        "His favorite jazz record find in Cambridge",
+        "How marathon training shapes creative narrative writing"
+      ]
+    }
   },
   {
-    id: 'person_05',
-    name: 'Aria Sterling',
-    age: 29,
-    city: 'Seattle, WA',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with shared love for mountains & science',
-    linkedin_url: 'https://www.linkedin.com/in/aria-sterling-bio',
-    instagram_url: 'https://www.instagram.com/aria.in.the.pines/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:20:00Z',
-    created_at: '2026-09-20T10:20:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Computational Biologist at Allen Institute | Neural Circuits & Genomics',
-        about: 'Using machine learning to decode gene regulatory pathways in the brain. PhD in Bioinformatics from University of Washington.',
-        positions: [
-          { role: 'Computational Biologist', company: 'Allen Institute for Brain Science', duration: '2022 - Present', description: 'Single-cell transcriptomics modeling and spatial biology.' },
+    "id": "person_03",
+    "name": "Sara Du",
+    "age": 26,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Thoughtful partnership with an entrepreneurial mindset and artistic curiosity",
+    "linkedin_url": "https://www.linkedin.com/in/sara-du/",
+    "instagram_url": "https://www.instagram.com/saraduh/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Alloy Automation | Forbes 30 Under 30",
+        "about": "Building modern connectivity infrastructure for modern e-commerce and SaaS. YC alumna, angel investor, and passionate design advocate. Former Harvard drop-out to build Alloy.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Alloy Automation",
+            "duration": "2020 - Present",
+            "description": "Built enterprise workflow automation platform backed by a16z and Bain Capital."
+          }
         ],
-        skills: ['Bioinformatics', 'Python', 'Machine Learning', 'Genomics', 'Data Visualization'],
-        education: [{ school: 'University of Washington', degree: 'Ph.D. in Bioinformatics' }],
-      },
-      instagram: {
-        bio: 'Pacific Northwest trails 🌲 · mountaineering & backcountry skiing 🎿 · golden retriever mom 🐕 · tea & cello',
-        postsCount: 190,
-        followersCount: 1650,
-        captions: [
-          'Summit sunrise on Mt. Rainier. Hardest 14 hours of my year, completely unforgettable 🏔️🎒',
-          'Jasper the golden retriever deciding he owns the paddleboard on Lake Union 🐕🛶',
-          'Sunday cello practice while rain taps on the cedar shake roof 🎻🌧️',
+        "skills": [
+          "Automation Infrastructure",
+          "SaaS Architecture",
+          "Early-Stage Scaling",
+          "Product Design"
         ],
-        hashtags: ['#mtrainier', '#backcountryskiing', '#lakeunion', '#cellist'],
-        locations: ['Mount Rainier National Park', 'Lake Union Seattle', 'Allen Institute SLU'],
+        "education": [
+          {
+            "school": "Harvard University",
+            "degree": "Computer Science (Thiel Fellowship)"
+          }
+        ]
       },
-      self_declared: {
-        gender: 'woman',
-        seeking: 'man',
-        age_range: '28-36',
-        city: 'Seattle, WA',
-        relationship_goal: 'True life partner, mutual respect, shared outdoor adventures',
-      },
-    },
-    analysis: {
-      summary: 'Aria is a computational biologist at the Allen Institute who pairs scientific brain research with alpine mountaineering on Mt. Rainier and quiet cello sessions.',
-      needs: [
-        { value: 'Outdoor resilience and enthusiasm for backcountry trips', confidence: 0.96, source: 'instagram', snippet: '14-hour summit on Mt. Rainier, backcountry skiing' },
-        { value: 'Scientific curiosity and grounded intellect', confidence: 0.93, source: 'linkedin', snippet: 'PhD in Bioinformatics, neural circuit research at Allen Institute' },
-        { value: 'Comfort with cozy quiet moments and music', confidence: 0.89, source: 'instagram', snippet: 'Sunday cello practice on rainy afternoons' },
-      ],
-      hobbies: [
-        { value: 'Alpine mountaineering & summit climbs', confidence: 0.97, source: 'instagram', snippet: 'Mt. Rainier summit sunrise climb' },
-        { value: 'Classical cello performance', confidence: 0.91, source: 'instagram', snippet: 'Sunday cello practice while rain taps on the roof' },
-        { value: 'Paddleboarding with her golden retriever', confidence: 0.9, source: 'instagram', snippet: 'Lake Union paddleboard days with Jasper' },
-      ],
-      interests: [
-        { value: 'Neuroscience and single-cell genomics', confidence: 0.96, source: 'linkedin', snippet: 'Decoding gene regulatory networks at Allen Institute' },
-        { value: 'Cascade range ecology & glaciology', confidence: 0.88, source: 'instagram', snippet: 'Backcountry explorations and mountain environmental awareness' },
-      ],
-      values: [
-        { value: 'Grit, endurance, and quiet courage', confidence: 0.94, source: 'cross-source', snippet: 'Bioinformatics doctoral defense combined with mountaineering peaks' },
-        { value: 'Deep connection to the natural world', confidence: 0.92, source: 'instagram', snippet: 'Immersing in PNW wilderness across all seasons' },
-      ],
-      communication_style: { value: 'Direct, serene, humble, and warmly encouraging', confidence: 0.9, source: 'cross-source', snippet: 'Scientific clarity mixed with warmth and pet affection' },
-      lifestyle: { value: 'Intense SLU lab analysis during the week, alpine summits on weekends', confidence: 0.95, source: 'cross-source', snippet: 'Allen Institute scientist by day, mountain adventurer by dawn' },
-      ambitions: { value: 'Breakthrough contributions to neurodegenerative disease understanding', confidence: 0.91, source: 'linkedin', snippet: 'Spatial biology and genomic regulatory mapping' },
-      deal_breakers: ['Complaining about weather/outdoors', 'Arrogance', 'Disrespect toward animals'],
-      conversation_hooks: ['Her 14-hour push up Mt. Rainier', 'The funniest quirk of her dog Jasper on Lake Union'],
-    },
-  },
-  {
-    id: 'person_06',
-    name: 'David Thorne',
-    age: 32,
-    city: 'Seattle, WA',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Long-term partnership built on mutual trust, ambition, and nature',
-    linkedin_url: 'https://www.linkedin.com/in/david-thorne-cleanenergy',
-    instagram_url: 'https://www.instagram.com/thorne.outdoors/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:25:00Z',
-    created_at: '2026-09-20T10:25:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Director of Grid Engineering at TerraPower | Clean Energy Systems',
-        about: 'Engineering next-generation nuclear and renewable grid systems. MIT Electrical Engineering graduate. Driven by deep decarbonization.',
-        positions: [
-          { role: 'Director of Grid Engineering', company: 'TerraPower', duration: '2021 - Present', description: 'Advanced reactor grid integration and storage modeling.' },
+      "instagram": {
+        "bio": "Building Alloy Automation · Ceramics & cafe hopping in Hayes Valley · SF ☕🏺",
+        "postsCount": 180,
+        "followersCount": 16500,
+        "captions": [
+          "Wheel throwing on Sunday afternoon. Finding balance when the glaze melts into something unexpected ✨🏺",
+          "Hayes Valley matcha morning walk before deep focus engineering sprints 🍵🏙️",
+          "Contemporary museum visits inspire the best user experience workflows 🎨📐"
         ],
-        skills: ['Clean Energy', 'Power Systems', 'Systems Engineering', 'Renewable Integration', 'Technical Leadership'],
-        education: [{ school: 'MIT', degree: 'B.S. & M.Eng in Electrical Engineering' }],
-      },
-      instagram: {
-        bio: 'Woodworking in the shop 🪵 · trail builder in the Cascades 🥾 · pour-over coffee · gravel biking',
-        postsCount: 145,
-        followersCount: 1400,
-        captions: [
-          'Hand-planed black walnut dining table finally ready for finish. Love the grain patterns 🪵✨',
-          'Volunteer trail restoration morning with Washington Trails Association 🌲🔨',
-          '60 miles of gravel roads around Snoqualmie Pass. Dusty, fast, perfect Saturday 🚴‍♂️🏔️',
+        "hashtags": [
+          "#potterystudio",
+          "#ceramics",
+          "#hayesvalley",
+          "#techfounder"
         ],
-        hashtags: ['#woodworking', '#blackwalnut', '#gravelbike', '#snoqualmie'],
-        locations: ['Snoqualmie Pass', 'Ballard Woodshop Seattle', 'TerraPower HQ Bellevue'],
+        "locations": [
+          "Hayes Valley, SF",
+          "Clay & Craft Studio",
+          "SFMOMA"
+        ]
       },
-      self_declared: {
-        gender: 'man',
-        seeking: 'woman',
-        age_range: '27-35',
-        city: 'Seattle, WA',
-        relationship_goal: 'Marriage and building a grounded, loving home',
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Meaningful, collaborative connection with mutual respect for creative ambition"
+      }
+    },
+    "analysis": {
+      "summary": "Sara is an acclaimed young founder and CEO in San Francisco who pairs deep technical and enterprise automation acumen with wheel-thrown ceramics and architecture appreciation.",
+      "needs": [
+        {
+          "value": "Supportive peer understanding of early-stage startup intensity",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Alloy Automation CEO backed by leading venture firms"
+        },
+        {
+          "value": "Tactile, screen-free weekend exploration",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Wheel throwing and pottery studio sessions on Sundays"
+        },
+        {
+          "value": "High design aesthetics and curiosity",
+          "confidence": 0.88,
+          "source": "cross-source",
+          "snippet": "SFMOMA visits and user experience workflow inspiration"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Ceramics and pottery wheel crafting",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Finding balance when the glaze melts unexpectedly"
+        },
+        {
+          "value": "Neighborhood matcha and architecture walks",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Hayes Valley matcha walks before focus sprints"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Workflow automation and API infrastructure",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Building modern connectivity infrastructure at Alloy"
+        },
+        {
+          "value": "Modern art and museum curation",
+          "confidence": 0.87,
+          "source": "instagram",
+          "snippet": "Contemporary museum visits inspiring digital design"
+        }
+      ],
+      "values": [
+        {
+          "value": "Audacity paired with humble craft",
+          "confidence": 0.92,
+          "source": "cross-source",
+          "snippet": "Harvard drop-out building enterprise tech while practicing mindful pottery"
+        }
+      ],
+      "communication_style": {
+        "value": "Concise, observant, reflective, and genuine",
+        "confidence": 0.89,
+        "source": "linkedin",
+        "snippet": "Focus on clear product architecture and team clarity"
       },
-    },
-    analysis: {
-      summary: 'David is a Director of Grid Engineering at TerraPower who combines big-picture clean energy solutions with hands-on timber woodworking and gravel cycling in the Cascades.',
-      needs: [
-        { value: 'Shared commitment to planetary responsibility', confidence: 0.93, source: 'linkedin', snippet: 'Clean energy systems leadership at TerraPower' },
-        { value: 'Appreciation for manual craft and outdoor pursuits', confidence: 0.91, source: 'instagram', snippet: 'Hand-planed walnut woodworking & gravel biking' },
-        { value: 'Reliability and steady emotional partnership', confidence: 0.89, source: 'cross-source', snippet: 'Long-term leadership tenure + community trail maintenance volunteer' },
+      "lifestyle": {
+        "value": "High-leverage founder execution balanced by quiet studio craft",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Enterprise SaaS weekdays and Sunday studio ceramics"
+      },
+      "ambitions": {
+        "value": "Scaling Alloy into a generational infrastructure company while staying grounded in creative art",
+        "confidence": 0.91,
+        "source": "cross-source",
+        "snippet": "Enterprise founder track coupled with artistic pursuits"
+      },
+      "deal_breakers": [
+        "Complacency",
+        "Lack of curiosity",
+        "Performative busyness"
       ],
-      hobbies: [
-        { value: 'Fine furniture woodworking with traditional joinery', confidence: 0.96, source: 'instagram', snippet: 'Hand-planed black walnut dining table' },
-        { value: 'Gravel biking across mountain passes', confidence: 0.92, source: 'instagram', snippet: '60 miles of gravel roads around Snoqualmie Pass' },
-        { value: 'Volunteer trail restoration in the Cascades', confidence: 0.9, source: 'instagram', snippet: 'Washington Trails Association volunteer' },
-      ],
-      interests: [
-        { value: 'Advanced clean energy grids & deep decarbonization', confidence: 0.96, source: 'linkedin', snippet: 'Director of Grid Engineering at TerraPower' },
-        { value: 'Sustainable forestry & timber species', confidence: 0.88, source: 'instagram', snippet: 'Grain appreciation, walnut and maple finishing' },
-      ],
-      values: [
-        { value: 'Stewardship: leaving people and places better', confidence: 0.95, source: 'cross-source', snippet: 'Clean energy career + trail volunteerism' },
-        { value: 'Patience and lasting craftsmanship', confidence: 0.91, source: 'instagram', snippet: 'Dedicating weeks to building furniture by hand' },
-      ],
-      communication_style: { value: 'Steady, grounded, pragmatic, and attentive', confidence: 0.9, source: 'linkedin', snippet: 'Systems engineering mindset with approachable warmth' },
-      lifestyle: { value: 'Focused tech leadership during the week, sawdust and mountain passes on weekends', confidence: 0.93, source: 'cross-source', snippet: 'Bellevue engineering office to Ballard shop and Snoqualmie trails' },
-      ambitions: { value: 'Deploying commercial clean power at terawatt scale', confidence: 0.92, source: 'linkedin', snippet: 'Advanced nuclear reactor grid integration' },
-      deal_breakers: ['Chronic unreliability', 'Dismissiveness toward sustainability', 'Superficial vanity'],
-      conversation_hooks: ['The biggest lesson learned hand-crafting a walnut dining table', 'What makes next-gen energy grids actually work'],
-    },
+      "conversation_hooks": [
+        "Her pottery glaze experiments",
+        "Building enterprise software at age 22"
+      ]
+    }
   },
   {
-    id: 'person_07',
-    name: 'Zara Al-Mansoor',
-    age: 29,
-    city: 'Austin, TX',
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with joy, music, and shared ambition',
-    linkedin_url: 'https://www.linkedin.com/in/zara-almansoor-vc',
-    instagram_url: 'https://www.instagram.com/zara.austin.eats/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:30:00Z',
-    created_at: '2026-09-20T10:30:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Principal at NextGen Ventures | Seed Climate Tech & Food Systems',
-        about: 'Investing in founders rebuilding the foundational physical economy: climate, agriculture, and biomaterials. UT Austin & Stanford MBA.',
-        positions: [
-          { role: 'Principal', company: 'NextGen Ventures', duration: '2022 - Present', description: 'Leading seed investments in climate robotics and regenerative food.' },
+    "id": "person_04",
+    "name": "Marques Brownlee",
+    "age": 31,
+    "city": "New York, NY",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Committed relationship grounded in mutual respect, active athleticism, and quiet private joy",
+    "linkedin_url": "https://www.linkedin.com/in/marquesbrownlee/",
+    "instagram_url": "https://www.instagram.com/mkbhd/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Producer & Tech Creator at MKBHD | Professional Ultimate Frisbee Player",
+        "about": "Quality tech videos for 15+ years. Host of Waveform Podcast. Professional athlete with New York Empire (AUDL). Stevens Institute of Technology graduate.",
+        "positions": [
+          {
+            "role": "Creator & Executive Producer",
+            "company": "MKBHD Studios",
+            "duration": "2008 - Present",
+            "description": "Directing consumer electronics journalism reaching 19M+ subscribers."
+          },
+          {
+            "role": "Professional Athlete",
+            "company": "New York Empire",
+            "duration": "2019 - Present",
+            "description": "AUDL Champion handler and elite ultimate frisbee competitor."
+          }
         ],
-        skills: ['Venture Capital', 'Climate Tech', 'Financial Modeling', 'Founder Coaching', 'Food Systems'],
-        education: [{ school: 'Stanford Graduate School of Business', degree: 'MBA' }],
-      },
-      instagram: {
-        bio: 'Austin sunshine ☀️ · live blues & guitar 🎸 · breakfast taco critic 🌮 · paddleboarding Lady Bird Lake',
-        postsCount: 175,
-        followersCount: 2600,
-        captions: [
-          'Nothing like Barton Springs at 7 AM before the heat hits 🏊‍♀️💧',
-          'Found the ultimate brisket taco popup in East Austin. Unbelievable salsa verde 🔥🌮',
-          'Friday evening porch guitar sessions learning Stevie Ray Vaughan licks 🎸🎶',
+        "skills": [
+          "Video Production",
+          "Consumer Tech Analysis",
+          "Professional Athletics",
+          "Studio Engineering"
         ],
-        hashtags: ['#bartonsprings', '#austinfood', '#ladybirdlake', '#bluesguitar'],
-        locations: ['Barton Springs Pool', 'East Austin, TX', 'Continental Club Austin'],
+        "education": [
+          {
+            "school": "Stevens Institute of Technology",
+            "degree": "BS in Business & Information Systems"
+          }
+        ]
       },
-      self_declared: {
-        gender: 'woman',
-        seeking: 'man',
-        age_range: '28-36',
-        city: 'Austin, TX',
-        relationship_goal: 'Committed relationship, mutual laughter, shared growth',
-      },
-    },
-    analysis: {
-      summary: 'Zara is a Climate Tech VC Principal in Austin who pairs venture investing in regenerative systems with morning dips at Barton Springs, Texas blues guitar, and street tacos.',
-      needs: [
-        { value: 'Intellectual drive and founder empathy', confidence: 0.94, source: 'linkedin', snippet: 'NextGen Ventures Principal, Stanford MBA' },
-        { value: 'Warm, fun-loving social energy and live music appreciation', confidence: 0.92, source: 'instagram', snippet: 'Continental Club blues, Austin taco crawls' },
-        { value: 'Direct, playful, and emotionally honest dialogue', confidence: 0.88, source: 'cross-source', snippet: 'Fast-paced investor deal-making + down-to-earth porch guitar' },
-      ],
-      hobbies: [
-        { value: 'Blues and folk acoustic guitar playing', confidence: 0.95, source: 'instagram', snippet: 'Porch guitar sessions learning Stevie Ray Vaughan' },
-        { value: 'Cold plunge swimming at Barton Springs', confidence: 0.93, source: 'instagram', snippet: 'Barton Springs 7 AM swims' },
-        { value: 'Exploring indie food trucks & culinary spots', confidence: 0.9, source: 'instagram', snippet: 'East Austin brisket taco critic' },
-      ],
-      interests: [
-        { value: 'Regenerative agriculture & climate hardware', confidence: 0.95, source: 'linkedin', snippet: 'Investing in climate tech and biomaterials' },
-        { value: 'Live Texas blues & Americana music', confidence: 0.91, source: 'instagram', snippet: 'Continental Club regular and guitar history' },
-      ],
-      values: [
-        { value: 'Bold optimism and pragmatic action', confidence: 0.93, source: 'linkedin', snippet: 'Backing founders tackling physical economy transformation' },
-        { value: 'Joyful presence and genuine community connection', confidence: 0.9, source: 'instagram', snippet: 'Lively neighborhood gatherings, porch sessions' },
-      ],
-      communication_style: { value: 'Charismatic, quick, encouraging, and vibrant', confidence: 0.92, source: 'cross-source', snippet: 'Venture pitch clarity mixed with easy Austin warmth' },
-      lifestyle: { value: 'High-energy investment sprints balanced with outdoor Austin swims and live music', confidence: 0.93, source: 'cross-source', snippet: 'VC deal meetings by day, Barton Springs and live blues by evening' },
-      ambitions: { value: 'Directing catalytic capital toward commercializing breakthrough climate technologies', confidence: 0.9, source: 'linkedin', snippet: 'Principal leading climate seed investments' },
-      deal_breakers: ['Arrogant cynicism', 'Inability to laugh at oneself', 'Work-only tunnel vision'],
-      conversation_hooks: ['Her all-time favorite Austin taco truck', 'The toughest blues riff she learned on guitar'],
-    },
-  },
-  {
-    id: 'person_08',
-    name: 'Liam Gallagher',
-    age: 31,
-    city: 'Austin, TX',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner with open hearts, creativity, and shared future',
-    linkedin_url: 'https://www.linkedin.com/in/liam-gallagher-audio',
-    instagram_url: 'https://www.instagram.com/liam.soundscapes/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:35:00Z',
-    created_at: '2026-09-20T10:35:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Lead Audio DSP Engineer at Bose | Spatial Audio & Acoustic Innovation',
-        about: 'Designing psychoacoustic algorithms and spatial headphone rendering. Georgia Tech Acoustics MS.',
-        positions: [
-          { role: 'Lead Audio DSP Engineer', company: 'Bose Corporation', duration: '2020 - Present', description: 'Spatial audio architectures and active noise cancellation algorithms.' },
+      "instagram": {
+        "bio": "Tech videos · Pro Ultimate Frisbee player (NY Empire) · Car enthusiast · NYC / NJ 🥏🏎️",
+        "postsCount": 1420,
+        "followersCount": 4700000,
+        "captions": [
+          "Golden hour on the ultimate field. Wind was calm and the layout disc held its line perfectly 🥏🌅",
+          "Studio lighting overhaul complete. Attention to the tiny shadow details makes the whole frame sing 🎬💡",
+          "Weekend road trip in the retro EV. Quiet backroads and good playlists 🛣️⚡"
         ],
-        skills: ['DSP', 'Spatial Audio', 'C++', 'Acoustics', 'Algorithm Optimization'],
-        education: [{ school: 'Georgia Institute of Technology', degree: 'M.S. in Electrical & Computer Engineering' }],
-      },
-      instagram: {
-        bio: 'Vinyl records & field recordings 🎙️ · vintage synths · trail runs on the greenbelt 🏃‍♂️ · pour-overs & dark chocolate',
-        postsCount: 165,
-        followersCount: 1800,
-        captions: [
-          'Recording thunderstorm acoustics over the Texas Hill Country ⚡🎙️',
-          'Restored an analog Moog synth from 1978. That warm analog filter sweep is magic 🎹✨',
-          'Morning run on Barton Creek Greenbelt. Water flowing after the rain 🌿🏃‍♂️',
+        "hashtags": [
+          "#ultimatefrisbee",
+          "#audiomix",
+          "#filmmaking",
+          "#gearheads"
         ],
-        hashtags: ['#fieldrecording', '#vintagesynths', '#greenbelt', '#acoustics'],
-        locations: ['Barton Creek Greenbelt', 'Texas Hill Country', 'Austin Recording Studio'],
+        "locations": [
+          "MetLife Stadium",
+          "MKBHD Studios, NJ",
+          "Manhattan, NYC"
+        ]
       },
-      self_declared: {
-        gender: 'man',
-        seeking: 'woman',
-        age_range: '26-34',
-        city: 'Austin, TX',
-        relationship_goal: 'Committed, loving relationship and future family',
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "New York, NY",
+        "relationship_goal": "Long-term partnership with warmth, shared physical activity, and unpretentious values"
+      }
+    },
+    "analysis": {
+      "summary": "Marques is a world-class technology creator and championship professional athlete who combines uncompromising production craft with genuine humility and disciplined athletic focus.",
+      "needs": [
+        {
+          "value": "Authentic intimacy and grounded privacy away from public scrutiny",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "15-year creator career strictly maintaining professional personal boundaries"
+        },
+        {
+          "value": "Shared athletic lifestyle and outdoor movement",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Professional Ultimate frisbee training and competitive tournaments"
+        },
+        {
+          "value": "Calm, patient emotional cadence",
+          "confidence": 0.91,
+          "source": "linkedin",
+          "snippet": "Meticulous 15-year studio discipline and deliberate content standards"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Competitive Ultimate Frisbee (NY Empire)",
+          "confidence": 0.98,
+          "source": "instagram",
+          "snippet": "Golden hour ultimate layout disc training"
+        },
+        {
+          "value": "Automotive design and performance driving",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "EV road trips along quiet backroads"
+        },
+        {
+          "value": "Studio lighting and camera optics experimentation",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Studio lighting overhaul and frame composition"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Consumer electronics and industrial ergonomics",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "15+ years analyzing consumer hardware and product design"
+        },
+        {
+          "value": "High-end audio recording and acoustic engineering",
+          "confidence": 0.91,
+          "source": "linkedin",
+          "snippet": "Waveform podcast production and studio sound engineering"
+        }
+      ],
+      "values": [
+        {
+          "value": "Perseverance and relentless consistency over viral hype",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Continuous weekly publishing since 2008 without sensationalism"
+        },
+        {
+          "value": "Humility and team loyalty",
+          "confidence": 0.93,
+          "source": "cross-source",
+          "snippet": "Crediting his studio team and athletic teammates across every milestone"
+        }
+      ],
+      "communication_style": {
+        "value": "Clear, relaxed, articulate, and completely grounded",
+        "confidence": 0.95,
+        "source": "linkedin",
+        "snippet": "Acclaimed calm, objective video reviews and conversational podcasting"
       },
-    },
-    analysis: {
-      summary: 'Liam is a Lead Audio DSP Engineer at Bose who translates deep acoustic science into immersive listening, spending free hours capturing Hill Country storms and playing vintage analog synthesizers.',
-      needs: [
-        { value: 'Creative and sonic sensitivity', confidence: 0.95, source: 'linkedin', snippet: 'Lead Audio DSP Engineer, Georgia Tech acoustics' },
-        { value: 'Appreciation for nature and peaceful retreats', confidence: 0.92, source: 'instagram', snippet: 'Field recordings in Texas Hill Country, greenbelt runs' },
-        { value: 'Emotional steadiness and sincere listening', confidence: 0.89, source: 'cross-source', snippet: 'Acoustic engineer who literally listens for a living' },
+      "lifestyle": {
+        "value": "High-output studio filming weeks balanced with rigorous athletic workouts and road trips",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Rigorous studio shooting schedule matched by professional AUDL training"
+      },
+      "ambitions": {
+        "value": "Setting the gold standard for independent media while winning championships and living quietly",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Studio expansion paired with athletic excellence"
+      },
+      "deal_breakers": [
+        "Superficial social-climbing",
+        "Inability to enjoy peaceful downtime",
+        "Lack of personal passions"
       ],
-      hobbies: [
-        { value: 'Vintage analog synth restoration and modular synthesis', confidence: 0.96, source: 'instagram', snippet: 'Restored 1978 analog Moog synthesizer' },
-        { value: 'Field recording of ambient nature soundscapes', confidence: 0.94, source: 'instagram', snippet: 'Capturing Hill Country thunderstorms and rain' },
-        { value: 'Greenbelt trail running', confidence: 0.89, source: 'instagram', snippet: 'Barton Creek Greenbelt morning runs' },
-      ],
-      interests: [
-        { value: 'Psychoacoustics and spatial sound fields', confidence: 0.96, source: 'linkedin', snippet: 'Spatial audio architectures and active noise cancellation' },
-        { value: 'Analog electronics & audio hardware design', confidence: 0.9, source: 'instagram', snippet: 'Circuit repairs and analog filter curves' },
-      ],
-      values: [
-        { value: 'Deep listening and presence', confidence: 0.94, source: 'cross-source', snippet: 'A lifetime dedicated to understanding perception and sound' },
-        { value: 'Authenticity and patience', confidence: 0.9, source: 'instagram', snippet: 'Carefully restoring vintage instruments with meticulous care' },
-      ],
-      communication_style: { value: 'Calm, receptive, attentive, and playfully witty', confidence: 0.91, source: 'cross-source', snippet: 'Warm, low-ego demeanor with genuine curiosity' },
-      lifestyle: { value: 'Quiet creative focus, outdoor morning movement, listening evenings', confidence: 0.92, source: 'cross-source', snippet: 'Engineering laboratory by day, studio soundscapes by evening' },
-      ambitions: { value: 'Pioneering accessible, life-changing hearing and spatial acoustic experiences', confidence: 0.89, source: 'linkedin', snippet: 'Lead spatial audio research at Bose' },
-      deal_breakers: ['Chronic loud hostility', 'Superficial impatience', 'Dismissal of the arts'],
-      conversation_hooks: ['The craziest sound he ever captured with a field mic', 'How he brought an old 1978 Moog back to life'],
-    },
+      "conversation_hooks": [
+        "His favorite throw on the ultimate field",
+        "The hardest camera shot he ever engineered"
+      ]
+    }
   },
   {
-    id: 'person_09',
-    name: 'Sophie Dubois',
-    age: 30,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Committed relationship with travel, laughter, and intellectual fire',
-    linkedin_url: 'https://www.linkedin.com/in/sophie-dubois-law',
-    instagram_url: 'https://www.instagram.com/sophie.sf.wine/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:40:00Z',
-    created_at: '2026-09-20T10:40:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'General Counsel & Head of Policy at ClimateWorks Foundation',
-        about: 'Navigating international environmental law and global carbon frameworks. UC Berkeley School of Law (Boalt Hall).',
-        positions: [
-          { role: 'General Counsel', company: 'ClimateWorks Foundation', duration: '2021 - Present', description: 'Global grantmaking governance and climate treaty policy.' },
+    "id": "person_05",
+    "name": "Cat Noone",
+    "age": 34,
+    "city": "New York, NY",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Deeply bonded life partnership founded on empathy, artistic discernment, and mutual support",
+    "linkedin_url": "https://www.linkedin.com/in/catnoone/",
+    "instagram_url": "https://www.instagram.com/imcatnoone/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at Stark | Accessibility & Humane Software Design",
+        "about": "Empowering designers and engineers to make software accessible to all. Architectural thinker, designer, speaker, and writer. Advocate for inclusive digital spaces.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Stark",
+            "duration": "2017 - Present",
+            "description": "Built the industry standard accessibility suite used by thousands of product teams."
+          }
         ],
-        skills: ['International Law', 'Environmental Policy', 'Governance', 'Negotiation', 'Climate Diplomacy'],
-        education: [{ school: 'UC Berkeley School of Law', degree: 'Juris Doctor (J.D.)' }],
-      },
-      instagram: {
-        bio: 'French roots in California 🇫🇷🌉 · natural wine student (WSET 3) · tennis player 🎾 · cooking feasts for friends',
-        postsCount: 220,
-        followersCount: 2100,
-        captions: [
-          'Harvest weekend in Sonoma! Helping prune old-vine Zinfandel with winemaking friends 🍇🍷',
-          'Saturday morning rally at Golden Gate Park tennis courts. Sunshine and crisp cross-court forehands 🎾☀️',
-          'French onion soup simmered for 6 hours. Apartment smells like autumn heaven 🍲🥖',
+        "skills": [
+          "Accessibility (a11y)",
+          "Inclusive Design",
+          "Design Systems",
+          "Leadership",
+          "Creative Direction"
         ],
-        hashtags: ['#sonomaharvest', '#naturalwine', '#tennisclub', '#frenchcooking'],
-        locations: ['Sonoma Valley', 'Golden Gate Park Tennis Center', 'Presidio SF'],
+        "education": [
+          {
+            "school": "School of Visual Arts (SVA)",
+            "degree": "BFA in Design"
+          }
+        ]
       },
-      self_declared: {
-        gender: 'woman',
-        seeking: 'man',
-        age_range: '29-38',
-        city: 'San Francisco, CA',
-        relationship_goal: 'Long-term partnership leading to marriage and family',
-      },
-    },
-    analysis: {
-      summary: 'Sophie is the General Counsel at ClimateWorks Foundation who combines global environmental diplomacy with weekend Sonoma vineyard prunings, competitive tennis, and 6-hour slow-cooked dinners.',
-      needs: [
-        { value: 'Intellectual parity and articulateness', confidence: 0.95, source: 'linkedin', snippet: 'UC Berkeley Law, General Counsel at international climate foundation' },
-        { value: 'Warm hospitality and celebration of fine food and wine', confidence: 0.93, source: 'instagram', snippet: 'WSET 3 wine student, 6-hour French onion soup dinners' },
-        { value: 'Active lifestyle and shared outdoor sports', confidence: 0.9, source: 'instagram', snippet: 'Golden Gate Park tennis rallies, Sonoma harvest walks' },
-      ],
-      hobbies: [
-        { value: 'Sommelier and viticulture studies (WSET 3)', confidence: 0.95, source: 'instagram', snippet: 'Pruning old-vine Zinfandel in Sonoma, natural wine tastings' },
-        { value: 'Competitive tennis matches', confidence: 0.92, source: 'instagram', snippet: 'Saturday morning rallies at Golden Gate Park courts' },
-        { value: 'Classic French culinary feasts', confidence: 0.91, source: 'instagram', snippet: '6-hour simmered French onion soup with toasted gruyère' },
-      ],
-      interests: [
-        { value: 'International climate diplomacy and environmental justice', confidence: 0.96, source: 'linkedin', snippet: 'General Counsel guiding international carbon frameworks' },
-        { value: 'Old-world viniculture & terroir', confidence: 0.9, source: 'instagram', snippet: 'Sonoma and Loire Valley heritage winemaking' },
-      ],
-      values: [
-        { value: 'Justice, fairness, and systemic stewardship', confidence: 0.94, source: 'linkedin', snippet: 'Devoting legal career to global climate governance' },
-        { value: 'Joy de vivre and sharing good tables with loved ones', confidence: 0.92, source: 'instagram', snippet: 'French heritage celebrating lingering meals and laughter' },
-      ],
-      communication_style: { value: 'Sharp, elegant, witty, and deeply engaging', confidence: 0.93, source: 'cross-source', snippet: 'Lawyerly precision seasoned with Gallic warmth' },
-      lifestyle: { value: 'International treaty calls during the week, vineyard dust and tennis matches on weekends', confidence: 0.94, source: 'cross-source', snippet: 'SF foundation legal work meets Sonoma country weekends' },
-      ambitions: { value: 'Driving multi-billion dollar treaty commitments for global ecological protection', confidence: 0.91, source: 'linkedin', snippet: 'General Counsel leading climate governance' },
-      deal_breakers: ['Passive lack of ambition', 'Rudeness to service workers', 'Intellectual complacency'],
-      conversation_hooks: ['The one natural wine bottle that made her fall in love with viticulture', 'Her favorite hidden court in San Francisco'],
-    },
-  },
-  {
-    id: 'person_10',
-    name: 'Kofi Mensah',
-    age: 33,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Deep lifelong partnership with laughter, exploration, and family',
-    linkedin_url: 'https://www.linkedin.com/in/kofi-mensah-fintech',
-    instagram_url: 'https://www.instagram.com/kofi.aroundthebay/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:45:00Z',
-    created_at: '2026-09-20T10:45:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'VP of Engineering at Plaid | Distributed Financial Infrastructure',
-        about: 'Building resilient API rails connecting millions of consumers to financial freedom. Previously Google. Carnegie Mellon Computer Science alum.',
-        positions: [
-          { role: 'VP of Engineering', company: 'Plaid', duration: '2021 - Present', description: 'Scaling core transactions engine and bank connector reliability.' },
+      "instagram": {
+        "bio": "Accessibility first · Designer & Architect · Matcha explorer & architectural photography · NYC 🍵🏛️",
+        "postsCount": 420,
+        "followersCount": 22000,
+        "captions": [
+          "Morning walk through SoHo studying cast-iron facades and early autumn light 🏛️🍂",
+          "Whisking ceremonial grade Uji matcha at home. A quiet moment before leading design reviews 🍵✨",
+          "Good design is not decorative; it is the bridge between human dignity and digital tools 💡🤍"
         ],
-        skills: ['Distributed Systems', 'Engineering Leadership', 'Go', 'Infrastructure', 'Mentorship'],
-        education: [{ school: 'Carnegie Mellon University', degree: 'B.S. in Computer Science' }],
-      },
-      instagram: {
-        bio: 'SF enthusiast 🌉 · distance swimmer 🏊‍♂️ · jazz saxophone 🎷 · West African street food popups · mentor',
-        postsCount: 195,
-        followersCount: 2400,
-        captions: [
-          'Alcatraz to Aquatic Park swim completed this morning! Cold Bay water wakes up the soul 🏊‍♂️🌊',
-          'Testing Jollof rice recipes for our monthly community dinner. Smoky fire pit technique won 🍚🔥',
-          'Tenor saxophone jam session with friends in the Fillmore district. Music heals 🎷✨',
+        "hashtags": [
+          "#accessibility",
+          "#architecturelovers",
+          "#matcharitual",
+          "#designmatters"
         ],
-        hashtags: ['#aquaticpark', '#openwaterswim', '#jollofrice', '#fillmorejazz'],
-        locations: ['Aquatic Park Cove SF', 'The Fillmore, SF', 'Plaid HQ San Francisco'],
+        "locations": [
+          "SoHo, New York",
+          "West Village, NYC",
+          "SVA NYC"
+        ]
       },
-      self_declared: {
-        gender: 'man',
-        seeking: 'woman',
-        age_range: '28-36',
-        city: 'San Francisco, CA',
-        relationship_goal: 'Life partner to build a home and raise children together',
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "New York, NY",
+        "relationship_goal": "Compassionate partnership with someone who loves deep talks, walks, and building things of lasting beauty"
+      }
+    },
+    "analysis": {
+      "summary": "Cat is a pioneer in digital accessibility and design leadership, combining deep moral conviction with architectural photography, matcha rituals, and empathetic connection.",
+      "needs": [
+        {
+          "value": "Deep emotional empathy and social conscientiousness",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Dedicated career to universal software accessibility at Stark"
+        },
+        {
+          "value": "Visual and architectural appreciation in daily life",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Studying cast-iron facades and urban architecture"
+        },
+        {
+          "value": "Calm, intentional home environment",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Quiet ceremonial matcha whisking rituals"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Architectural photography in NYC neighborhoods",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "SoHo cast-iron facade and morning light photography"
+        },
+        {
+          "value": "Ceremonial matcha preparation and tea ceremonies",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Whisking ceremonial grade Uji matcha at home"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Inclusive design systems and cognitive ergonomics",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Building industry standard accessibility suite at Stark"
+        },
+        {
+          "value": "Urban history and historic restoration",
+          "confidence": 0.88,
+          "source": "instagram",
+          "snippet": "Historic building preservation and human-scale architecture"
+        }
+      ],
+      "values": [
+        {
+          "value": "Human dignity as the core of technology",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Design as a bridge between human dignity and digital tools"
+        },
+        {
+          "value": "Integrity and deliberate living",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Quiet intentional mornings and focused work ethics"
+        }
+      ],
+      "communication_style": {
+        "value": "Poetic, direct, warm, and deeply principled",
+        "confidence": 0.93,
+        "source": "linkedin",
+        "snippet": "Authoritative keynote presentations and thoughtful design essays"
       },
-    },
-    analysis: {
-      summary: 'Kofi is a VP of Engineering at Plaid who balances leading mission-critical financial systems with open-water swimming across the SF Bay, tenor saxophone jams, and hosting African dinners.',
-      needs: [
-        { value: 'Warm emotional maturity and family orientation', confidence: 0.94, source: 'cross-source', snippet: 'Community leadership, dinner hosting, clear relationship intentions' },
-        { value: 'Intellectual depth and respect for drive', confidence: 0.93, source: 'linkedin', snippet: 'CMU CS graduate, VP of Engineering at Plaid' },
-        { value: 'Spontaneity and love for culture and music', confidence: 0.9, source: 'instagram', snippet: 'Live jazz jams in the Fillmore, open water adventures' },
-      ],
-      hobbies: [
-        { value: 'Open-water cold Bay swimming', confidence: 0.96, source: 'instagram', snippet: 'Alcatraz to Aquatic Park swim completed' },
-        { value: 'Tenor saxophone jazz improvisation', confidence: 0.94, source: 'instagram', snippet: 'Jamming in the historic Fillmore jazz district' },
-        { value: 'Cooking authentic West African cuisine (Jollof & Suya)', confidence: 0.92, source: 'instagram', snippet: 'Smoky fire pit Jollof dinners for community' },
-      ],
-      interests: [
-        { value: 'Financial democratization & distributed infrastructure', confidence: 0.96, source: 'linkedin', snippet: 'Core transaction engine and financial API access at Plaid' },
-        { value: 'African diaspora jazz history and culinary traditions', confidence: 0.91, source: 'instagram', snippet: 'Fillmore jazz roots and West African heritage cooking' },
-      ],
-      values: [
-        { value: 'Mentorship and lifting others as you climb', confidence: 0.95, source: 'cross-source', snippet: 'Active engineering mentor + community dinner organizer' },
-        { value: 'Courage, vitality, and inner discipline', confidence: 0.93, source: 'instagram', snippet: 'Diving into cold SF Bay waters at dawn' },
-      ],
-      communication_style: { value: 'Generous, reassuring, charismatic, and grounded', confidence: 0.93, source: 'cross-source', snippet: 'Executive leadership clarity paired with hearty laughter' },
-      lifestyle: { value: 'High-responsibility tech leadership balanced by physical Bay swimming and soulful music', confidence: 0.95, source: 'cross-source', snippet: 'From Plaid architecture reviews to Aquatic Park waters and saxophone nights' },
-      ambitions: { value: 'Fostering tech ecosystem leaders across the continent of Africa while building a family', confidence: 0.9, source: 'linkedin', snippet: 'Mentoring underrepresented founders and scaling resilient systems' },
-      deal_breakers: ['Cold emotional detachment', 'Inauthenticity', 'Disregard for community'],
-      conversation_hooks: ['What it feels like swimming past Alcatraz in 55-degree water', 'The secret to truly transcendent smoky Jollof rice'],
-    },
-  },
-  // People 11 through 25
-  {
-    id: 'person_11',
-    name: 'Chloe Takahashi',
-    age: 26,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Meaningful long-term connection with mutual support',
-    linkedin_url: 'https://www.linkedin.com/in/chloe-takahashi-vr',
-    instagram_url: 'https://www.instagram.com/chloe.creates.art/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:50:00Z',
-    created_at: '2026-09-20T10:50:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Creative Technologist at Media.Monks | Spatial Computing & Shaders',
-        about: 'Creating interactive WebGL installations, AR museum exhibits, and generative shaders. NYU ITP graduate.',
-        positions: [{ role: 'Creative Technologist', company: 'Media.Monks', duration: '2022 - Present', description: 'Interactive spatial graphics and procedural art.' }],
-        skills: ['Three.js', 'GLSL', 'Creative Coding', 'Spatial Computing', 'Interactive Design'],
-        education: [{ school: 'NYU Tisch School of the Arts (ITP)', degree: 'M.P.S. in Interactive Telecommunications' }],
+      "lifestyle": {
+        "value": "Mission-driven company leadership paired with peaceful walking and cultural immersion",
+        "confidence": 0.91,
+        "source": "cross-source",
+        "snippet": "Leading Stark team while nurturing daily artistic rituals"
       },
-      instagram: {
-        bio: 'Generative art · tea ceremonies 🍵 · vintage Japanese fashion · Lower East Side explorations',
-        postsCount: 155,
-        followersCount: 3100,
-        captions: ['Projection mapping test at Brooklyn Navy Yard warehouse ✨🖥️', 'Matcha whisking meditation before coding shaders 🍵', 'DUMBO walk at dusk catching ferry ripples ⛴️🌊'],
-        hashtags: ['#generativeart', '#threejs', '#matchaceremony', '#dumbo'],
-        locations: ['Brooklyn Navy Yard', 'Lower East Side, NYC', 'DUMBO Brooklyn'],
+      "ambitions": {
+        "value": "Making the entire digital world inherently accessible while building a warm, loving home",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Universal accessibility advocacy and personal wellness"
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '25-33', city: 'New York, NY', relationship_goal: 'Committed relationship' },
-    },
-    analysis: {
-      summary: 'Chloe is an NYU ITP-trained creative technologist blending mathematical GLSL shaders with contemplative Japanese tea rituals and Brooklyn warehouse installations.',
-      needs: [
-        { value: 'Creative and artistic empathy', confidence: 0.95, source: 'linkedin', snippet: 'NYU ITP master, creative technologist at Media.Monks' },
-        { value: 'Calm, contemplative emotional presence', confidence: 0.91, source: 'instagram', snippet: 'Daily matcha whisking meditation rituals' },
-        { value: 'Shared love for underground culture and art', confidence: 0.89, source: 'instagram', snippet: 'Projection mapping warehouse exhibits in Brooklyn' },
+      "deal_breakers": [
+        "Lack of empathy for marginalized communities",
+        "Cynical apathy",
+        "Chaotic living spaces"
       ],
-      hobbies: [
-        { value: 'Traditional Japanese tea ceremony (Chado)', confidence: 0.95, source: 'instagram', snippet: 'Matcha whisking meditation before coding' },
-        { value: 'Generative coding & live visuals', confidence: 0.94, source: 'linkedin', snippet: 'WebGL installations, Three.js shaders' },
-        { value: 'Hunting vintage Japanese textiles in LES', confidence: 0.88, source: 'instagram', snippet: 'Vintage fashion and Lower East Side gallery walks' },
-      ],
-      interests: [
-        { value: 'Spatial computing and procedural aesthetics', confidence: 0.96, source: 'linkedin', snippet: 'GLSL shaders, generative art exhibits' },
-        { value: 'Aesthetic philosophy and wabi-sabi', confidence: 0.9, source: 'cross-source', snippet: 'Balancing digital pixels with organic tea rituals' },
-      ],
-      values: [
-        { value: 'Harmony between ancient rituals and futuristic craft', confidence: 0.94, source: 'cross-source', snippet: 'Tradition meets cutting-edge spatial tech' },
-        { value: 'Quiet focus and emotional authenticity', confidence: 0.89, source: 'instagram', snippet: 'Finding serenity amidst fast-paced New York' },
-      ],
-      communication_style: { value: 'Gentle, intuitive, playful, and observant', confidence: 0.9, source: 'instagram', snippet: 'Poetic captions and thoughtful expressions' },
-      lifestyle: { value: 'Creative coding sprints, warehouse art exhibits, peaceful tea mornings', confidence: 0.92, source: 'cross-source', snippet: 'DUMBO and Brooklyn studios by day, peaceful LES evenings' },
-      ambitions: { value: 'Directing large-scale public art installations worldwide', confidence: 0.88, source: 'linkedin', snippet: 'Interactive spatial graphics and museum exhibits' },
-      deal_breakers: ['Loud aggressive behavior', 'Disrespect for quiet moments', 'Narrow materialism'],
-      conversation_hooks: ['How math and GLSL shaders turn into emotional art', 'Her favorite tea house in NYC'],
-    },
-  },
-  {
-    id: 'person_12',
-    name: 'Mateo Morales',
-    age: 29,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Long-term partnership with creativity, trust, and shared values',
-    linkedin_url: 'https://www.linkedin.com/in/mateo-morales-chef',
-    instagram_url: 'https://www.instagram.com/mateo.cooks.ny/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T10:55:00Z',
-    created_at: '2026-09-20T10:55:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Culinary Director at Wildflower Hospitality | Sustainable Gastronomy',
-        about: 'Spearheading zero-waste restaurant concepts and heirloom grain preservation. Culinary Institute of America graduate.',
-        positions: [{ role: 'Culinary Director', company: 'Wildflower Hospitality', duration: '2021 - Present', description: 'Developing seasonal farm-to-table menus and sourcing partnerships.' }],
-        skills: ['Menu Development', 'Farm-to-Table', 'Hospitality Management', 'Zero-Waste Kitchens', 'Culinary Operations'],
-        education: [{ school: 'Culinary Institute of America (CIA)', degree: 'B.P.S. in Culinary Arts Management' }],
-      },
-      instagram: {
-        bio: 'Cook by trade 🍳 · upstate foraging trips 🍄 · vinyl bossa nova · cycling the West Side highway 🚴‍♂️',
-        postsCount: 180,
-        followersCount: 4200,
-        captions: ['Foraged morel mushrooms in the Hudson Valley today! Earthy perfection 🍄🌲', 'Handmade tortellini in brodo for Sunday staff meal. Simplicity is everything 🥟🍲', 'Sunset ride down Hudson River Park after a 12-hour kitchen push 🌅🚴‍♂️'],
-        hashtags: ['#farmtotable', '#hudsonvalley', '#tortellini', '#westsidehighway'],
-        locations: ['Hudson Valley, NY', 'West Village Restaurant NYC', 'Hudson River Park'],
-      },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '25-33', city: 'New York, NY', relationship_goal: 'Deep committed partnership' },
-    },
-    analysis: {
-      summary: 'Mateo is a CIA-trained Culinary Director in New York pioneering zero-waste farm-to-table gastronomy, spending days off foraging morels upstate and cycling Hudson River Park.',
-      needs: [
-        { value: 'Passion for honest food and shared tables', confidence: 0.96, source: 'linkedin', snippet: 'Culinary Director, CIA graduate, sustainable gastronomy' },
-        { value: 'Warm emotional reciprocity and patience', confidence: 0.91, source: 'cross-source', snippet: 'Dedicated hospitality mindset that cares deeply for people' },
-        { value: 'Outdoor curiosity and weekend escapes', confidence: 0.9, source: 'instagram', snippet: 'Foraging trips in the Hudson Valley, cycling West Side highway' },
-      ],
-      hobbies: [
-        { value: 'Wild mushroom and herb foraging in the Hudson Valley', confidence: 0.96, source: 'instagram', snippet: 'Foraged morel mushrooms in Hudson Valley' },
-        { value: 'Handmade fresh pasta crafting', confidence: 0.93, source: 'instagram', snippet: 'Tortellini in brodo handmade from scratch' },
-        { value: 'Sunset cycling along the Hudson River', confidence: 0.89, source: 'instagram', snippet: 'West Side highway cycling after kitchen shifts' },
-      ],
-      interests: [
-        { value: 'Zero-waste culinary systems and regenerative farming', confidence: 0.95, source: 'linkedin', snippet: 'Heirloom grain preservation and farm-to-table menus' },
-        { value: 'Bossa nova jazz and acoustic music', confidence: 0.88, source: 'instagram', snippet: 'Vinyl bossa nova listening during prep' },
-      ],
-      values: [
-        { value: 'Nourishment, care, and generous hospitality', confidence: 0.95, source: 'cross-source', snippet: 'Creating warmth and joy for people through culinary art' },
-        { value: 'Respect for nature and sustainable sourcing', confidence: 0.92, source: 'linkedin', snippet: 'Pioneering zero-waste commercial kitchens' },
-      ],
-      communication_style: { value: 'Warm, expressive, unpretentious, and humorous', confidence: 0.92, source: 'cross-source', snippet: 'Down-to-earth kitchen leadership and heartfelt captions' },
-      lifestyle: { value: 'Intense kitchen rhythm balanced by serene upstate forest foraging and bike rides', confidence: 0.94, source: 'cross-source', snippet: 'West Village dining rooms to quiet Hudson trails' },
-      ambitions: { value: 'Opening an agrarian farm-restaurant educational retreat upstate', confidence: 0.9, source: 'linkedin', snippet: 'Culinary Director advancing sustainable gastronomy' },
-      deal_breakers: ['Pickiness with food and unwillingness to taste', 'Disrespectful attitude', 'Snobbery'],
-      conversation_hooks: ['How to safely identify wild morel mushrooms in the forest', 'The one pasta dough technique that changes everything'],
-    },
+      "conversation_hooks": [
+        "Her favorite cast-iron building in SoHo",
+        "How tea rituals cultivate clarity in high-pressure leadership"
+      ]
+    }
   },
   {
-    id: 'person_13',
-    name: 'Siddharth Patel',
-    age: 32,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Lifelong partner with mutual dreams and intellectual depth',
-    linkedin_url: 'https://www.linkedin.com/in/sid-patel-health',
-    instagram_url: 'https://www.instagram.com/sid.climbs.rocks/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:00:00Z',
-    created_at: '2026-09-20T11:00:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Co-Founder & CEO at VitalPath | Preventive Healthcare AI',
-        about: 'Building AI tools for early cardiovascular detection. MD/PhD from Johns Hopkins. Passionate about health equity and preventative longevity.',
-        positions: [{ role: 'Co-Founder & CEO', company: 'VitalPath', duration: '2021 - Present', description: 'Leading clinical trials and FDA-cleared diagnostic algorithms.' }],
-        skills: ['Cardiology', 'Clinical Research', 'Biomedical AI', 'FDA Strategy', 'Healthcare Leadership'],
-        education: [{ school: 'Johns Hopkins University School of Medicine', degree: 'MD / PhD in Biomedical Engineering' }],
+    "id": "person_06",
+    "name": "Brian Chesky",
+    "age": 43,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Meaningful, lasting partnership centered on shared adventures, design, and authenticity",
+    "linkedin_url": "https://www.linkedin.com/in/brianchesky/",
+    "instagram_url": "https://www.instagram.com/brianchesky/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Airbnb | Industrial Designer",
+        "about": "Co-founder and CEO of Airbnb. Passionate about design, hospitality, and creating belonging anywhere in the world. RISD Industrial Design graduate.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Airbnb",
+            "duration": "2008 - Present",
+            "description": "Leading global travel marketplace operating in 220+ countries."
+          }
+        ],
+        "skills": [
+          "Design Leadership",
+          "Product Vision",
+          "Global Strategy",
+          "Brand Architecture",
+          "Hospitality Design"
+        ],
+        "education": [
+          {
+            "school": "Rhode Island School of Design (RISD)",
+            "degree": "BFA in Industrial Design"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Bouldering & trad climbing 🧗‍♂️ · Yosemite weekends · indie podcasts · Golden Gate sunsets 🌅',
-        postsCount: 160,
-        followersCount: 1850,
-        captions: ['Topping out on Cathedral Peak in Tuolumne Meadows! Unreal granite 🏔️🧗‍♂️', 'Saturday morning chess in Buena Vista park with a flat white ♟️☕', 'Cooking Gujarati dal with grandmother recipe cards. Comfort food hits home 🍲✨'],
-        hashtags: ['#yosemiteclimbing', '#tuolumne', '#chessandcoffee', '#gujaratifood'],
-        locations: ['Yosemite National Park', 'Buena Vista Park SF', 'Mission District SF'],
+      "instagram": {
+        "bio": "Designer · Co-founder & CEO at Airbnb · Passionate about architecture, hospitality, and design 🏡✨",
+        "postsCount": 520,
+        "followersCount": 540000,
+        "captions": [
+          "Golden hour sketches of mid-century architectural pavilions. Designing spaces that bring people together 🏛️✍️",
+          "Morning run up the hills of San Francisco with my golden retriever. Best city in the world when the sun breaks through 🐕🌉",
+          "Hosted guests at my home this weekend. Hospitality begins with listening and welcoming someone into your story 🗝️🤍"
+        ],
+        "hashtags": [
+          "#airbnbdesign",
+          "#hospitality",
+          "#sanfrancisco",
+          "#architecturedesign"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "RISD Providence",
+          "Big Sur, CA"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '27-35', city: 'San Francisco, CA', relationship_goal: 'Marriage and children' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Genuine, grounded companionship with an adventurous and kind-hearted partner"
+      }
     },
-    analysis: {
-      summary: 'Siddharth is an MD/PhD CEO pioneering AI cardiovascular detection who recharges on Yosemite granite pitches and weekend chess in Buena Vista Park.',
-      needs: [
-        { value: 'Intellectual curiosity and drive to impact humanity', confidence: 0.95, source: 'linkedin', snippet: 'Johns Hopkins MD/PhD, founder of healthcare AI startup' },
-        { value: 'Outdoor vigor and trust-based adventure', confidence: 0.92, source: 'instagram', snippet: 'Trad climbing Cathedral Peak in Yosemite' },
-        { value: 'Grounded family warmth and cultural roots', confidence: 0.9, source: 'instagram', snippet: 'Cooking grandmother Gujarati dal recipes' },
+    "analysis": {
+      "summary": "Brian is an iconic design-led founder and CEO who views hospitality and architecture through the lens of human connection, paired with fitness, dog walks, and mid-century sketching.",
+      "needs": [
+        {
+          "value": "Authentic warmth without celebrity pretension",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Hosting travelers in his own home and seeking genuine human connection"
+        },
+        {
+          "value": "Shared passion for travel, architecture, and aesthetics",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Mid-century sketches and architectural travel exploration"
+        },
+        {
+          "value": "Dog lover and active outdoor partner",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Morning hill runs with golden retriever across SF"
+        }
       ],
-      hobbies: [
-        { value: 'Traditional granite rock climbing & bouldering', confidence: 0.96, source: 'instagram', snippet: 'Cathedral Peak Tuolumne Meadows top out' },
-        { value: 'Park chess and specialty coffee', confidence: 0.91, source: 'instagram', snippet: 'Buena Vista park chess with a flat white' },
-        { value: 'Authentic Indian regional cooking', confidence: 0.9, source: 'instagram', snippet: 'Heritage Gujarati dal recipes' },
+      "hobbies": [
+        {
+          "value": "Architectural sketching and industrial model drawing",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Golden hour sketches of mid-century architectural pavilions"
+        },
+        {
+          "value": "Hill running and functional fitness",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Morning runs up the hills of San Francisco"
+        },
+        {
+          "value": "Mid-century modern furniture collecting",
+          "confidence": 0.89,
+          "source": "linkedin",
+          "snippet": "RISD Industrial design foundation"
+        }
       ],
-      interests: [
-        { value: 'Cardiovascular longevity and preventative diagnostics', confidence: 0.96, source: 'linkedin', snippet: 'FDA-cleared algorithms for early detection' },
-        { value: 'Alpine wilderness conservation', confidence: 0.89, source: 'instagram', snippet: 'Sierra Nevada and Yosemite environmental stewardship' },
+      "interests": [
+        {
+          "value": "Hospitality design and community psychology",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Creating belonging anywhere in 220+ countries"
+        },
+        {
+          "value": "Art school history and physical manufacturing",
+          "confidence": 0.9,
+          "source": "linkedin",
+          "snippet": "RISD alumni network and industrial design craftsmanship"
+        }
       ],
-      values: [
-        { value: 'Service to human health and health equity', confidence: 0.95, source: 'linkedin', snippet: 'Devoting clinical and engineering expertise to save lives' },
-        { value: 'Focus, composure under pressure, and mutual trust', confidence: 0.93, source: 'cross-source', snippet: 'Lead climbing high granite routes + managing clinical trials' },
+      "values": [
+        {
+          "value": "Human connection and belonging as life purpose",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Core mission of building belonging anywhere in the world"
+        },
+        {
+          "value": "Craft and taste over institutional bureaucratization",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Design-led management and personal attention to UI and host craft"
+        }
       ],
-      communication_style: { value: 'Composed, articulate, warm, and deeply thoughtful', confidence: 0.92, source: 'cross-source', snippet: 'Doctor empathy combined with founder energy' },
-      lifestyle: { value: 'High-intensity clinical/startup weekdays, rugged Sierra granite on weekends', confidence: 0.94, source: 'cross-source', snippet: 'Clinical labs in SF to Tuolumne granite routes' },
-      ambitions: { value: 'Preventing 1 million premature cardiac events through accessible diagnostics', confidence: 0.93, source: 'linkedin', snippet: 'VitalPath early detection mission' },
-      deal_breakers: ['Lack of empathy', 'Flakiness or unreliability', 'Dismissiveness toward family'],
-      conversation_hooks: ['The mental discipline needed when lead climbing in Yosemite', 'Why preventative health is changing so rapidly'],
-    },
+      "communication_style": {
+        "value": "Story-driven, reflective, energetic, and candid",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Personal storytelling style in shareholder letters and design reviews"
+      },
+      "lifestyle": {
+        "value": "Global leadership grounded by dog walks, sketching, and hosting rituals",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Leading global company while personally welcoming guests and sketching"
+      },
+      "ambitions": {
+        "value": "Transforming global travel into meaningful connection while finding enduring personal love",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Pioneering community-first travel while seeking an authentic life partner"
+      },
+      "deal_breakers": [
+        "Superficial materialism",
+        "Aloofness towards strangers",
+        "Dislike of dogs"
+      ],
+      "conversation_hooks": [
+        "His first week at RISD",
+        "The most unusual architecture he stayed at in Big Sur"
+      ]
+    }
   },
   {
-    id: 'person_14',
-    name: 'Nadia Volkova',
-    age: 28,
-    city: 'Seattle, WA',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'True life partner to build an adventurous, grounded future',
-    linkedin_url: 'https://www.linkedin.com/in/nadia-volkova-robotics',
-    instagram_url: 'https://www.instagram.com/nadia.explores.pnw/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:05:00Z',
-    created_at: '2026-09-20T11:05:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Senior Robotics Perception Engineer at Amazon Robotics | Computer Vision',
-        about: 'Building autonomous navigation and 3D perception algorithms for mobile warehouse robots. Carnegie Mellon Robotics Institute MS.',
-        positions: [{ role: 'Senior Robotics Engineer', company: 'Amazon Robotics', duration: '2021 - Present', description: 'SLAM systems and real-time point cloud segmentation.' }],
-        skills: ['Robotics', 'ROS 2', 'Computer Vision', 'C++', 'SLAM', 'Point Clouds'],
-        education: [{ school: 'Carnegie Mellon University', degree: 'M.S. in Robotic Systems Development' }],
+    "id": "person_07",
+    "name": "Grace Beverley",
+    "age": 27,
+    "city": "London, UK",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Equitable partnership with shared ambition, humor, and work-life intentionality",
+    "linkedin_url": "https://www.linkedin.com/in/grace-beverley-227749132/",
+    "instagram_url": "https://www.instagram.com/gracebeverley/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at TALA & Shreddy | Author & Podcaster",
+        "about": "Founder of sustainable activewear brand TALA and fitness tech app Shreddy. Sunday Times bestselling author of \"Working Hard, Hardly Working\". Oxford University graduate in Music.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "TALA",
+            "duration": "2019 - Present",
+            "description": "Disrupting fast-fashion with ethically produced, high-performance activewear."
+          },
+          {
+            "role": "Founder & CEO",
+            "company": "Shreddy",
+            "duration": "2019 - Present",
+            "description": "Fitness app delivering guided strength training and community workouts."
+          }
+        ],
+        "skills": [
+          "Sustainable Retail",
+          "Brand Growth",
+          "Product Strategy",
+          "Media Production",
+          "Fitness Tech"
+        ],
+        "education": [
+          {
+            "school": "University of Oxford",
+            "degree": "BA in Music"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Robotics engineer 🤖 · sea kayaking Puget Sound 🛶 · sourdough enthusiast 🍞 · snowy mountain hikes 🏔️',
-        postsCount: 150,
-        followersCount: 1720,
-        captions: ['Sea kayaking alongside orca pods in the San Juan Islands 🌊🐋', 'Crisp winter morning snowshoeing around Artist Point ❄️🏔️', 'Fresh country loaf with 48h cold fermentation. Open crumb victory 🥖✨'],
-        hashtags: ['#sanjuanislands', '#seakayaking', '#bakerartistpoint', '#sourdoughbaking'],
-        locations: ['San Juan Islands, WA', 'Mt Baker Artist Point', 'Seattle Waterfront'],
+      "instagram": {
+        "bio": "Sustainable activewear founder · Podcaster & Author · Oxford grad · Pilates & matcha lover · London 🏋️‍♀️☕",
+        "postsCount": 1680,
+        "followersCount": 1100000,
+        "captions": [
+          "Saturday morning reformer pilates session followed by oat flat whites in Marylebone 🧘‍♀️☕",
+          "Designing the autumn sustainable collection. Upcycled textiles and high-support fits 👗🌿",
+          "Recording season 5 of the podcast. Honest discussions on productivity, rest, and avoiding burnout 🎙️✨"
+        ],
+        "hashtags": [
+          "#wearetala",
+          "#pilateslovers",
+          "#productivityhabits",
+          "#londonlife"
+        ],
+        "locations": [
+          "Marylebone, London",
+          "Soho Farmhouse",
+          "Oxford, UK"
+        ]
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '27-35', city: 'Seattle, WA', relationship_goal: 'Long-term partnership' },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "London, UK",
+        "relationship_goal": "Equal partnership with mutual emotional intelligence and grounded humor"
+      }
     },
-    analysis: {
-      summary: 'Nadia is an autonomous robotics perception engineer at Amazon who seeks Puget Sound sea kayaking adventures with orcas and bakes artisan sourdough loaves on rainy Seattle mornings.',
-      needs: [
-        { value: 'Love for maritime and mountain wilderness', confidence: 0.95, source: 'instagram', snippet: 'Sea kayaking with orcas, snowshoeing at Mt Baker' },
-        { value: 'Intellectual depth and technical curiosity', confidence: 0.93, source: 'linkedin', snippet: 'CMU Robotics MS, autonomous perception engineer' },
-        { value: 'Warm, collaborative team spirit in everyday life', confidence: 0.89, source: 'cross-source', snippet: 'Systems problem solving + patient fermentation baking' },
+    "analysis": {
+      "summary": "Grace is a leading British direct-to-consumer entrepreneur and author who balances dual venture leadership with reformer pilates, classical music training, and work-life balance advocacy.",
+      "needs": [
+        {
+          "value": "Respect for female entrepreneurship and demanding executive schedules",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Dual venture CEO building TALA and Shreddy"
+        },
+        {
+          "value": "Healthy physical wellness and active lifestyle",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Daily reformer pilates and functional fitness workouts"
+        },
+        {
+          "value": "Vulnerability and honest conversations around rest",
+          "confidence": 0.91,
+          "source": "cross-source",
+          "snippet": "Author of Working Hard Hardly Working on anti-burnout principles"
+        }
       ],
-      hobbies: [
-        { value: 'Puget Sound sea kayaking & orca watching', confidence: 0.96, source: 'instagram', snippet: 'Kayaking in San Juan Islands beside orcas' },
-        { value: 'Winter snowshoeing and alpine trekking', confidence: 0.92, source: 'instagram', snippet: 'Snowshoeing around Artist Point at Mt Baker' },
-        { value: 'Artisan sourdough baking with long cold fermentation', confidence: 0.9, source: 'instagram', snippet: '48h cold fermentation country loaf with open crumb' },
+      "hobbies": [
+        {
+          "value": "Reformer pilates and strength training",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Saturday morning reformer pilates in Marylebone"
+        },
+        {
+          "value": "Classical music and piano playing",
+          "confidence": 0.89,
+          "source": "linkedin",
+          "snippet": "Oxford University Music degree background"
+        },
+        {
+          "value": "Podcast interviewing on business and lifestyle",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Recording season 5 of the podcast on productivity and rest"
+        }
       ],
-      interests: [
-        { value: 'Autonomous 3D spatial intelligence and SLAM', confidence: 0.96, source: 'linkedin', snippet: 'Real-time point cloud segmentation at Amazon Robotics' },
-        { value: 'Marine ecosystem conservation in Washington waters', confidence: 0.88, source: 'instagram', snippet: 'San Juan Island marine wildlife preservation' },
+      "interests": [
+        {
+          "value": "Circular fashion and sustainable textile manufacturing",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Upcycled performance activewear at TALA"
+        },
+        {
+          "value": "Independent London cafes and country weekend retreats",
+          "confidence": 0.88,
+          "source": "instagram",
+          "snippet": "Marylebone coffee and Soho Farmhouse escapes"
+        }
       ],
-      values: [
-        { value: 'Curiosity, grit, and hands-on capability', confidence: 0.94, source: 'cross-source', snippet: 'Robotics hardware integration + harsh weather outdoor trekking' },
-        { value: 'Patient craftsmanship and domestic comfort', confidence: 0.9, source: 'instagram', snippet: 'Dedicated 48h sourdough baking rituals' },
+      "values": [
+        {
+          "value": "Sustainability without greenwashing",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Transparent supply chains and verified ethical production"
+        },
+        {
+          "value": "Productivity grounded in intentional rest",
+          "confidence": 0.93,
+          "source": "cross-source",
+          "snippet": "Championing anti-burnout workplace culture"
+        }
       ],
-      communication_style: { value: 'Direct, bright, curious, and cheerful', confidence: 0.91, source: 'cross-source', snippet: 'Robotics precision combined with enthusiastic outdoor joy' },
-      lifestyle: { value: 'High-tech robotics engineering during the week, sea water and mountain snow on weekends', confidence: 0.94, source: 'cross-source', snippet: 'Bellevue robotics lab to San Juan waters' },
-      ambitions: { value: 'Pioneering humanoid robotic perception for search and rescue operations', confidence: 0.88, source: 'linkedin', snippet: 'Advancing real-time spatial vision algorithms' },
-      deal_breakers: ['Complaining about getting outdoors in winter', 'Condescension', 'Laziness'],
-      conversation_hooks: ['The magic of paddling alongside an orca pod in the San Juans', 'How robots actually perceive 3D space in real time'],
-    },
+      "communication_style": {
+        "value": "Fast-paced, articulate, funny, and transparent",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Bestselling author and energetic podcast interviewer"
+      },
+      "lifestyle": {
+        "value": "High-speed retail leadership balanced by weekend countryside retreats and pilates",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Managing headquarters while taking screen breaks in the Cotswolds"
+      },
+      "ambitions": {
+        "value": "Redefining fashion sustainability globally while cultivating meaningful personal happiness",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Scaling TALA internationally while maintaining health and relationships"
+      },
+      "deal_breakers": [
+        "Condescending attitudes towards businesswomen",
+        "Obsessive workaholism without boundaries",
+        "Smoking"
+      ],
+      "conversation_hooks": [
+        "Her Oxford music thesis",
+        "The reality of sustainable activewear supply chains in Europe"
+      ]
+    }
   },
   {
-    id: 'person_15',
-    name: 'Tariq Benali',
-    age: 34,
-    city: 'Boston, MA',
-    avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner to build a loving family, share ideas, and travel',
-    linkedin_url: 'https://www.linkedin.com/in/tariq-benali-neuro',
-    instagram_url: 'https://www.instagram.com/tariq.in.cambridge/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:10:00Z',
-    created_at: '2026-09-20T11:10:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Associate Professor of Neuroscience at Harvard University',
-        about: 'Investigating neural mechanisms of memory consolidation and plasticity. Oxford PhD, Harvard Junior Fellow. Author of scientific monographs.',
-        positions: [{ role: 'Associate Professor', company: 'Harvard University', duration: '2019 - Present', description: 'Principal Investigator running the Neural Plasticity Laboratory.' }],
-        skills: ['Neuroscience', 'Electrophysiology', 'Scientific Writing', 'Mentorship', 'Grant Writing'],
-        education: [{ school: 'University of Oxford', degree: 'DPhil in Neuroscience' }],
+    "id": "person_08",
+    "name": "Guillermo Rauch",
+    "age": 34,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Long-term partnership with a kind, curious, and creative woman",
+    "linkedin_url": "https://www.linkedin.com/in/rauchg/",
+    "instagram_url": "https://www.instagram.com/rauchg/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at Vercel | Creator of Next.js & Socket.io",
+        "about": "Founder and CEO of Vercel. Creator of Next.js and open source developer tools empowering millions of web developers. Dedicated to making the web faster and more collaborative.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Vercel",
+            "duration": "2015 - Present",
+            "description": "Building the Frontend Cloud platform powering the modern web."
+          }
+        ],
+        "skills": [
+          "Web Architecture",
+          "Developer Experience",
+          "Open Source",
+          "Distributed Systems",
+          "Frontend Innovation"
+        ],
+        "education": [
+          {
+            "school": "Self-taught Engineer",
+            "degree": "Open Source Systems Pioneer"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Cambridge MA 🏛️ · sailing Charles River ⛵ · rare book collector · Moroccan mint tea & chess ♟️',
-        postsCount: 170,
-        followersCount: 2200,
-        captions: ['Wind catching the jib on the Charles River as sunset hits the Boston skyline ⛵🌇', 'Discovered a 19th-century Arabic astronomical atlas in an antiquarian stall 📚✨', 'Fresh mint and orange blossom water tea ceremony with visiting family 🍵🌿'],
-        hashtags: ['#charlesriver', '#bostonsailing', '#rarebooks', '#harvardfaculty'],
-        locations: ['Community Boating Charles River', 'Harvard Yard Cambridge', 'Beacon Hill Boston'],
+      "instagram": {
+        "bio": "Making the Web Faster · Open Source Creator · Specialty espresso & Buenos Aires roots · SF ⚡☕",
+        "postsCount": 380,
+        "followersCount": 38000,
+        "captions": [
+          "Sunrise pour over with freshly roasted geisha beans. Precision in brewing mirrors precision in software engineering ☕🔬",
+          "Next.js Conf stage moments. The energy of hundreds of creators building together is unmatched 🌐✨",
+          "Sunday evening asado with close friends. Slow embers, rich wine, and timeless stories 🥩🍷"
+        ],
+        "hashtags": [
+          "#vercel",
+          "#specialtycoffee",
+          "#nextjs",
+          "#asadoargentino"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Buenos Aires, Argentina",
+          "Silicon Valley"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '28-36', city: 'Boston, MA', relationship_goal: 'Marriage and children' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Loving, supportive partnership with mutual depth, shared laughter, and warmth"
+      }
     },
-    analysis: {
-      summary: 'Tariq is an Oxford-educated Associate Professor of Neuroscience at Harvard who navigates Charles River sailing boats, collects antiquarian manuscripts, and serves Moroccan mint tea.',
-      needs: [
-        { value: 'Intellectual depth and philosophical conversation', confidence: 0.96, source: 'linkedin', snippet: 'Harvard Associate Professor, Oxford DPhil' },
-        { value: 'Cultural breadth and curiosity about world history', confidence: 0.93, source: 'instagram', snippet: 'Rare Arabic astronomical manuscripts, Moroccan tea rituals' },
-        { value: 'Warm emotional depth and dedication to family', confidence: 0.9, source: 'cross-source', snippet: 'Family tea ceremonies + deep mentorship of university scholars' },
+    "analysis": {
+      "summary": "Guillermo is the visionary founder and CEO of Vercel and creator of Next.js, blending intense technical mastery with Argentine asado traditions, specialty espresso, and generous mentorship.",
+      "needs": [
+        {
+          "value": "Appreciation for craft excellence and deep focus",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Creator of Next.js and open source infrastructure powering global web"
+        },
+        {
+          "value": "Warm cultural hospitality and community gathering",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Sunday evening asado rituals and shared wine evenings"
+        },
+        {
+          "value": "Calm, thoughtful presence amid fast-paced technology",
+          "confidence": 0.91,
+          "source": "cross-source",
+          "snippet": "Precision espresso brewing and deliberate leadership cadence"
+        }
       ],
-      hobbies: [
-        { value: 'Small boat sailing on the Charles River', confidence: 0.95, source: 'instagram', snippet: 'Sailing Community Boating Charles River at sunset' },
-        { value: 'Antiquarian book and manuscript collecting', confidence: 0.93, source: 'instagram', snippet: '19th-century astronomical atlases and rare editions' },
-        { value: 'Chess and traditional tea ceremonies', confidence: 0.89, source: 'instagram', snippet: 'Moroccan mint tea with orange blossom water and chess' },
+      "hobbies": [
+        {
+          "value": "Specialty coffee extraction and brewing science",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Sunrise geisha coffee brewing with precision"
+        },
+        {
+          "value": "Argentine asado cooking over open embers",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Sunday evening slow-cooked asado with friends"
+        },
+        {
+          "value": "Open source software architecture",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Creating developer tools and distributed platforms"
+        }
       ],
-      interests: [
-        { value: 'Memory consolidation and synaptic plasticity', confidence: 0.97, source: 'linkedin', snippet: 'Principal Investigator of Neural Plasticity Lab at Harvard' },
-        { value: 'History of Islamic science and mathematics', confidence: 0.91, source: 'instagram', snippet: 'Antiquarian collections and scholarly heritage' },
+      "interests": [
+        {
+          "value": "Frontend cloud computing and edge latency optimization",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Making the web faster at Vercel"
+        },
+        {
+          "value": "Latin American literature and tango history",
+          "confidence": 0.87,
+          "source": "instagram",
+          "snippet": "Buenos Aires roots and cultural appreciation"
+        }
       ],
-      values: [
-        { value: 'Intellectual humility and pursuit of truth', confidence: 0.96, source: 'linkedin', snippet: 'Scientific research dedicated to fundamental brain mechanisms' },
-        { value: 'Gracious hospitality and multi-generational family respect', confidence: 0.92, source: 'instagram', snippet: 'Hosting family with traditional Moroccan tea rituals' },
+      "values": [
+        {
+          "value": "Democratizing developer capability across the world",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Self-taught background and global open source tool creation"
+        },
+        {
+          "value": "Generosity and warm hospitality",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Bringing friends together around the dinner table"
+        }
       ],
-      communication_style: { value: 'Scholarly, gracious, witty, and warmly reassuring', confidence: 0.94, source: 'cross-source', snippet: 'Harvard faculty eloquence mixed with Mediterranean warmth' },
-      lifestyle: { value: 'Academic research and mentoring in Cambridge, river sailing and quiet library evenings', confidence: 0.93, source: 'cross-source', snippet: 'Harvard Yard laboratory to Charles River rigging' },
-      ambitions: { value: 'Unlocking therapeutic targets for Alzheimer’s memory preservation', confidence: 0.92, source: 'linkedin', snippet: 'Leading memory consolidation breakthroughs' },
-      deal_breakers: ['Anti-intellectualism', 'Disrespect for heritage and elders', 'Cynical pettiness'],
-      conversation_hooks: ['How human brains physically solidify memories during sleep', 'The best gust of wind he ever caught sailing on the Charles'],
-    },
-  },
-  // Profiles 16 to 25
-  {
-    id: 'person_16',
-    name: 'Isabella Rossi',
-    age: 27,
-    city: 'Chicago, IL',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Committed relationship with warmth, creativity, and shared laughter',
-    linkedin_url: 'https://www.linkedin.com/in/isabella-rossi-design',
-    instagram_url: 'https://www.instagram.com/isabella.chicago.art/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:15:00Z',
-    created_at: '2026-09-20T11:15:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Lead Exhibition Designer at The Art Institute of Chicago',
-        about: 'Curating spatial visitor journeys and lighting environments for world-class historical and modern art. SAIC graduate.',
-        positions: [{ role: 'Lead Exhibition Designer', company: 'Art Institute of Chicago', duration: '2022 - Present', description: 'Master planning galleries and interactive cultural exhibits.' }],
-        skills: ['Exhibition Design', 'Lighting Design', 'Spatial Strategy', 'Art History', '3D Modeling'],
-        education: [{ school: 'School of the Art Institute of Chicago (SAIC)', degree: 'M.Des in Designed Objects' }],
+      "communication_style": {
+        "value": "Insightful, succinct, warm, and uplifting",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Famous clear aphorisms on web performance and gracious public speaking"
       },
-      instagram: {
-        bio: 'Museum curator & designer 🏛️ · vintage Italian espresso machines ☕ · Lake Michigan bike path 🚲 · ceramic jewelry',
-        postsCount: 160,
-        followersCount: 2300,
-        captions: ['Installing a Caravaggio masterwork in the newly lit European galleries. Goosebumps ✨🖼️', '20 miles on the Lakefront Trail with crisp lake breezes 🚴‍♀️🌊', 'Restored a 1961 Faema lever espresso machine. Crema is liquid velvet ☕🇮🇹'],
-        hashtags: ['#artinstitutechi', '#lakefronttrail', '#faema61', '#chicagodesign'],
-        locations: ['Art Institute of Chicago', 'Lakefront Trail Chicago', 'Wicker Park Chicago'],
+      "lifestyle": {
+        "value": "High-growth technology executive who protects intentional family traditions and espresso rituals",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Global Vercel platform governance paired with slow weekend cooking"
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '26-35', city: 'Chicago, IL', relationship_goal: 'Long-term partnership' },
-    },
-    analysis: {
-      summary: 'Isabella is the Lead Exhibition Designer at the Art Institute of Chicago who designs luminous galleries for Caravaggios and spends Saturdays riding the Lakefront Trail and restoring vintage espresso machines.',
-      needs: [
-        { value: 'Visual appreciation and aesthetic wonder', confidence: 0.95, source: 'linkedin', snippet: 'Exhibition Designer at Art Institute of Chicago, SAIC graduate' },
-        { value: 'Active vitality and love for city landmarks', confidence: 0.91, source: 'instagram', snippet: '20-mile rides on Chicago Lakefront Trail' },
-        { value: 'Tactile craft appreciation', confidence: 0.89, source: 'instagram', snippet: 'Restoring 1961 vintage lever espresso machines' },
-      ],
-      hobbies: [
-        { value: 'Vintage mechanical espresso machine restoration', confidence: 0.95, source: 'instagram', snippet: 'Restored 1961 Faema lever espresso machine' },
-        { value: 'Lake Michigan Lakefront Trail cycling', confidence: 0.92, source: 'instagram', snippet: '20 miles on Lakefront trail with crisp lake breezes' },
-        { value: 'Handmade ceramic and brass jewelry design', confidence: 0.88, source: 'instagram', snippet: 'Ceramic jewelry craft in Wicker Park studio' },
-      ],
-      interests: [
-        { value: 'Museum spatial curation & historic lighting', confidence: 0.96, source: 'linkedin', snippet: 'Master planning galleries for European masterworks' },
-        { value: 'Mid-century Italian industrial design', confidence: 0.9, source: 'cross-source', snippet: 'Faema machines, Italian heritage design objects' },
-      ],
-      values: [
-        { value: 'Preserving cultural heritage and beauty for all people', confidence: 0.95, source: 'linkedin', snippet: 'Public museum exhibition design' },
-        { value: 'Patience and mechanical ingenuity', confidence: 0.91, source: 'instagram', snippet: 'Restoring intricate espresso levers and valves' },
-      ],
-      communication_style: { value: 'Vibrant, witty, enthusiastic, and cultured', confidence: 0.91, source: 'cross-source', snippet: 'Curatorial elegance mixed with Chicago warmth' },
-      lifestyle: { value: 'Inspiring museum days, cycling the lake, cozy espresso rituals in Wicker Park', confidence: 0.93, source: 'cross-source', snippet: 'Loop galleries to Wicker Park studio' },
-      ambitions: { value: 'Transforming public museums into accessible, emotionally resonant civic sanctuaries', confidence: 0.9, source: 'linkedin', snippet: 'Interactive cultural exhibit direction' },
-      deal_breakers: ['Lack of curiosity about art/culture', 'Complacency', 'Selfishness'],
-      conversation_hooks: ['What it feels like standing 2 inches from a Caravaggio during installation', 'Her restoration of the 1961 Faema espresso machine'],
-    },
-  },
-  {
-    id: 'person_17',
-    name: 'Lucas Silva',
-    age: 31,
-    city: 'Chicago, IL',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner to build a home and share adventures together',
-    linkedin_url: 'https://www.linkedin.com/in/lucas-silva-structures',
-    instagram_url: 'https://www.instagram.com/lucas.chicago.runs/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:20:00Z',
-    created_at: '2026-09-20T11:20:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Senior Structural Engineer at SOM | Skyscraper Wind Engineering',
-        about: 'Analyzing aerodynamic damping and seismic resilience for supertall towers. UIUC Civil Engineering MS.',
-        positions: [{ role: 'Senior Structural Engineer', company: 'Skidmore, Owings & Merrill (SOM)', duration: '2020 - Present', description: 'Wind tunnel testing and structural finite element modeling.' }],
-        skills: ['Structural Engineering', 'Wind Dynamics', 'FEA', 'Tall Buildings', 'Seismic Design'],
-        education: [{ school: 'University of Illinois Urbana-Champaign', degree: 'M.S. in Structural Engineering' }],
+      "ambitions": {
+        "value": "Empowering the next billion software creators while building an enduring, joyful personal partnership",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Advancing the web while investing in deep personal relationships"
       },
-      instagram: {
-        bio: 'Brazilian in Chicago 🇧🇷🏙️ · marathon training (sub-3 goal) 🏃‍♂️ · vinyl samba & bossa · pour-overs',
-        postsCount: 175,
-        followersCount: 1950,
-        captions: ['18-mile marathon training long run past Navy Pier in sub-zero wind chill! Chicago builds grit 🏃‍♂️❄️', 'Cooking feijoada with family over the weekend. Slow simmering for 8 hours 🍲🇧🇷', 'Architectural river cruise never gets old even when you design the buildings 🚤✨'],
-        hashtags: ['#chicagomarathon', '#sombuildings', '#feijoada', '#chicagoriver'],
-        locations: ['Chicago Riverwalk', 'Navy Pier', 'SOM Chicago Studio'],
-      },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '26-34', city: 'Chicago, IL', relationship_goal: 'Marriage and children' },
-    },
-    analysis: {
-      summary: 'Lucas is a Senior Structural Engineer at SOM who engineers wind damping for iconic skyscrapers, runs marathon miles through icy Chicago lakefront winds, and cooks 8-hour feijoada.',
-      needs: [
-        { value: 'Grit, determination, and mutual support', confidence: 0.94, source: 'cross-source', snippet: 'Marathon training sub-3 goal + engineering supertall towers' },
-        { value: 'Warm family orientation and cultural hospitality', confidence: 0.92, source: 'instagram', snippet: '8-hour slow-cooked feijoada dinners with family' },
-        { value: 'Intellectual depth and design appreciation', confidence: 0.9, source: 'linkedin', snippet: 'Structural aerodynamics at legendary SOM' },
+      "deal_breakers": [
+        "Arrogance",
+        "Disrespect for service staff or peers",
+        "Indifference to quality"
       ],
-      hobbies: [
-        { value: 'Competitive distance and marathon running', confidence: 0.97, source: 'instagram', snippet: '18-mile long runs along Lake Michigan' },
-        { value: 'Authentic Brazilian culinary hosting (Feijoada)', confidence: 0.93, source: 'instagram', snippet: '8-hour simmering traditional feijoada feasts' },
-        { value: 'Chicago architectural history and river cruising', confidence: 0.89, source: 'instagram', snippet: 'River cruises and structural skyscraper design' },
-      ],
-      interests: [
-        { value: 'Supertall building aerodynamics and structural damping', confidence: 0.96, source: 'linkedin', snippet: 'Wind tunnel testing at SOM' },
-        { value: 'Brazilian MPB, samba, and vinyl records', confidence: 0.88, source: 'instagram', snippet: 'Vinyl samba listening during long cooking sessions' },
-      ],
-      values: [
-        { value: 'Resilience, precision, and safety of human lives', confidence: 0.95, source: 'linkedin', snippet: 'Engineering skyscrapers to withstand severe storms' },
-        { value: 'Warmth, generosity, and cultural pride', confidence: 0.92, source: 'instagram', snippet: 'Brazilian roots and open-hearted home hosting' },
-      ],
-      communication_style: { value: 'Warm, positive, steady, and engagingly funny', confidence: 0.92, source: 'cross-source', snippet: 'Engineering rigor wrapped in warm Brazilian friendliness' },
-      lifestyle: { value: 'Early morning marathon training runs, intense engineering design, lively weekend dinners', confidence: 0.94, source: 'cross-source', snippet: 'SOM tower models by day, Lakefront miles by dawn' },
-      ambitions: { value: 'Engineering zero-embodied-carbon skyscrapers that redefine world skylines', confidence: 0.91, source: 'linkedin', snippet: 'Senior Structural Engineer at SOM' },
-      deal_breakers: ['Passive unreliability', 'Cold cynicism', 'Lack of physical health awareness'],
-      conversation_hooks: ['How a 1,000-foot skyscraper sways and bends safely in 70mph winds', 'His secret technique for the richest feijoada'],
-    },
+      "conversation_hooks": [
+        "His favorite coffee processing method",
+        "Learning to code in Buenos Aires as a teenager"
+      ]
+    }
   },
   {
-    id: 'person_18',
-    name: 'Camila Reyes',
-    age: 28,
-    city: 'Los Angeles, CA',
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with creativity, outdoor life, and laughter',
-    linkedin_url: 'https://www.linkedin.com/in/camila-reyes-film',
-    instagram_url: 'https://www.instagram.com/camila.cinematography/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:25:00Z',
-    created_at: '2026-09-20T11:25:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Director of Photography | Independent Documentaries & Sundance Alum',
-        about: 'Capturing human resilience and ecological restoration through cinematic storytelling. AFI Cinematography MFA.',
-        positions: [{ role: 'Director of Photography', company: 'Independent Film', duration: '2020 - Present', description: 'Lensed award-winning environmental feature documentaries.' }],
-        skills: ['Cinematography', 'ARRI Alexa', 'Documentary Film', 'Color Grading', 'Lighting Design'],
-        education: [{ school: 'American Film Institute (AFI)', degree: 'MFA in Cinematography' }],
+    "id": "person_09",
+    "name": "Codie Sanchez",
+    "age": 37,
+    "city": "Austin, TX",
+    "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "High-trust, equal partnership with a grounded, hardworking man who loves the outdoors",
+    "linkedin_url": "https://www.linkedin.com/in/codiesanchez/",
+    "instagram_url": "https://www.instagram.com/codiesanchez/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & Managing Director at Contrarian Thinking | Investor & Author",
+        "about": "Empowering people to achieve financial freedom through main street business ownership. Former Wall Street institutional investor (Goldman Sachs, State Street). Author and podcast host.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Contrarian Thinking",
+            "duration": "2020 - Present",
+            "description": "Financial education and holding company investing in cash-flowing small businesses."
+          },
+          {
+            "role": "Partner",
+            "company": "EEC Ventures",
+            "duration": "2017 - 2020",
+            "description": "Institutional venture capital and private equity investing across the Americas."
+          }
+        ],
+        "skills": [
+          "Private Equity",
+          "Small Business Acquisition",
+          "Financial Literacy",
+          "Media Publishing",
+          "Capital Allocation"
+        ],
+        "education": [
+          {
+            "school": "Georgetown University",
+            "degree": "MBA in Global Business"
+          }
+        ]
       },
-      instagram: {
-        bio: 'DP & filmmaker 🎥 · 16mm film captures · surfing Malibu First Point 🏄‍♀️ · golden hour obsession · Silver Lake',
-        postsCount: 210,
-        followersCount: 5100,
-        captions: ['Dawn patrol at Malibu. Glassy right-handers and pink morning sky 🏄‍♀️🌅', 'Lensing in the desert with ARRI Alexa and vintage anamorphic glass 🌵🎬', 'Sunday farmer’s market bounty in Silver Lake. Heirloom tomatoes and fresh basil 🍅🌿'],
-        hashtags: ['#malibusurf', '#arrialexa', '#anamorphic', '#silverlake'],
-        locations: ['Malibu First Point', 'Silver Lake Los Angeles', 'Joshua Tree National Park'],
+      "instagram": {
+        "bio": "Small business owner & investor · Ex-private equity · Ranch life & weightlifting in Austin 🤠🏋️‍♀️",
+        "postsCount": 1950,
+        "followersCount": 1800000,
+        "captions": [
+          "Morning deadlifts at the ranch gym before inspecting local manufacturing facilities 🏋️‍♀️🚜",
+          "Main street businesses are the backbone of human community. Plumbers, car washes, laundromats—real businesses for real people 🛠️💵",
+          "Saturday trail ride through the Texas hill country. Big sky, quiet horse, zero phone notifications 🐴🌄"
+        ],
+        "hashtags": [
+          "#smallbiz",
+          "#contrarianthinking",
+          "#ranchlife",
+          "#austintx"
+        ],
+        "locations": [
+          "Austin, TX",
+          "Texas Hill Country",
+          "Scottsdale, AZ"
+        ]
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '27-36', city: 'Los Angeles, CA', relationship_goal: 'Committed relationship' },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "Austin, TX",
+        "relationship_goal": "Direct, honest, masculine partnership with shared family values and active outdoor grit"
+      }
     },
-    analysis: {
-      summary: 'Camila is an AFI-trained documentary Director of Photography whose films have screened at Sundance, catching dawn surf at Malibu and capturing desert light on vintage glass.',
-      needs: [
-        { value: 'Artistic depth and visual appreciation', confidence: 0.96, source: 'linkedin', snippet: 'AFI MFA in Cinematography, Sundance documentary DP' },
-        { value: 'Spontaneity and love for ocean & desert nature', confidence: 0.93, source: 'instagram', snippet: 'Dawn patrol surfing Malibu, Joshua Tree filming' },
-        { value: 'Warm, low-drama emotional authenticity', confidence: 0.9, source: 'cross-source', snippet: 'Documentary lenser who values human honesty over Hollywood pretense' },
+    "analysis": {
+      "summary": "Codie is an investor, author, and ranch owner in Texas who pairs Wall Street financial rigor with a passion for small business ownership, heavy weightlifting, and horseback trail riding.",
+      "needs": [
+        {
+          "value": "Unshakeable confidence and emotional stability",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "High-conviction financial holding company leadership and outspoken views"
+        },
+        {
+          "value": "Outdoor grit and physical capability",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Ranch maintenance, deadlifts, and horseback trail riding"
+        },
+        {
+          "value": "Straightforward honesty without passive-aggressive games",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Pragmatic, direct small business financial advice"
+        }
       ],
-      hobbies: [
-        { value: 'Longboard surfing at Malibu First Point', confidence: 0.97, source: 'instagram', snippet: 'Dawn patrol glassy right-handers at Malibu' },
-        { value: '16mm and 35mm analog street photography', confidence: 0.92, source: 'instagram', snippet: 'Vintage anamorphic captures and 16mm rolls' },
-        { value: 'Silver Lake farmers market cooking', confidence: 0.89, source: 'instagram', snippet: 'Fresh heirloom tomato feasts with friends' },
+      "hobbies": [
+        {
+          "value": "Heavy barbell strength training (deadlifts & squats)",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Morning deadlifts at the ranch gym"
+        },
+        {
+          "value": "Horseback riding across Texas Hill Country",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Trail rides with horses under Texas big skies"
+        },
+        {
+          "value": "Clay shooting and ranch management",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "Hands-on ranch stewardship and outdoor sports"
+        }
       ],
-      interests: [
-        { value: 'Ecological documentary storytelling', confidence: 0.95, source: 'linkedin', snippet: 'Lensing environmental restoration features' },
-        { value: 'Vintage optical lenses and color grading', confidence: 0.91, source: 'instagram', snippet: 'Anamorphic glass and light capture' },
+      "interests": [
+        {
+          "value": "Small business acquisition and micro-private equity",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Main street cash-flowing enterprise acquisition"
+        },
+        {
+          "value": "Financial independence and self-reliance education",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Contrarian Thinking newsletter and holding company operations"
+        }
       ],
-      values: [
-        { value: 'Truth in storytelling and elevating quiet voices', confidence: 0.95, source: 'linkedin', snippet: 'Documenting human resilience across the globe' },
-        { value: 'Connection to natural light and the Pacific Ocean', confidence: 0.92, source: 'instagram', snippet: 'Grounded in morning ocean waves and desert skies' },
+      "values": [
+        {
+          "value": "Self-sovereignty and practical craftsmanship",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Prioritizing tangible small businesses over speculative froth"
+        },
+        {
+          "value": "Physical and mental resilience",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Daily hard training and screen-free outdoor disconnection"
+        }
       ],
-      communication_style: { value: 'Observant, warm, visually poetic, and grounded', confidence: 0.92, source: 'cross-source', snippet: 'Cinematographer’s eye for nuance with genuine warmth' },
-      lifestyle: { value: 'On-location documentary shoots balanced by peaceful Silver Lake porch mornings and surf runs', confidence: 0.93, source: 'cross-source', snippet: 'Desert film sets to Malibu point breaks' },
-      ambitions: { value: 'Directing a landmark documentary series on global ocean revival', confidence: 0.9, source: 'linkedin', snippet: 'Award-winning environmental feature cinematography' },
-      deal_breakers: ['Ego-driven pretension', 'Fear of adventure/outdoors', 'Inauthenticity'],
-      conversation_hooks: ['The craziest location she ever had to haul a camera package into', 'What morning surf at Malibu does for creative perspective'],
-    },
+      "communication_style": {
+        "value": "Direct, bold, charismatic, and pragmatic",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "High-energy, punchy video essays and straightforward business writing"
+      },
+      "lifestyle": {
+        "value": "Investment empire building combined with rustic ranch living and morning gym sessions",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Managing investments alongside tractor driving and horse care"
+      },
+      "ambitions": {
+        "value": "Building an enduring multi-generational small-business holding company and strong family unit",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Creating community wealth while living intentionally on the ranch"
+      },
+      "deal_breakers": [
+        "Helplessness or victim mentalities",
+        "Fear of hard work or getting dirt on hands",
+        "Financial irresponsibility"
+      ],
+      "conversation_hooks": [
+        "Her first small business acquisition",
+        "The best sunset riding spot in the Texas Hill Country"
+      ]
+    }
   },
   {
-    id: 'person_19',
-    name: 'Ethan Cole',
-    age: 32,
-    city: 'Los Angeles, CA',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Committed lifelong partnership and mutual elevation',
-    linkedin_url: 'https://www.linkedin.com/in/ethan-cole-sound',
-    instagram_url: 'https://www.instagram.com/ethan.composes.music/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:30:00Z',
-    created_at: '2026-09-20T11:30:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Film & Game Composer | Orchestral Arrangements & Modular Synthesis',
-        about: 'Scoring emotional scores for cinema and interactive narrative games. USC Thornton Screen Scoring graduate.',
-        positions: [{ role: 'Lead Composer', company: 'Sonic Horizon Studio', duration: '2019 - Present', description: 'Composed scores recorded with London Symphony and indie ensembles.' }],
-        skills: ['Film Scoring', 'Orchestration', 'Logic Pro', 'Modular Synths', 'Sound Design'],
-        education: [{ school: 'USC Thornton School of Music', degree: 'M.M. in Screen Scoring' }],
+    "id": "person_10",
+    "name": "Garry Tan",
+    "age": 43,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Deep, joyful partnership centered on creative curiosity, family warmth, and public service",
+    "linkedin_url": "https://www.linkedin.com/in/garrytan/",
+    "instagram_url": "https://www.instagram.com/garrytan/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "President & CEO at Y Combinator | Founder at Initialized Capital",
+        "about": "President and CEO of Y Combinator. Early backer of Coinbase, Instacart, and Flexport. Engineer and designer passionate about civic flourishing and empowering builders. Stanford CS graduate.",
+        "positions": [
+          {
+            "role": "President & CEO",
+            "company": "Y Combinator",
+            "duration": "2023 - Present",
+            "description": "Directing the world leading startup accelerator and founder community."
+          },
+          {
+            "role": "Managing Partner",
+            "company": "Initialized Capital",
+            "duration": "2012 - 2022",
+            "description": "Early-stage venture fund with $3.2B in assets under management."
+          }
+        ],
+        "skills": [
+          "Venture Capital",
+          "Startup Incubation",
+          "Product Design",
+          "Civic Advocacy",
+          "Full-Stack Engineering"
+        ],
+        "education": [
+          {
+            "school": "Stanford University",
+            "degree": "BS in Computer Science"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Film composer 🎹 · piano & vintage tape echoes 📼 · trail running Santa Monica mountains 🏃‍♂️ · pour-overs',
-        postsCount: 185,
-        followersCount: 3800,
-        captions: ['Late night session tracking solo cello for our new feature film score. Chills in the studio 🎻🌌', '10 miles along Backbone Trail looking out over the Pacific mist 🏔️🌊', 'Morning acoustic piano improvisations with coffee ☕🎹'],
-        hashtags: ['#filmscoring', '#backbonetrail', '#cellorecording', '#santamonica'],
-        locations: ['Santa Monica Mountains', 'Sunset Sound Studio', 'Venice Beach CA'],
+      "instagram": {
+        "bio": "Helping founders build the future · Engineer & designer · Film photographer & coffee explorer · SF ☕📷",
+        "postsCount": 1450,
+        "followersCount": 110000,
+        "captions": [
+          "Leica 35mm street shots along Chinatown and North Beach. Light cutting through morning alleyways 📷🏙️",
+          "Pour-over espresso flight at Saint Frank on Polk Street. San Francisco coffee culture is truly second to none ☕✨",
+          "Saturday family park afternoon in the Presidio. Grateful for our community and clean public spaces 🌳☀️"
+        ],
+        "hashtags": [
+          "#leicafilm",
+          "#sanfranciscotech",
+          "#presidiosf",
+          "#saintfrankcoffee"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Y Combinator Mountain View",
+          "Presidio of San Francisco"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '26-34', city: 'Los Angeles, CA', relationship_goal: 'Life partner to build a family' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Warm, committed relationship with mutual emotional maturity and shared creative values"
+      }
     },
-    analysis: {
-      summary: 'Ethan is a USC Thornton-trained film composer who scores orchestral cinema, runs trails along the Santa Monica mountains, and experiments with vintage tape delays.',
-      needs: [
-        { value: 'Artistic sensitivity and emotional vulnerability', confidence: 0.95, source: 'linkedin', snippet: 'Film composer, USC Screen Scoring master' },
-        { value: 'Love for natural vistas and mountain air', confidence: 0.92, source: 'instagram', snippet: 'Trail running Santa Monica Backbone Trail' },
-        { value: 'Cozy domestic grounding and mutual respect', confidence: 0.9, source: 'cross-source', snippet: 'Morning piano improvisations with coffee' },
+    "analysis": {
+      "summary": "Garry is the President and CEO of Y Combinator, combining foundational engineering and design chops with Leica film street photography, San Francisco civic optimism, and family values.",
+      "needs": [
+        {
+          "value": "Shared civic optimism and belief in human progress",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "YC leadership and public advocacy for San Francisco revitalization"
+        },
+        {
+          "value": "Creative artistic sensibility and visual eye",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Leica 35mm street photography and typography appreciation"
+        },
+        {
+          "value": "Warm family orientation and supportive domestic presence",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Presidio family park afternoons and quiet community meals"
+        }
       ],
-      hobbies: [
-        { value: 'Mountain trail running along the Pacific coast', confidence: 0.96, source: 'instagram', snippet: '10 miles along Backbone Trail over Pacific mist' },
-        { value: 'Acoustic piano improvisation & composition', confidence: 0.94, source: 'instagram', snippet: 'Morning piano improvisations with coffee' },
-        { value: 'Vintage analog tape delay and synth experimentation', confidence: 0.9, source: 'instagram', snippet: 'Modular synthesis and tape echo machines' },
+      "hobbies": [
+        {
+          "value": "Leica 35mm analog street photography",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Chinatown and North Beach morning street photography with Leica"
+        },
+        {
+          "value": "Specialty coffee exploration across San Francisco",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Saint Frank Polk Street espresso tasting flights"
+        },
+        {
+          "value": "UI illustration and front-end coding",
+          "confidence": 0.89,
+          "source": "linkedin",
+          "snippet": "Stanford CS and early Posterous design/engineering roots"
+        }
       ],
-      interests: [
-        { value: 'Orchestral composition and acoustic scoring', confidence: 0.96, source: 'linkedin', snippet: 'London Symphony scoring sessions' },
-        { value: 'Interactive storytelling in games and film', confidence: 0.9, source: 'linkedin', snippet: 'Interactive narrative game scores' },
+      "interests": [
+        {
+          "value": "Early-stage startup mentorship and company formation",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Leading Y Combinator accelerator programs"
+        },
+        {
+          "value": "Civic policy and urban vibrancy in San Francisco",
+          "confidence": 0.92,
+          "source": "cross-source",
+          "snippet": "Advocacy for clean, safe, and innovative city governance"
+        }
       ],
-      values: [
-        { value: 'Emotional resonance, empathy, and craft dedication', confidence: 0.95, source: 'cross-source', snippet: 'Tapping deep feelings to score human drama' },
-        { value: 'Peace of mind and connection to the wild', confidence: 0.91, source: 'instagram', snippet: 'Running mountain ridges to balance studio hours' },
+      "values": [
+        {
+          "value": "Empowering ambitious underdogs to build generational technology",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Backing early non-traditional founders who change the world"
+        },
+        {
+          "value": "Community gratitude and stewardship",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Active dedication to public parks, schools, and civic health"
+        }
       ],
-      communication_style: { value: 'Thoughtful, articulate, empathetic, and gentle', confidence: 0.93, source: 'cross-source', snippet: 'Composer’s emotional intelligence and warm cadence' },
-      lifestyle: { value: 'Intense creative scoring sprints, mountain trail running, quiet home cooking', confidence: 0.93, source: 'cross-source', snippet: 'Venice/Santa Monica studio to mountain crests' },
-      ambitions: { value: 'Composing a timeless symphonic film score that touches millions', confidence: 0.91, source: 'linkedin', snippet: 'Sonic Horizon lead composer' },
-      deal_breakers: ['Cold superficiality', 'Disregard for emotional depth', 'Cruelty'],
-      conversation_hooks: ['How a composer finds the central musical theme for a character', 'His favorite scenic trail overlooking the Pacific'],
-    },
+      "communication_style": {
+        "value": "Thoughtful, inspiring, transparent, and approachable",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Popular YouTube vlogs and empathetic founder coaching"
+      },
+      "lifestyle": {
+        "value": "High-responsibility accelerator leadership balanced with daily street photography walks and coffee",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Managing YC batches while enjoying quiet neighborhood walks"
+      },
+      "ambitions": {
+        "value": "Catalyzing the next golden age of technology and human flourishing while nurturing a happy family",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Expanding global founder ecosystem while remaining deeply present at home"
+      },
+      "deal_breakers": [
+        "Nihilistic pessimism",
+        "Elitism that looks down on beginners",
+        "Unkindness towards working families"
+      ],
+      "conversation_hooks": [
+        "His favorite Leica lens for San Francisco fog",
+        "The early days of backing Coinbase in 2012"
+      ]
+    }
   },
   {
-    id: 'person_20',
-    name: 'Ananya Sharma',
-    age: 29,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Committed life partner with warmth, laughter, and intellectual depth',
-    linkedin_url: 'https://www.linkedin.com/in/ananya-sharma-climate',
-    instagram_url: 'https://www.instagram.com/ananya.plants.trees/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:35:00Z',
-    created_at: '2026-09-20T11:35:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Head of Forest Carbon Science at Pachama | Satellite Remote Sensing',
-        about: 'Using LiDAR and high-resolution satellite imagery to verify forest carbon storage. Berkeley PhD in Environmental Science.',
-        positions: [{ role: 'Head of Forest Carbon Science', company: 'Pachama', duration: '2021 - Present', description: 'Machine learning models for canopy biomass measurement.' }],
-        skills: ['Remote Sensing', 'LiDAR', 'Forest Ecology', 'Python', 'Climate Policy'],
-        education: [{ school: 'UC Berkeley', degree: 'Ph.D. in Environmental Science, Policy & Management' }],
+    "id": "person_11",
+    "name": "Shriya Nevatia",
+    "age": 32,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Deeply supportive partnership grounded in intellectual honesty, mutual kindness, and art",
+    "linkedin_url": "https://www.linkedin.com/in/shriyanevatia/",
+    "instagram_url": "https://www.instagram.com/shriyanevatia/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder at The Close | Community Architect & Tech Investor",
+        "about": "Building curated communities and networks that connect world-class tech founders and leaders. Former Director of Community at Pioneer. Tufts Computer Science alum.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "The Close",
+            "duration": "2022 - Present",
+            "description": "Curating executive masterminds and founder retreats across North America."
+          },
+          {
+            "role": "Director of Community",
+            "company": "Pioneer",
+            "duration": "2019 - 2022",
+            "description": "Built global tournament engine discovering lost prodigies in tech."
+          }
+        ],
+        "skills": [
+          "Community Architecture",
+          "Executive Curation",
+          "Venture Partnerships",
+          "Writing",
+          "Event Design"
+        ],
+        "education": [
+          {
+            "school": "Tufts University",
+            "degree": "BS in Computer Science"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Forest ecologist 🌲 · botanical watercolor 🎨 · herbal tea blender · backpacking the High Sierra 🎒',
-        postsCount: 170,
-        followersCount: 2500,
-        captions: ['Backpacking over Kearsarge Pass into Rae Lakes! Granite peaks and crystal alpine waters 🏔️🎒', 'Painting native California poppies and coast live oaks in botanical watercolor 🎨🌿', 'Brewing fresh lemon verbena and chamomile from my balcony garden ☕🌱'],
-        hashtags: ['#highsierra', '#kearsargepass', '#botanicalart', '#forestecology'],
-        locations: ['Rae Lakes Kings Canyon', 'Kearsarge Pass', 'Berkeley Botanical Garden'],
+      "instagram": {
+        "bio": "Connecting extraordinary people · Tufts CS alum · Contemporary art & sourdough baking · SF 🎨🥖",
+        "postsCount": 310,
+        "followersCount": 9400,
+        "captions": [
+          "Baked a country sourdough loaf with 85% hydration. The blistered crust crackle is pure music 🥖🔥",
+          "Hosted a salon dinner in Cole Valley discussing artificial intelligence, human intimacy, and ethics 🍷🕯️",
+          "Gallery opening at Minnesota Street Project. Contemporary textiles and geometric abstractions 🎨✨"
+        ],
+        "hashtags": [
+          "#sourdoughbaking",
+          "#salonconversations",
+          "#minnesotastreetproject",
+          "#sfcreatives"
+        ],
+        "locations": [
+          "Cole Valley, SF",
+          "Minnesota Street Project",
+          "Tufts Boston"
+        ]
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '27-36', city: 'San Francisco, CA', relationship_goal: 'Marriage and children' },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Committed relationship with a warm, thoughtful partner who values deep conversation and good food"
+      }
     },
-    analysis: {
-      summary: 'Ananya is the Head of Forest Carbon Science at Pachama with a Berkeley PhD, spending high-season weeks backpacking over High Sierra passes and painting native California flora in botanical watercolors.',
-      needs: [
-        { value: 'Deep ecological stewardship and intellectual depth', confidence: 0.96, source: 'linkedin', snippet: 'Berkeley PhD, Head of Forest Carbon Science at Pachama' },
-        { value: 'Resilience on backcountry mountain treks', confidence: 0.94, source: 'instagram', snippet: 'Backpacking over Kearsarge Pass into Rae Lakes' },
-        { value: 'Gentle warmth and creative appreciation', confidence: 0.9, source: 'instagram', snippet: 'Botanical watercolor painting and balcony herbal tea blending' },
+    "analysis": {
+      "summary": "Shriya is a community architect and investor who brings brilliant minds together, blending computer science foundations with sourdough baking, salon dinners, and contemporary art.",
+      "needs": [
+        {
+          "value": "Warm emotional reciprocity and authentic presence",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Host of salon dinners and curated founder communities"
+        },
+        {
+          "value": "Intellectual curiosity across technology, art, and philosophy",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Tufts CS background paired with humanist event architecture"
+        },
+        {
+          "value": "Love of domestic cooking and shared meals",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "High-hydration sourdough baking and dinner hosting"
+        }
       ],
-      hobbies: [
-        { value: 'High Sierra alpine backpacking and trekking', confidence: 0.96, source: 'instagram', snippet: 'Kearsarge Pass into Rae Lakes backpacker' },
-        { value: 'Botanical watercolor illustration of native plants', confidence: 0.93, source: 'instagram', snippet: 'Painting California poppies and coast live oaks' },
-        { value: 'Balcony herb gardening and herbal tea blending', confidence: 0.89, source: 'instagram', snippet: 'Home-grown lemon verbena and chamomile infusions' },
+      "hobbies": [
+        {
+          "value": "Artisan sourdough bread baking",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "85% hydration country sourdough loaves and crust crackling"
+        },
+        {
+          "value": "Hosting salon dinners and intellectual salons",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Cole Valley dinner discussions on tech ethics and intimacy"
+        },
+        {
+          "value": "Contemporary gallery visiting (Minnesota Street Project)",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "Textile art and geometric abstraction openings"
+        }
       ],
-      interests: [
-        { value: 'LiDAR canopy biomass and satellite forest observation', confidence: 0.97, source: 'linkedin', snippet: 'Machine learning for canopy verification at Pachama' },
-        { value: 'Sierra Nevada alpine ecology and native flora', confidence: 0.91, source: 'cross-source', snippet: 'Deep academic and personal passion for forest health' },
+      "interests": [
+        {
+          "value": "Human network graph dynamics and social capital",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Designing high-leverage peer masterminds at The Close"
+        },
+        {
+          "value": "AI ethics and human-computer connection",
+          "confidence": 0.88,
+          "source": "cross-source",
+          "snippet": "Salon discussions on AI and intimacy"
+        }
       ],
-      values: [
-        { value: 'Honesty, scientific rigor, and planetary restoration', confidence: 0.95, source: 'linkedin', snippet: 'Ensuring real, verifiable carbon sequestration' },
-        { value: 'Patience and peaceful living', confidence: 0.91, source: 'instagram', snippet: 'Careful botanical rendering and peaceful tea rituals' },
+      "values": [
+        {
+          "value": "Generosity and intentional connection",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Connecting people selflessly to open life-changing opportunities"
+        },
+        {
+          "value": "Mindful hospitality",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Creating warm, candle-lit environments for honest conversation"
+        }
       ],
-      communication_style: { value: 'Serene, articulate, encouraging, and perceptive', confidence: 0.93, source: 'cross-source', snippet: 'Scientist clarity paired with gentle artistic empathy' },
-      lifestyle: { value: 'High-impact climate tech research balanced by mountain backpacking and quiet art sessions', confidence: 0.94, source: 'cross-source', snippet: 'Satellite analytics by day, alpine trails and balcony tea by weekend' },
-      ambitions: { value: 'Protecting 100 million hectares of vulnerable primary forest through transparent tech', confidence: 0.92, source: 'linkedin', snippet: 'Forest carbon science leadership' },
-      deal_breakers: ['Arrogant disrespect for nature', 'Chronic laziness', 'Dishonesty'],
-      conversation_hooks: ['What satellite LiDAR actually reveals about forest canopies from space', 'Her most memorable night under the stars in Kings Canyon'],
-    },
+      "communication_style": {
+        "value": "Warm, perceptive, attentive, and articulately curious",
+        "confidence": 0.93,
+        "source": "linkedin",
+        "snippet": "Skilled community moderator and essayist"
+      },
+      "lifestyle": {
+        "value": "Connecting founders by day and nurturing bread starters and books by night",
+        "confidence": 0.91,
+        "source": "cross-source",
+        "snippet": "Active tech events balanced with quiet home baking"
+      },
+      "ambitions": {
+        "value": "Building enduring cultural and business networks while maintaining a deeply rooted, joyful home",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Expanding The Close while cultivating meaningful personal bonds"
+      },
+      "deal_breakers": [
+        "Emotional unavailability",
+        "Arrogant monologue conversationalists",
+        "Lack of curiosity about others"
+      ],
+      "conversation_hooks": [
+        "Her sourdough starter lineage",
+        "The most memorable insight from her Cole Valley salon dinners"
+      ]
+    }
   },
   {
-    id: 'person_21',
-    name: 'Gabriel Martinez',
-    age: 30,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner to build a home and family with',
-    linkedin_url: 'https://www.linkedin.com/in/gabriel-martinez-geo',
-    instagram_url: 'https://www.instagram.com/gabriel.surfs.ob/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:40:00Z',
-    created_at: '2026-09-20T11:40:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Lead Ocean Data Scientist at Saildrone | Autonomous Ocean Mapping',
-        about: 'Deploying autonomous uncrewed surface vehicles to map ocean floor bathymetry and oceanic weather phenomena. Stanford Geophysics MS.',
-        positions: [{ role: 'Lead Data Scientist', company: 'Saildrone Inc', duration: '2021 - Present', description: 'Processing oceanic sensor telemetry and acoustic bathymetry.' }],
-        skills: ['Oceanography', 'Acoustics', 'Python', 'Autonomous Vehicles', 'Geophysics'],
-        education: [{ school: 'Stanford University', degree: 'M.S. in Geophysics' }],
+    "id": "person_12",
+    "name": "Alexis Ohanian",
+    "age": 41,
+    "city": "Los Angeles, CA",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Lifelong partnership centered on shared family devotion, creative ambition, and playfulness",
+    "linkedin_url": "https://www.linkedin.com/in/alexisohanian/",
+    "instagram_url": "https://www.instagram.com/alexisohanian/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder at Seven Seven Six | Co-founder at Reddit",
+        "about": "Founder of venture capital firm Seven Seven Six. Co-founder of Reddit. Advocate for paid family leave, women's sports, and technology that serves humanity. UVA graduate.",
+        "positions": [
+          {
+            "role": "Founder & General Partner",
+            "company": "Seven Seven Six (776)",
+            "duration": "2020 - Present",
+            "description": "Early-stage tech investment firm deploying software-driven venture capital."
+          },
+          {
+            "role": "Co-founder & Executive Chairman",
+            "company": "Reddit",
+            "duration": "2005 - 2020",
+            "description": "Co-founded the front page of the internet, scaling to hundreds of millions of users."
+          }
+        ],
+        "skills": [
+          "Venture Capital",
+          "Community Platforms",
+          "Consumer Technology",
+          "Public Advocacy",
+          "Family Leave Policy"
+        ],
+        "education": [
+          {
+            "school": "University of Virginia",
+            "degree": "BA in History & Commerce"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Ocean scientist 🌊 · Ocean Beach dawn surfer 🏄‍♂️ · sourdough pizza maker 🍕 · guitar fingerpicking',
-        postsCount: 165,
-        followersCount: 1900,
-        captions: ['Heavy winter swell at Ocean Beach. Survived the paddle out and scored two great peaks 🌊🏄‍♂️', 'Friday sourdough pizza night: 72h fermented dough, San Marzano sauce, fresh basil 🍕🔥', 'Fingerpicking acoustic tunes on the deck watching fog roll in over the dunes 🎸🌫️'],
-        hashtags: ['#oceanbeachsf', '#sfsurf', '#sourdoughpizza', '#fingerstyle'],
-        locations: ['Ocean Beach San Francisco', 'Saildrone Alameda HQ', 'Sunset District SF'],
+      "instagram": {
+        "bio": "Business dad · 776 venture fund · Women's sports advocate · Trading card collector · LA 🃏🏆",
+        "postsCount": 1890,
+        "followersCount": 820000,
+        "captions": [
+          "Sunday morning waffle art with the girls. Getting better at making chocolate chip dinosaurs 🥞🦕",
+          "Courtside cheering on Angel City FC. Women's sports is the greatest undervalued asset in entertainment ⚽🔥",
+          "Grading vintage 1999 Pokémon booster packs. Nostalgia meets disciplined market investing 🃏✨"
+        ],
+        "hashtags": [
+          "#businessdad",
+          "#angelcityfc",
+          "#776investments",
+          "#waffleart"
+        ],
+        "locations": [
+          "Los Angeles, CA",
+          "BMO Stadium LA",
+          "Miami, FL"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '26-34', city: 'San Francisco, CA', relationship_goal: 'Marriage and children' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "Los Angeles, CA",
+        "relationship_goal": "Deep, loving partnership with shared family values, active laughter, and loyalty"
+      }
     },
-    analysis: {
-      summary: 'Gabriel is a Lead Ocean Data Scientist at Saildrone with a Stanford Geophysics MS who tackles heavy winter surf at Ocean Beach, plays fingerstyle guitar, and bakes 72h sourdough pizzas.',
-      needs: [
-        { value: 'Ocean and outdoor connection', confidence: 0.96, source: 'instagram', snippet: 'Ocean Beach dawn surfer, marine geophysicist' },
-        { value: 'Scientific curiosity and grounded drive', confidence: 0.93, source: 'linkedin', snippet: 'Stanford MS in Geophysics, autonomous vehicle ocean mapping' },
-        { value: 'Warm, relaxed domestic hospitality', confidence: 0.9, source: 'instagram', snippet: 'Friday sourdough pizza nights and deck acoustic guitar' },
+    "analysis": {
+      "summary": "Alexis is the co-founder of Reddit and founder of Seven Seven Six, known as an unapologetic \"business dad\" who balances venture investing with pancake art, women's soccer advocacy, and trading cards.",
+      "needs": [
+        {
+          "value": "Fierce family loyalty and deep maternal/paternal values",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Proud public identity as an active, devoted \"business dad\""
+        },
+        {
+          "value": "Playful humor and lighthearted silliness at home",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Sunday dinosaur waffle art and cartoon sketching"
+        },
+        {
+          "value": "Shared passion for equity and supporting women in business/sports",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Leading investor in Angel City FC and champion for paid family leave"
+        }
       ],
-      hobbies: [
-        { value: 'Cold-water ocean surfing at Ocean Beach SF', confidence: 0.97, source: 'instagram', snippet: 'Heavy winter swell surfing at Ocean Beach' },
-        { value: 'Wood-fired sourdough pizza crafting', confidence: 0.94, source: 'instagram', snippet: '72h fermented dough with San Marzano sauce' },
-        { value: 'Fingerstyle acoustic folk guitar', confidence: 0.89, source: 'instagram', snippet: 'Acoustic fingerpicking on the deck in the Sunset district' },
+      "hobbies": [
+        {
+          "value": "Pancake and waffle art cooking",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Chocolate chip dinosaur waffle breakfasts"
+        },
+        {
+          "value": "Vintage sports and gaming card collecting",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Collecting and grading vintage Pokémon and athletic cards"
+        },
+        {
+          "value": "Supporting women's professional soccer (Angel City FC)",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Courtside attendance and ownership of Angel City FC"
+        }
       ],
-      interests: [
-        { value: 'Ocean bathymetry and autonomous marine vehicles', confidence: 0.96, source: 'linkedin', snippet: 'Acoustic seafloor mapping at Saildrone' },
-        { value: 'Wave dynamics and marine climatology', confidence: 0.91, source: 'cross-source', snippet: 'Geophysics background combined with surf forecasting' },
+      "interests": [
+        {
+          "value": "Software-driven venture capital and seed tech investing",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Deploying capital at Seven Seven Six across frontier tech"
+        },
+        {
+          "value": "Public policy for paid parental leave",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "National advocacy for paid paternity and maternity leave"
+        }
       ],
-      values: [
-        { value: 'Courage, humility, and respect for natural forces', confidence: 0.95, source: 'cross-source', snippet: 'Confronting big Ocean Beach waves + scientific humility' },
-        { value: 'Warmth and sharing delicious food with loved ones', confidence: 0.92, source: 'instagram', snippet: 'Hosting regular pizza nights for community' },
+      "values": [
+        {
+          "value": "Showing up for family first before all business prestige",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Stepping down from board seats to prioritize family and equality"
+        },
+        {
+          "value": "Championing overlooked potential in society",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Investing in women's sports and underrepresented founders"
+        }
       ],
-      communication_style: { value: 'Easygoing, sincere, grounded, and playfully humble', confidence: 0.92, source: 'cross-source', snippet: 'Surfer calm paired with deep analytical clarity' },
-      lifestyle: { value: 'Dawn surf sessions at OB, high-level marine data telemetry, pizza dough and guitar evenings', confidence: 0.94, source: 'cross-source', snippet: 'Sunset dunes to Alameda marina labs' },
-      ambitions: { value: 'Mapping the entire world’s ocean floor to unlock deep sea climate knowledge', confidence: 0.91, source: 'linkedin', snippet: 'Autonomous ocean mapping missions' },
-      deal_breakers: ['Fear of water/beach', 'Self-absorbed arrogance', 'Inconsistent communication'],
-      conversation_hooks: ['What it feels like paddling out into 10-foot Ocean Beach winter surf', 'His secret for the ultimate airy sourdough pizza crust'],
-    },
+      "communication_style": {
+        "value": "Warm, candid, enthusiastic, and grounded",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Down-to-earth social media voice and passionate public advocacy"
+      },
+      "lifestyle": {
+        "value": "High-power venture capital investing balanced with school runs and weekend soccer matches",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Venture meetings paired with family breakfasts and sports games"
+      },
+      "ambitions": {
+        "value": "Building an enduring venture firm that changes the world while being the world's best dad and partner",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "776 growth matched by dedicated family presence"
+      },
+      "deal_breakers": [
+        "Coldness towards children",
+        "Cynicism about family",
+        "Snobbish elitism"
+      ],
+      "conversation_hooks": [
+        "His technique for chocolate chip pancake dinosaurs",
+        "Why women's sports is the best entertainment investment"
+      ]
+    }
   },
   {
-    id: 'person_22',
-    name: 'Helena Bergström',
-    age: 29,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term committed partnership leading to marriage',
-    linkedin_url: 'https://www.linkedin.com/in/helena-bergstrom-design',
-    instagram_url: 'https://www.instagram.com/helena.nordic.spaces/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:45:00Z',
-    created_at: '2026-09-20T11:45:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Senior Interior Architect at Snøhetta | Nordic Biophilic Architecture',
-        about: 'Creating human-centered learning and civic spaces with sustainable Scandinavian materials. Lund University Architecture graduate.',
-        positions: [{ role: 'Senior Interior Architect', company: 'Snøhetta', duration: '2021 - Present', description: 'Directing public library and cultural pavilion interior architectures.' }],
-        skills: ['Interior Architecture', 'Biophilic Design', 'Sustainable Materials', 'Acoustic Planning', 'Revit'],
-        education: [{ school: 'Lund University Faculty of Engineering', degree: 'M.Arch in Architecture' }],
+    "id": "person_13",
+    "name": "Dylan Field",
+    "age": 32,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Thoughtful, long-term relationship with someone who loves art, design, and continuous learning",
+    "linkedin_url": "https://www.linkedin.com/in/dylanfield/",
+    "instagram_url": "https://www.instagram.com/dylanfield/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Figma | Thiel Fellow",
+        "about": "Co-founder and CEO of Figma. Working to make design accessible to everyone on the web. Passionate about creative tools, computer graphics, and generative art.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Figma",
+            "duration": "2012 - Present",
+            "description": "Built collaborative canvas software used by millions of digital creators."
+          }
+        ],
+        "skills": [
+          "Computer Graphics",
+          "Product Vision",
+          "Design Systems",
+          "WebAssembly",
+          "Creative Tools"
+        ],
+        "education": [
+          {
+            "school": "Brown University",
+            "degree": "Computer Science (Thiel Fellowship leave)"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Swedish architect in NYC 🇸🇪🏙️ · cinnamon buns from scratch 🥐 · cold plunging Rockaways 🌊 · modernist furniture',
-        postsCount: 155,
-        followersCount: 2700,
-        captions: ['Swedish kardemummabullar (cardamom buns) fresh out of the oven! Scent of crushed cardamom ✨🥐', 'Winter sunrise dip at Jacob Riis Beach. Freezing cold, completely euphoric 🌊❄️', 'Library pavilion mockups looking tactile and warm in European oak 🏛️🌿'],
-        hashtags: ['#kardemummabullar', '#rockaways', '#snohetta', '#nordicdesign'],
-        locations: ['Jacob Riis Park', 'Snøhetta NYC Studio', 'Cobble Hill Brooklyn'],
+      "instagram": {
+        "bio": "Building Figma · Designing on the web · Contemporary sculpture & generative art enthusiast · SF 🎨🖥️",
+        "postsCount": 220,
+        "followersCount": 42000,
+        "captions": [
+          "Visiting the Dia Beacon sculpture installations. The way Richard Serra works steel changes how you perceive weight and space 🏛️✨",
+          "Configuring the new Figma Config stage. Celebrating the craft of our community 🎨💻",
+          "Sunday evening reading on early computer graphics history and Sutherland's Sketchpad 📖🖥️"
+        ],
+        "hashtags": [
+          "#figmaconfig",
+          "#diabeacon",
+          "#computergraphics",
+          "#designcraft"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Dia Beacon, NY",
+          "Brown University"
+        ]
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '28-36', city: 'New York, NY', relationship_goal: 'Life partner to build a home together' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Warm, intellectual, and creative partnership with deep mutual affection"
+      }
     },
-    analysis: {
-      summary: 'Helena is a Swedish Senior Interior Architect at Snøhetta in NYC who designs biophilic public libraries, bakes authentic cardamom buns, and cold-plunges at Jacob Riis Beach.',
-      needs: [
-        { value: 'Refined aesthetic sensibility and calm nature', confidence: 0.95, source: 'linkedin', snippet: 'Snøhetta senior interior architect, Lund University M.Arch' },
-        { value: 'Courage and love for invigorating outdoor rituals', confidence: 0.92, source: 'instagram', snippet: 'Winter sunrise cold dips at Jacob Riis Beach' },
-        { value: 'Cozy domestic hygge and sincere warmth', confidence: 0.9, source: 'instagram', snippet: 'Baking Swedish cardamom buns and sharing with friends' },
+    "analysis": {
+      "summary": "Dylan is the co-founder and CEO of Figma, combining computer graphics genius with a deep love for monumental sculpture, browser standards, and quiet intellectual curiosity.",
+      "needs": [
+        {
+          "value": "Deep appreciation for visual art and design aesthetics",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Figma CEO and contemporary art museum patron"
+        },
+        {
+          "value": "Calm, thoughtful, non-dramatic personal demeanor",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Patient, long-term 12-year execution building collaborative web tools"
+        },
+        {
+          "value": "Curiosity about ideas and history",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Reading Sutherland's Sketchpad and computer graphics history"
+        }
       ],
-      hobbies: [
-        { value: 'Traditional Swedish pastry baking (Kardemummabullar)', confidence: 0.96, source: 'instagram', snippet: 'Fresh cardamom buns with crushed spice' },
-        { value: 'Winter cold plunging at the Rockaways', confidence: 0.93, source: 'instagram', snippet: 'Jacob Riis beach winter sunrise dips' },
-        { value: 'Collecting vintage Scandinavian modernist furniture', confidence: 0.9, source: 'cross-source', snippet: 'Tactile oak pieces and Mid-century Nordic forms' },
+      "hobbies": [
+        {
+          "value": "Contemporary art museum and sculpture park visits (Dia Beacon)",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Studying Richard Serra steel sculptures at Dia Beacon"
+        },
+        {
+          "value": "Reading historical computing and design literature",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Study of early computer graphics breakthroughs"
+        },
+        {
+          "value": "Exploring San Francisco contemporary galleries",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "SF gallery visits and local art patronage"
+        }
       ],
-      interests: [
-        { value: 'Biophilic architecture and sensory wellbeing in civic spaces', confidence: 0.96, source: 'linkedin', snippet: 'Civic learning centers and library design at Snøhetta' },
-        { value: 'Natural materials, acoustics, and tactile architecture', confidence: 0.92, source: 'linkedin', snippet: 'European oak, natural wools, acoustic integration' },
+      "interests": [
+        {
+          "value": "WebAssembly, WebGL, and browser-native graphics pipelines",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Pioneered WebGL in-browser collaborative design at Figma"
+        },
+        {
+          "value": "Creative empowerment and multiplayer tools",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Making design accessible to every team on the web"
+        }
       ],
-      values: [
-        { value: 'Egalitarian human design and civic dignity', confidence: 0.95, source: 'linkedin', snippet: 'Creating public buildings that welcome all citizens' },
-        { value: 'Simplicity, presence, and nature connection (Friluftsliv)', confidence: 0.93, source: 'instagram', snippet: 'Living Nordic outdoor principles even in New York City' },
+      "values": [
+        {
+          "value": "Patience and long-term craftsmanship over quick shortcuts",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Spending four silent years building Figma engine before public launch"
+        },
+        {
+          "value": "Democratizing creativity",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Belief that anyone can learn to design given intuitive web tools"
+        }
       ],
-      communication_style: { value: 'Serene, articulate, sincere, and quietly playful', confidence: 0.92, source: 'cross-source', snippet: 'Scandinavian straightforwardness with genuine warmth' },
-      lifestyle: { value: 'High-concept design studio days, ocean dips, warm Sunday baking at home in Brooklyn', confidence: 0.94, source: 'cross-source', snippet: 'Snøhetta Manhattan studio to Cobble Hill kitchen' },
-      ambitions: { value: 'Directing international public buildings that promote peace and mental wellbeing', confidence: 0.91, source: 'linkedin', snippet: 'Interior architecture leadership at Snøhetta' },
-      deal_breakers: ['Arrogant boastfulness', 'Disrespect for civic/public goods', 'Materialistic clutter'],
-      conversation_hooks: ['Why cardamom is the true king of Scandinavian spices', 'The secret to designing rooms that naturally lower your heart rate'],
-    },
+      "communication_style": {
+        "value": "Humble, articulate, observant, and reflective",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Low-ego leadership style and thoughtful community presentations"
+      },
+      "lifestyle": {
+        "value": "Focus on product vision and team mentorship balanced with quiet art museum weekends",
+        "confidence": 0.91,
+        "source": "cross-source",
+        "snippet": "Figma executive leadership paired with sculpture study"
+      },
+      "ambitions": {
+        "value": "Pushing the boundaries of the digital canvas while living a rich, cultured, and peaceful personal life",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Expanding Figma ecosystem while supporting contemporary artists"
+      },
+      "deal_breakers": [
+        "Superficial materialism",
+        "Lack of curiosity for artistic culture",
+        "Arrogant posturing"
+      ],
+      "conversation_hooks": [
+        "His favorite Richard Serra sculpture at Dia Beacon",
+        "Why in-browser graphics felt impossible in 2012"
+      ]
+    }
   },
   {
-    id: 'person_23',
-    name: 'Owen Mitchell',
-    age: 33,
-    city: 'Seattle, WA',
-    avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Committed lifelong partnership with adventure and laughter',
-    linkedin_url: 'https://www.linkedin.com/in/owen-mitchell-geo',
-    instagram_url: 'https://www.instagram.com/owen.in.the.cascades/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:50:00Z',
-    created_at: '2026-09-20T11:50:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Principal Glaciologist at US Geological Survey | Glacier Dynamics & Climate',
-        about: 'Researching alpine glacier mass loss and meltwater runoff in the Pacific Northwest. PhD from University of Washington Glaciology.',
-        positions: [{ role: 'Principal Glaciologist', company: 'USGS', duration: '2019 - Present', description: 'Leading field radar surveys on South Cascade Glacier.' }],
-        skills: ['Glaciology', 'Radar Surveying', 'Remote Sensing', 'Alpine Fieldwork', 'Climate Science'],
-        education: [{ school: 'University of Washington', degree: 'Ph.D. in Earth & Space Sciences (Glaciology)' }],
+    "id": "person_14",
+    "name": "Mathilde Collin",
+    "age": 35,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Deep, joyful partnership grounded in emotional honesty, mindfulness, and French warmth",
+    "linkedin_url": "https://www.linkedin.com/in/mathildecollin/",
+    "instagram_url": "https://www.instagram.com/collinmathilde/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & Executive Chair at Front | YC Alum",
+        "about": "Co-founder and Executive Chair of Front. Champion of customer-centric culture, workplace mindfulness, and transparent leadership. HEC Paris graduate.",
+        "positions": [
+          {
+            "role": "Co-founder & Executive Chair",
+            "company": "Front",
+            "duration": "2014 - Present",
+            "description": "Built collaborative customer communication hub valued at over $1.7B."
+          }
+        ],
+        "skills": [
+          "Executive Leadership",
+          "Product Culture",
+          "Mindful Management",
+          "SaaS Scaling",
+          "Customer Experience"
+        ],
+        "education": [
+          {
+            "school": "HEC Paris",
+            "degree": "Master in Management & Entrepreneurship"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Glacier scientist 🧊 · backcountry ski mountaineering 🎿 · fly fishing mountain streams 🎣 · cedar cabin',
-        postsCount: 160,
-        followersCount: 1750,
-        captions: ['Ice core sampling on South Cascade Glacier. 500 years of climate history in a cylinder 🧊🏔️', 'Spring corn snow turns on Mt. Shuksan. Perfect steep ski descent 🎿⛷️', 'Catch and release native cutthroat trout on the Snoqualmie Middle Fork 🎣🌲'],
-        hashtags: ['#glaciology', '#mtshuksan', '#backcountryskiing', '#flyfishing'],
-        locations: ['Mount Shuksan', 'South Cascade Glacier', 'Snoqualmie River'],
+      "instagram": {
+        "bio": "Making work more human · Meditation & mental health advocate · French gastronomy in SF · Mom 🧘‍♀️🥐",
+        "postsCount": 410,
+        "followersCount": 18500,
+        "captions": [
+          "Morning meditation on the balcony overlooking the bay. Silence before the day begins is non-negotiable 🧘‍♀️🌅",
+          "Sunday farmers market in the Ferry Building: heirloom tomatoes, fresh sourdough, and French cheeses 🧀🍅",
+          "Ten years building Front taught me that true leadership is being fully present with your team and your family 🤍✨"
+        ],
+        "hashtags": [
+          "#mindfulleadership",
+          "#frenchinfoc",
+          "#meditationpractice",
+          "#sfbay"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Paris, France",
+          "Napa Valley, CA"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '28-36', city: 'Seattle, WA', relationship_goal: 'Life partner to build a home and family' },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Warm, open-hearted partnership with an emotionally mature partner who loves good food and mindfulness"
+      }
     },
-    analysis: {
-      summary: 'Owen is a USGS Principal Glaciologist with a UW PhD who measures alpine glacier ice loss, skis Mt. Shuksan descents, and fly-fishes native trout on the Snoqualmie River.',
-      needs: [
-        { value: 'Shared passion for alpine wilderness and snow', confidence: 0.96, source: 'instagram', snippet: 'Backcountry ski mountaineering on Mt. Shuksan' },
-        { value: 'Scientific curiosity and grounded purpose', confidence: 0.94, source: 'linkedin', snippet: 'PhD in Glaciology, USGS Principal Glaciologist' },
-        { value: 'Quiet, steadfast emotional reliability', confidence: 0.9, source: 'cross-source', snippet: 'Field researcher working safely on crevasse fields' },
+    "analysis": {
+      "summary": "Mathilde is the co-founder and Executive Chair of Front, known for pioneering transparent and mindful tech leadership while cherishing daily meditation and French gastronomy.",
+      "needs": [
+        {
+          "value": "Emotional maturity and genuine vulnerability",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Outspoken advocate for mental health and transparent leadership"
+        },
+        {
+          "value": "Commitment to daily mindfulness or presence practices",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Non-negotiable daily morning meditation on the balcony"
+        },
+        {
+          "value": "Love of culinary culture and slow meals together",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Ferry Building farmers market and French cheese/wine rituals"
+        }
       ],
-      hobbies: [
-        { value: 'Backcountry ski mountaineering on PNW peaks', confidence: 0.97, source: 'instagram', snippet: 'Steep spring corn turns on Mt. Shuksan' },
-        { value: 'Fly fishing for native trout in mountain rivers', confidence: 0.93, source: 'instagram', snippet: 'Catch and release cutthroat trout on Snoqualmie' },
-        { value: 'Cabin craftsmanship and firewood splitting', confidence: 0.89, source: 'instagram', snippet: 'Woodstove evenings in his cedar cabin' },
+      "hobbies": [
+        {
+          "value": "Daily silent mindfulness meditation",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Morning balcony meditation before tech work"
+        },
+        {
+          "value": "French cooking and farmers market sourcing",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Heirloom tomato and cheese selection at Ferry Building"
+        },
+        {
+          "value": "Mental health and executive coaching writing",
+          "confidence": 0.9,
+          "source": "linkedin",
+          "snippet": "Public sharing of founder stress management playbooks"
+        }
       ],
-      interests: [
-        { value: 'Alpine glacier dynamics and global hydrological cycles', confidence: 0.97, source: 'linkedin', snippet: 'Radar surveys and ice core climate history' },
-        { value: 'Wild river ecology and salmon habitat conservation', confidence: 0.9, source: 'cross-source', snippet: 'Trout and river preservation in Washington state' },
+      "interests": [
+        {
+          "value": "Humane software interfaces and async communication",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Building Front customer communication platform"
+        },
+        {
+          "value": "Venture wellness and founder resilience ecosystems",
+          "confidence": 0.91,
+          "source": "cross-source",
+          "snippet": "Investing in and mentoring founders on sustainable performance"
+        }
       ],
-      values: [
-        { value: 'Environmental stewardship and scientific integrity', confidence: 0.96, source: 'linkedin', snippet: 'Documenting the reality of planetary ice retreat' },
-        { value: 'Patience, endurance, and quiet humility', confidence: 0.92, source: 'cross-source', snippet: 'Enduring harsh mountain weather without complaint' },
+      "values": [
+        {
+          "value": "Authenticity and work-life harmony",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Disciplined disconnection: no email apps on personal phone during vacations"
+        },
+        {
+          "value": "Courageous transparency",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Pioneered publicly sharing Front internal all-hands presentations"
+        }
       ],
-      communication_style: { value: 'Calm, patient, thoughtful, and deeply honest', confidence: 0.93, source: 'cross-source', snippet: 'Field scientist composure with gentle humor' },
-      lifestyle: { value: 'Rigorous alpine field expeditions in season, data analysis, peaceful cabin life', confidence: 0.94, source: 'cross-source', snippet: 'USGS offices to Cascade crevasse fields' },
-      ambitions: { value: 'Providing accurate water supply forecasts to protect millions living downstream', confidence: 0.91, source: 'linkedin', snippet: 'Principal Glaciologist USGS research' },
-      deal_breakers: ['Materialistic vanity', 'Complaining about rain or snow', 'Disrespect for nature'],
-      conversation_hooks: ['What 500-year-old glacier ice actually looks and smells like when pulled from an ice core', 'The wildest descent on Mt. Shuksan'],
-    },
+      "communication_style": {
+        "value": "Warm, direct, serene, and deeply encouraging",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Calm executive presence and honest reflections on leadership"
+      },
+      "lifestyle": {
+        "value": "High-level chairwoman duties balanced by dedicated meditation, family time, and slow cooking",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Executive advisory combined with serene domestic life"
+      },
+      "ambitions": {
+        "value": "Proving that world-class billion-dollar companies can be led with humanity, joy, and peace",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "Championing humane business culture globally"
+      },
+      "deal_breakers": [
+        "Toxic competitiveness",
+        "Addiction to frantic distraction",
+        "Inability to enjoy quiet moments"
+      ],
+      "conversation_hooks": [
+        "How she unplugs completely from technology on weekends",
+        "Her favorite hidden cheese shop in Paris"
+      ]
+    }
   },
   {
-    id: 'person_24',
-    name: 'Mira Sundaram',
-    age: 28,
-    city: 'New York, NY',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80',
-    gender: 'woman',
-    seeking: 'man',
-    relationship_goal: 'Long-term partnership with creativity, shared values, and joy',
-    linkedin_url: 'https://www.linkedin.com/in/mira-sundaram-curator',
-    instagram_url: 'https://www.instagram.com/mira.reads.poems/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T11:55:00Z',
-    created_at: '2026-09-20T11:55:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Poetry & Literature Curator at Brooklyn Public Library | Literary Programs',
-        about: 'Curating public literary readings, poetry fellowships, and neighborhood writing workshops across Brooklyn. Oxford English Literature MA.',
-        positions: [{ role: 'Curator of Literary Programs', company: 'Brooklyn Public Library', duration: '2021 - Present', description: 'Organizing literary festivals and community writing cohorts.' }],
-        skills: ['Curating', 'Literary Programming', 'Public Speaking', 'Community Organizing', 'Writing Workshops'],
-        education: [{ school: 'University of Oxford', degree: 'M.St in English Literature' }],
+    "id": "person_15",
+    "name": "Pieter Levels",
+    "age": 38,
+    "city": "Amsterdam, Netherlands",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Down-to-earth partnership with a creative, independent, and travel-loving woman",
+    "linkedin_url": "https://www.linkedin.com/in/pieter-levels/",
+    "instagram_url": "https://www.instagram.com/levelsio/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder at Nomad List & Remote OK | Solo Indie Hacker",
+        "about": "Bootstrapping profitable internet companies as a solo developer and digital nomad. Creator of Nomad List, Remote OK, Interior AI, and Photo AI. University of Amsterdam graduate.",
+        "positions": [
+          {
+            "role": "Solo Founder",
+            "company": "Nomad List & Remote OK",
+            "duration": "2014 - Present",
+            "description": "Built global platforms enabling millions of professionals to work remotely."
+          }
+        ],
+        "skills": [
+          "Full-Stack Prototyping",
+          "Solo Bootstrapping",
+          "AI Generative Models",
+          "Remote Work Infrastructure",
+          "PHP/JS Craft"
+        ],
+        "education": [
+          {
+            "school": "University of Amsterdam",
+            "degree": "BS in Business Administration"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Poetry curator 📖 · South Asian classical dance (Bharatanatyam) 💃 · filter coffee fanatic ☕ · Prospect Park picnics',
-        postsCount: 165,
-        followersCount: 2800,
-        captions: ['Hosting 200 poets under the stars at Brooklyn Public Library plaza! Magic words 📚✨', 'Morning Bharatanatyam footwork practice to classical mridangam rhythms 💃🎶', 'Traditional South Indian filter coffee in the brass tumbler. Perfect Sunday froth ☕🥛'],
-        hashtags: ['#brooklynlibrary', '#bharatanatyam', '#filtercoffee', '#prospectpark'],
-        locations: ['Brooklyn Public Library Central', 'Prospect Park, Brooklyn', 'Park Slope NYC'],
+      "instagram": {
+        "bio": "Bootstrapped founder · 100% remote work advocate · Electronic music synthesis & backpacking · Amsterdam 🎒🎹",
+        "postsCount": 780,
+        "followersCount": 160000,
+        "captions": [
+          "Working from a seaside wooden bench in Portugal. Single laptop, mobile hotspot, and complete creative freedom 🌊💻",
+          "Modular synthesizer jam on a rainy Amsterdam evening. Patching analog oscillators to clear the mind 🎹🌧️",
+          "Shipped another feature in 45 minutes with vanilla JS. Simplicity always beats over-engineering 🚀✨"
+        ],
+        "hashtags": [
+          "#digitalnomad",
+          "#indiehacker",
+          "#modularsynth",
+          "#remotework"
+        ],
+        "locations": [
+          "Amsterdam, Netherlands",
+          "Lisbon, Portugal",
+          "Tokyo, Japan"
+        ]
       },
-      self_declared: { gender: 'woman', seeking: 'man', age_range: '27-35', city: 'New York, NY', relationship_goal: 'Committed partnership and family' },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "Amsterdam, Netherlands",
+        "relationship_goal": "Adventurous, independent partnership with deep affection, shared exploration, and simple living"
+      }
     },
-    analysis: {
-      summary: 'Mira is the Curator of Literary Programs at Brooklyn Public Library with an Oxford Master’s who brings poetry to public plazas, practices Bharatanatyam dance, and brews frothy South Indian filter coffee.',
-      needs: [
-        { value: 'Literary and poetic appreciation', confidence: 0.96, source: 'linkedin', snippet: 'Oxford M.St in English Literature, Brooklyn Public Library curator' },
-        { value: 'Cultural rhythm and artistic commitment', confidence: 0.93, source: 'instagram', snippet: 'Bharatanatyam classical dance dedication' },
-        { value: 'Warm community spirit and hospitality', confidence: 0.91, source: 'cross-source', snippet: 'Hosting community poetry festivals + authentic filter coffee' },
+    "analysis": {
+      "summary": "Pieter is the legendary solo indie hacker behind Nomad List and Remote OK, who lives simply with a laptop, modular synthesizers, and global remote work freedom.",
+      "needs": [
+        {
+          "value": "Independence and shared love of global exploration",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Pioneered digital nomad lifestyle living across continents"
+        },
+        {
+          "value": "Simplicity and avoidance of corporate theater",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Solo bootstrapped business model with zero employees or venture funding"
+        },
+        {
+          "value": "Creative artistic curiosity in music or design",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Modular synthesizer jamming and music production"
+        }
       ],
-      hobbies: [
-        { value: 'Bharatanatyam Indian classical dance', confidence: 0.96, source: 'instagram', snippet: 'Morning footwork practice to classical mridangam rhythms' },
-        { value: 'Traditional South Indian brass tumbler filter coffee brewing', confidence: 0.94, source: 'instagram', snippet: 'Frothing filter coffee in brass davarah' },
-        { value: 'Prospect Park lawn picnics and book circles', confidence: 0.9, source: 'instagram', snippet: 'Park Slope poetry readings and park gatherings' },
+      "hobbies": [
+        {
+          "value": "Modular analog synthesizer patching and electronic music",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Modular synthesizer jams in Amsterdam studio"
+        },
+        {
+          "value": "Backpacking and scouting coastal seaside towns",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Working from seaside wooden benches across Portugal and Japan"
+        },
+        {
+          "value": "Rapid solo web development hacking",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Shipping web and AI tools with minimal code"
+        }
       ],
-      interests: [
-        { value: 'Public libraries as vital civic sanctuaries', confidence: 0.97, source: 'linkedin', snippet: 'Curating open access literary programming' },
-        { value: 'South Asian poetry and diaspora storytelling', confidence: 0.92, source: 'cross-source', snippet: 'Bilingual poetry workshops and translation' },
+      "interests": [
+        {
+          "value": "Remote work dynamics and digital nomad cities",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Nomad List global index and community platform"
+        },
+        {
+          "value": "Consumer generative AI tools for everyday creativity",
+          "confidence": 0.91,
+          "source": "linkedin",
+          "snippet": "Creator of Interior AI and Photo AI"
+        }
       ],
-      values: [
-        { value: 'Accessibility of knowledge and public art', confidence: 0.96, source: 'linkedin', snippet: 'Devoting career to free community cultural programs' },
-        { value: 'Grace, discipline, and emotional expressiveness', confidence: 0.93, source: 'instagram', snippet: 'Years of classical dance discipline and expressive performance' },
+      "values": [
+        {
+          "value": "Ultimate personal freedom and self-determination",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Rejecting corporate hierarchy to live and build autonomously"
+        },
+        {
+          "value": "Pragmatic minimalism and shipping fast",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Belief that simple working code beats complex corporate engineering"
+        }
       ],
-      communication_style: { value: 'Articulate, melodic, warmly expressive, and deeply curious', confidence: 0.94, source: 'cross-source', snippet: 'Literary eloquence blended with joyful warmth' },
-      lifestyle: { value: 'Engaging library readings by day, dance studio discipline, peaceful Brooklyn park weekends', confidence: 0.93, source: 'cross-source', snippet: 'Central Library plaza to Park Slope tree-lined streets' },
-      ambitions: { value: 'Publishing a translation anthology of South Asian female poets across two centuries', confidence: 0.89, source: 'linkedin', snippet: 'Curating poetry fellowships and anthologies' },
-      deal_breakers: ['Cynical dismissiveness of the arts', 'Arrogant rudeness', 'Lack of empathy'],
-      conversation_hooks: ['What classical Bharatanatyam hand gestures (mudras) communicate', 'The secret to the perfect froth on South Indian filter coffee'],
-    },
+      "communication_style": {
+        "value": "Unfiltered, hilarious, direct, and radically transparent",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "Famous public revenue dashboards and candid social commentary"
+      },
+      "lifestyle": {
+        "value": "Minimalist backpack lifestyle with periods of deep coding flow and seaside exploration",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Nomadic laptop setups balanced with quiet modular synth sessions"
+      },
+      "ambitions": {
+        "value": "Proving that a solo human can build world-scale technology while maintaining full personal freedom and finding a fellow free spirit",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Expanding indie software while traveling meaningfully"
+      },
+      "deal_breakers": [
+        "Need for corporate bureaucracy",
+        "Materialistic need for status symbols",
+        "Inflexibility with travel"
+      ],
+      "conversation_hooks": [
+        "His favorite modular synthesizer patch",
+        "The strangest seaside town he ever launched a company from"
+      ]
+    }
   },
   {
-    id: 'person_25',
-    name: 'Leo Van Der Beek',
-    age: 31,
-    city: 'San Francisco, CA',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
-    gender: 'man',
-    seeking: 'woman',
-    relationship_goal: 'Life partner to build a loving, adventurous life with',
-    linkedin_url: 'https://www.linkedin.com/in/leo-vanderbeek-ai',
-    instagram_url: 'https://www.instagram.com/leo.sails.thebay/',
-    is_synthetic: false,
-    consent_at: '2026-09-20T12:00:00Z',
-    created_at: '2026-09-20T12:00:00Z',
-    source_bundle: {
-      linkedin: {
-        headline: 'Staff Robotics Simulation Engineer at Waymo | Autonomous Fleet Sim',
-        about: 'Simulating millions of edge-case driving miles in physics engines to validate autonomous vehicle safety. TU Delft & Stanford MS.',
-        positions: [{ role: 'Staff Simulation Engineer', company: 'Waymo', duration: '2020 - Present', description: 'Large-scale synthetic sensor simulation and dynamic collision avoidance.' }],
-        skills: ['Physics Simulation', 'Robotics', 'C++', 'Unreal Engine', 'Autonomous Vehicles'],
-        education: [{ school: 'Stanford University', degree: 'M.S. in Mechanical Engineering' }],
+    "id": "person_16",
+    "name": "Laura Behrens Wu",
+    "age": 34,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Loving, grounded partnership with shared curiosity, outdoor road trips, and mutual respect",
+    "linkedin_url": "https://www.linkedin.com/in/laurabehrenswu/",
+    "instagram_url": "https://www.instagram.com/laurabehrenswu/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at Shippo | YC W14 Alum",
+        "about": "Founder and CEO of Shippo. Empowering e-commerce merchants of all sizes to compete with global supply chains. University of St. Gallen graduate.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Shippo",
+            "duration": "2013 - Present",
+            "description": "Built e-commerce shipping platform powering over 100,000 merchants."
+          }
+        ],
+        "skills": [
+          "Logistics Infrastructure",
+          "E-commerce Platforms",
+          "Startup Scaling",
+          "Team Culture",
+          "Executive Leadership"
+        ],
+        "education": [
+          {
+            "school": "University of St. Gallen",
+            "degree": "BA in Business Administration"
+          }
+        ]
       },
-      instagram: {
-        bio: 'Dutch engineer in SF 🇳🇱🌉 · keelboat sailing SF Bay ⛵ · sourdough baker 🍞 · road cycling Mt. Tam 🚴‍♂️',
-        postsCount: 175,
-        followersCount: 2100,
-        captions: ['Sailing under the Golden Gate Bridge in a 25-knot afternoon breeze! Spray in the face ⛵🌊', 'Mt. Tamalpais climb on two wheels. Above the cloud inversion at the peak 🚴‍♂️☁️', 'Dutch stroopwafels made fresh on the waffle iron with homemade caramel 🧇✨'],
-        hashtags: ['#sfbaysailing', '#mttam', '#goldengate', '#stroopwafel'],
-        locations: ['Golden Gate Bridge', 'St. Francis Yacht Club SF', 'Mount Tamalpais'],
+      "instagram": {
+        "bio": "Logistics tech pioneer · Passionate about small businesses · Road trips along Highway 1 · SF 🛣️🌊",
+        "postsCount": 340,
+        "followersCount": 8800,
+        "captions": [
+          "Weekend escape down Highway 1 to Big Sur. Coastal redwoods meeting the Pacific surf is magic 🌲🌊",
+          "Shippo company offsite: celebrating ten years of shipping billions of packages for small shops 📦✨",
+          "Morning espresso and neighborhood flower market walk in the Marina ☕🌸"
+        ],
+        "hashtags": [
+          "#highway1",
+          "#bigsur",
+          "#shippoculture",
+          "#womenintech"
+        ],
+        "locations": [
+          "Big Sur, CA",
+          "Marina District, SF",
+          "San Francisco, CA"
+        ]
       },
-      self_declared: { gender: 'man', seeking: 'woman', age_range: '26-34', city: 'San Francisco, CA', relationship_goal: 'Marriage and building a family' },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Committed, warm partnership with an adventurous spirit and grounded emotional maturity"
+      }
     },
-    analysis: {
-      summary: 'Leo is a Dutch Staff Simulation Engineer at Waymo with a Stanford MS who steers 30-foot sailboats through 25-knot Golden Gate breezes, cycles Mt. Tam above the fog, and bakes fresh warm stroopwafels.',
-      needs: [
-        { value: 'Adventurous spirit and physical vigor', confidence: 0.96, source: 'instagram', snippet: 'Sailing through 25-knot Golden Gate gusts, cycling Mt. Tam' },
-        { value: 'High intellectual curiosity and problem solving', confidence: 0.94, source: 'linkedin', snippet: 'Staff Simulation Engineer at Waymo, Stanford MS' },
-        { value: 'Warm, down-to-earth domestic joy', confidence: 0.9, source: 'instagram', snippet: 'Making fresh warm stroopwafels and sharing with friends' },
+    "analysis": {
+      "summary": "Laura is the founder and CEO of Shippo, combining deep German engineering discipline in logistics with coastal California road trips, flower market strolls, and small business advocacy.",
+      "needs": [
+        {
+          "value": "Appreciation for resilient, long-term leadership",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "10+ years building Shippo into an e-commerce infrastructure backbone"
+        },
+        {
+          "value": "Love of nature and coastal weekend road trips",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Highway 1 and Big Sur redwood road trips"
+        },
+        {
+          "value": "Unpretentious warmth and loyalty",
+          "confidence": 0.9,
+          "source": "cross-source",
+          "snippet": "Down-to-earth leadership supporting everyday small merchant businesses"
+        }
       ],
-      hobbies: [
-        { value: 'Keelboat sailing on San Francisco Bay', confidence: 0.97, source: 'instagram', snippet: 'Sailing under Golden Gate Bridge in 25 knots' },
-        { value: 'Road cycling climbs on Mount Tamalpais', confidence: 0.93, source: 'instagram', snippet: 'Cycling above the cloud inversion on Mt. Tam' },
-        { value: 'Authentic Dutch stroopwafel and sourdough baking', confidence: 0.91, source: 'instagram', snippet: 'Fresh waffle iron stroopwafels with homemade caramel' },
+      "hobbies": [
+        {
+          "value": "Pacific Coast Highway 1 road trips",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Big Sur coastal drives and redwood forest hiking"
+        },
+        {
+          "value": "Marina neighborhood flower market exploration",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Sunday flower markets and morning walks"
+        },
+        {
+          "value": "Mentoring immigrant and women founders",
+          "confidence": 0.9,
+          "source": "linkedin",
+          "snippet": "Active guidance for early-stage YC founders"
+        }
       ],
-      interests: [
-        { value: 'Autonomous physical world simulation & AI robotics', confidence: 0.96, source: 'linkedin', snippet: 'Simulating millions of autonomous driving miles at Waymo' },
-        { value: 'Wind aerodynamics and marine seamanship', confidence: 0.92, source: 'cross-source', snippet: 'Physics simulation meets real-world sail trimming' },
+      "interests": [
+        {
+          "value": "Supply chain automation and physical retail empowerment",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "Leveling the playing field for independent e-commerce brands"
+        },
+        {
+          "value": "California coastal architecture and history",
+          "confidence": 0.88,
+          "source": "instagram",
+          "snippet": "Historic coastal highway landmarks and photography"
+        }
       ],
-      values: [
-        { value: 'Rigorous engineering safety and protecting human life', confidence: 0.95, source: 'linkedin', snippet: 'Validating safety for autonomous passenger rides' },
-        { value: 'Direct, honest communication and joyful camaraderie', confidence: 0.93, source: 'cross-source', snippet: 'Dutch directness combined with team sailing coordination' },
+      "values": [
+        {
+          "value": "Tenacity and humble perseverance",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Navigating early venture skepticism to build a billion-dollar platform"
+        },
+        {
+          "value": "Supporting main street livelihoods",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Dedicated service to hundreds of thousands of small merchants"
+        }
       ],
-      communication_style: { value: 'Direct, cheerful, highly articulate, and warm', confidence: 0.93, source: 'cross-source', snippet: 'No-nonsense Dutch warmth and energetic enthusiasm' },
-      lifestyle: { value: 'High-responsibility tech simulation by day, salty Bay sailing and mountain climbs by weekend', confidence: 0.95, source: 'cross-source', snippet: 'Mountain View Waymo lab to St. Francis Yacht Club slips' },
-      ambitions: { value: 'Solving autonomous robot physical safety at planetary scale', confidence: 0.91, source: 'linkedin', snippet: 'Staff Simulation Engineering leadership' },
-      deal_breakers: ['Passive-aggressive communication', 'Fear of the outdoors', 'Dishonesty'],
-      conversation_hooks: ['How autonomous cars test in virtual worlds before hitting real streets', 'The adrenaline rush of sailing through the Golden Gate slot'],
-    },
+      "communication_style": {
+        "value": "Gentle, clear, highly structured, and grounded",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Thoughtful keynote delivery and approachable team leadership"
+      },
+      "lifestyle": {
+        "value": "Silicon Valley executive pace balanced with peaceful ocean coastline weekends",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Logistics scaling paired with Big Sur coastal retreats"
+      },
+      "ambitions": {
+        "value": "Building an enduring global logistics infrastructure while nurturing a loving, grounded personal life",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Shippo global scaling matched with personal happiness"
+      },
+      "deal_breakers": [
+        "Arrogant entitlement",
+        "Lack of follow-through on commitments",
+        "Dislike of outdoor travel"
+      ],
+      "conversation_hooks": [
+        "Her favorite secret vista along Highway 1",
+        "The early days of shipping packages from her own apartment in SF"
+      ]
+    }
   },
+  {
+    "id": "person_17",
+    "name": "Amjad Masad",
+    "age": 36,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Committed, loving partnership with shared intellectual curiosity, warmth, and family loyalty",
+    "linkedin_url": "https://www.linkedin.com/in/amjadmasad/",
+    "instagram_url": "https://www.instagram.com/amasad/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Replit | Former Engineer at Facebook",
+        "about": "Co-founder and CEO of Replit. Empowering the next billion software creators through AI and cloud computing environments. Born in Amman, Jordan. Pioneer of in-browser IDEs.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Replit",
+            "duration": "2016 - Present",
+            "description": "Building the world collaborative AI development environment used by 25M+ developers."
+          },
+          {
+            "role": "Software Engineer",
+            "company": "Facebook",
+            "duration": "2013 - 2016",
+            "description": "Early engineer on React Native and JavaScript toolchains."
+          }
+        ],
+        "skills": [
+          "Cloud Computing",
+          "AI Code Generation",
+          "Developer Ecosystems",
+          "In-Browser Runtimes",
+          "Philosophical Debate"
+        ],
+        "education": [
+          {
+            "school": "Princess Sumaya University for Technology",
+            "degree": "BS in Computer Science"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Democratizing software creation · Amman to SF · Heavy reading & philosophical debates · SF 📚💻",
+        "postsCount": 460,
+        "followersCount": 28000,
+        "captions": [
+          "Stack of weekend reading: ancient Greek philosophy, history of printing presses, and AI agent architectures 📚🏛️",
+          "San Francisco sunset walk through Buena Vista Park. The city is alive with energy and builders 🌉✨",
+          "Baking flatbread with family on Sunday afternoon. Roots keep you grounded no matter how high tech moves 🫓🤍"
+        ],
+        "hashtags": [
+          "#replit",
+          "#historyofideas",
+          "#sanfrancisco",
+          "#buenavista"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Amman, Jordan",
+          "Silicon Valley"
+        ]
+      },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Long-term partnership with a kind, intellectually curious, and grounded woman"
+      }
+    },
+    "analysis": {
+      "summary": "Amjad is the co-founder and CEO of Replit, blending pioneering AI coding infrastructure with ancient philosophical reading, Middle Eastern family flatbread baking, and deep civic optimism.",
+      "needs": [
+        {
+          "value": "Intellectual depth and enthusiasm for philosophical debate",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Avid reader of ancient Greek philosophy and computing history"
+        },
+        {
+          "value": "Family loyalty and cultural appreciation",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Traditional flatbread baking and honoring family roots"
+        },
+        {
+          "value": "Shared optimism about human potential",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Mission to empower the next billion software developers"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Reading history of ideas and classical philosophy",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Weekend reading stacks spanning philosophy to computing"
+        },
+        {
+          "value": "Baking traditional Levantine flatbreads",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Sunday afternoon family flatbread baking"
+        },
+        {
+          "value": "Sunset walks through Buena Vista and Corona Heights",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "San Francisco ridge walking and city contemplation"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Autonomous software agents and in-browser computing",
+          "confidence": 0.98,
+          "source": "linkedin",
+          "snippet": "Building Replit AI collaborative environments"
+        },
+        {
+          "value": "History of democratization of communication technologies",
+          "confidence": 0.92,
+          "source": "cross-source",
+          "snippet": "Comparing AI software tools to the invention of the printing press"
+        }
+      ],
+      "values": [
+        {
+          "value": "Democratizing creation for everyone regardless of background",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Personal journey from Amman to Silicon Valley fueling mission for access"
+        },
+        {
+          "value": "Truth-seeking through rigorous, open debate",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Encouraging civil intellectual discourse and free inquiry"
+        }
+      ],
+      "communication_style": {
+        "value": "Philosophical, articulate, passionate, and warm",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Thoughtful essays and podcast interviews on the future of programming"
+      },
+      "lifestyle": {
+        "value": "High-focus AI leadership balanced by heavy reading, park walks, and family dinners",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Directing Replit while preserving space for deep study and heritage"
+      },
+      "ambitions": {
+        "value": "Enabling any human on Earth to create software with words while building a rich family life",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "Scaling Replit to 100M creators and nurturing personal relationships"
+      },
+      "deal_breakers": [
+        "Anti-intellectualism",
+        "Cynical fatalism",
+        "Lack of respect for family traditions"
+      ],
+      "conversation_hooks": [
+        "Why the printing press is the closest analogy to AI code generation",
+        "His secret technique for crispy Levantine flatbread"
+      ]
+    }
+  },
+  {
+    "id": "person_18",
+    "name": "Melanie Perkins",
+    "age": 37,
+    "city": "Sydney, Australia",
+    "avatar": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Loving, collaborative life partnership grounded in kindness, adventure, and global philanthropy",
+    "linkedin_url": "https://www.linkedin.com/in/melanieperkins/",
+    "instagram_url": "https://www.instagram.com/melanieperkins/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Canva | Empowering the World to Design",
+        "about": "Co-founder and CEO of Canva. On a mission to empower everyone in the world to design anything and publish anywhere. Committed to using Canva profits for profound global good.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Canva",
+            "duration": "2012 - Present",
+            "description": "Built visual communication platform used by over 170M active monthly users globally."
+          }
+        ],
+        "skills": [
+          "Visual Communication",
+          "Product Scaling",
+          "Global Team Culture",
+          "Philanthropic Design",
+          "Mission-Driven Growth"
+        ],
+        "education": [
+          {
+            "school": "University of Western Australia",
+            "degree": "Communications & Psychology"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Empowering every person to design · Kitesurfing enthusiast & philanthropic builder · Sydney 🪁🌏",
+        "postsCount": 490,
+        "followersCount": 195000,
+        "captions": [
+          "Kitesurfing in Western Australia over the break. High winds, ocean spray, and total focus 🪁🌊",
+          "Canva Create stage celebrating our global creator community! Millions of people finding their creative voice 🎨✨",
+          "Quiet Sunday morning sketch walk along Bondi coastal paths ☕🌅"
+        ],
+        "hashtags": [
+          "#canvadesign",
+          "#kitesurfing",
+          "#sydneylife",
+          "#empoweringcreativity"
+        ],
+        "locations": [
+          "Sydney, Australia",
+          "Perth, Australia",
+          "Bondi Beach"
+        ]
+      },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "Sydney, Australia",
+        "relationship_goal": "Equitable partnership filled with outdoor joy, philanthropic purpose, and mutual laughter"
+      }
+    },
+    "analysis": {
+      "summary": "Melanie is the co-founder and CEO of Canva, pairing global visual empowerment and multi-billion-dollar philanthropy with ocean kitesurfing and coastal walks in Sydney.",
+      "needs": [
+        {
+          "value": "Authentic humility and shared philanthropic purpose",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Pledged majority of equity to eliminate extreme global poverty"
+        },
+        {
+          "value": "High outdoor energy and adventurous spirit",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Kitesurfing in Western Australia and ocean coastal hiking"
+        },
+        {
+          "value": "Kindness and positive team culture",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Canva core value: \"Be a good human\" and empower others"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Kitesurfing across Western Australia coastline",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "High winds and ocean spray kitesurfing sessions"
+        },
+        {
+          "value": "Bondi coastal trail walks and sketch journaling",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Quiet Sunday morning sketch walks in Sydney"
+        },
+        {
+          "value": "Philanthropic impact program design",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Canva Foundation initiatives across developing nations"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Democratizing visual communication and creative software",
+          "confidence": 0.98,
+          "source": "linkedin",
+          "snippet": "Empowering 170M+ people worldwide to design"
+        },
+        {
+          "value": "Marine conservation and ocean stewardship",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "Ocean preservation and Australian coastline ecology"
+        }
+      ],
+      "values": [
+        {
+          "value": "Using wealth and influence for radical global good",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Canva two-step plan: build one of the world's most valuable companies, then do the most good possible"
+        },
+        {
+          "value": "Relentless persistence against all odds",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Rejected by over 100 investors before building Canva into a global giant"
+        }
+      ],
+      "communication_style": {
+        "value": "Inspirational, warm, humble, and vision-driven",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Visionary community speeches and compassionate company letters"
+      },
+      "lifestyle": {
+        "value": "Directing a global tech platform while staying connected to ocean wind and humble roots",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Executive leadership balanced with kitesurfing and beach walks"
+      },
+      "ambitions": {
+        "value": "Eliminating extreme global poverty through Canva's foundation while living a joyful, grounded life",
+        "confidence": 0.96,
+        "source": "cross-source",
+        "snippet": "Fulfilling the two-step plan for global human good"
+      },
+      "deal_breakers": [
+        "Greed and ostentatious flashiness",
+        "Pessimism towards human progress",
+        "Self-absorbed vanity"
+      ],
+      "conversation_hooks": [
+        "How learning to kitesurf helped her raise Canva's seed round",
+        "Her favorite beach in Western Australia"
+      ]
+    }
+  },
+  {
+    "id": "person_19",
+    "name": "Sahil Lavingia",
+    "age": 32,
+    "city": "Portland, OR",
+    "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Thoughtful, artistic partnership with an authentic woman who loves nature and creative expression",
+    "linkedin_url": "https://www.linkedin.com/in/sahillavingia/",
+    "instagram_url": "https://www.instagram.com/shl/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at Gumroad | Author of The Minimalist Entrepreneur",
+        "about": "Founder of Gumroad. Helping creators earn over $1B selling digital products. Painter, writer, and investor. Early engineer at Pinterest. Advocate for sustainable, profitable business.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Gumroad",
+            "duration": "2011 - Present",
+            "description": "Empowering independent authors, artists, and creators worldwide."
+          }
+        ],
+        "skills": [
+          "Creator Economy",
+          "Oil Painting",
+          "Minimalist Entrepreneurship",
+          "Writing",
+          "Bootstrapping"
+        ],
+        "education": [
+          {
+            "school": "USC",
+            "degree": "Computer Science (left early to build Pinterest)"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Oil painter & writer · Bootstrapping advocate · Pacific Northwest trail hiking & coffee · Portland 🌲🎨",
+        "postsCount": 520,
+        "followersCount": 78000,
+        "captions": [
+          "Finished this large figurative oil painting in the studio. Glazing takes weeks of patience but gives luminosity 🎨✨",
+          "Morning run in Forest Park through damp moss and Douglas firs. Pacific Northwest air is restorative 🌲🌧️",
+          "Writing chapter notes at Coava Coffee. The best businesses are built for freedom, not valuation headlines ☕📖"
+        ],
+        "hashtags": [
+          "#oilpainting",
+          "#forestpark",
+          "#minimalistentrepreneur",
+          "#portlandarts"
+        ],
+        "locations": [
+          "Portland, OR",
+          "Forest Park Portland",
+          "San Francisco, CA"
+        ]
+      },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "Portland, OR",
+        "relationship_goal": "Meaningful, quiet, and deeply loving partnership with space for art, books, and nature"
+      }
+    },
+    "analysis": {
+      "summary": "Sahil is the founder of Gumroad, author of The Minimalist Entrepreneur, and an accomplished figurative oil painter who traded Silicon Valley hype for forest trail runs and studio painting in Portland.",
+      "needs": [
+        {
+          "value": "Appreciation for fine art and creative solitude",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Daily oil painter maintaining rigorous studio artistic practice"
+        },
+        {
+          "value": "Freedom over status and vanity metrics",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Author of The Minimalist Entrepreneur advocating sustainable autonomy"
+        },
+        {
+          "value": "Love of Pacific Northwest rain and quiet woods",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Forest Park trail runs and quiet coffee shop writing"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Figurative oil painting and portraiture",
+          "confidence": 0.97,
+          "source": "instagram",
+          "snippet": "Large figurative oil painting with layered glazing techniques"
+        },
+        {
+          "value": "Trail running through Forest Park",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Running through damp moss and Douglas fir trees in Portland"
+        },
+        {
+          "value": "Essay writing on economics and philosophy",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Author of bestselling business and lifestyle books"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Independent creator monetization systems",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Paying out over $1B to indie creators on Gumroad"
+        },
+        {
+          "value": "Classical art academy painting methods",
+          "confidence": 0.9,
+          "source": "instagram",
+          "snippet": "Classical glazing, anatomy, and studio lighting"
+        }
+      ],
+      "values": [
+        {
+          "value": "Freedom, sustainability, and personal sovereignty",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Pioneered building profitable, calm companies without venture treadmill"
+        },
+        {
+          "value": "Unflinching honesty about success and failure",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Wrote famously vulnerable essays on failure and redefining happiness"
+        }
+      ],
+      "communication_style": {
+        "value": "Reflective, concise, poetic, and transparent",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Minimalist prose style and thoughtful artistic reflections"
+      },
+      "lifestyle": {
+        "value": "Calm studio life alternating between painting, remote Gumroad governance, and forest runs",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Remote CEO running company in minimal hours to paint full-time"
+      },
+      "ambitions": {
+        "value": "Creating museum-caliber paintings and empowering millions of creators while sharing a peaceful life",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Balancing art and business mastery with domestic joy"
+      },
+      "deal_breakers": [
+        "Addiction to social media clout",
+        "Materialistic consumption",
+        "Disregard for quiet creative work"
+      ],
+      "conversation_hooks": [
+        "Why oil paint requires weeks of patience",
+        "What he learned from leaving Silicon Valley for Portland"
+      ]
+    }
+  },
+  {
+    "id": "person_20",
+    "name": "Whitney Wolfe Herd",
+    "age": 35,
+    "city": "Austin, TX",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Loving, equal partnership with deep mutual support, shared family values, and outdoor life",
+    "linkedin_url": "https://www.linkedin.com/in/whitney-wolfe-herd-8b9a2442/",
+    "instagram_url": "https://www.instagram.com/whitney/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & Executive Chair at Bumble | Entrepreneur & Investor",
+        "about": "Founder and Executive Chair of Bumble. Youngest female founder to take a company public. Committed to resetting dating norms, ending digital harassment, and empowering women. SMU graduate.",
+        "positions": [
+          {
+            "role": "Founder & Executive Chair",
+            "company": "Bumble",
+            "duration": "2014 - Present",
+            "description": "Created women-first dating and networking platform with over 100M users."
+          }
+        ],
+        "skills": [
+          "Consumer Networks",
+          "Social Psychology",
+          "Brand Building",
+          "Public Company Governance",
+          "Dating Dynamics"
+        ],
+        "education": [
+          {
+            "school": "Southern Methodist University (SMU)",
+            "degree": "BA in International Studies"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Empowering healthy connections · Modern romance pioneer · Equestrian riding & Texas outdoors · Austin 🐴🌻",
+        "postsCount": 680,
+        "followersCount": 1200000,
+        "captions": [
+          "Early morning at the stables. Horseback riding connects you to rhythm and quiet instincts like nothing else 🐴🌅",
+          "Honored to speak on the future of healthy human connection and mutual respect in modern relationships 💛✨",
+          "Sunday barbecue with family in the backyard. The best moments are always the simplest 🥩🌻"
+        ],
+        "hashtags": [
+          "#makefirstmove",
+          "#bumblelife",
+          "#equestrian",
+          "#austinliving"
+        ],
+        "locations": [
+          "Austin, TX",
+          "New York, NY",
+          "Yellowstone, WY"
+        ]
+      },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "Austin, TX",
+        "relationship_goal": "Equitable, warm partnership with a kind, grounded, and emotionally secure man"
+      }
+    },
+    "analysis": {
+      "summary": "Whitney is the founder of Bumble and youngest woman to take an American company public, known for redefining modern dating around women making the first move, paired with equestrian riding and Texas warmth.",
+      "needs": [
+        {
+          "value": "Unquestioned respect for women's agency and leadership",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Founded Bumble with the core premise of women making the first move"
+        },
+        {
+          "value": "Warm family orientation and domestic grounding",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Backyard barbecues and family grounding moments in Texas"
+        },
+        {
+          "value": "Love of animals and outdoor equestrian lifestyle",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Morning horseback riding and connection to horses"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Equestrian horseback riding",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Early morning stable sessions and horseback trail riding"
+        },
+        {
+          "value": "Family outdoor barbecuing and cooking",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Sunday backyard Texas barbecue meals"
+        },
+        {
+          "value": "Civic policy advocacy for online safety",
+          "confidence": 0.92,
+          "source": "linkedin",
+          "snippet": "Passed anti-cyberflashing legislation in Texas and California"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Social dynamics and digital relationship psychology",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Pioneered behavioral architecture for 100M+ daters"
+        },
+        {
+          "value": "Texas ranch land conservation",
+          "confidence": 0.88,
+          "source": "instagram",
+          "snippet": "Appreciation for open space and hill country wildlife"
+        }
+      ],
+      "values": [
+        {
+          "value": "Kindness and accountability as relationship non-negotiables",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Built Bumble on zero tolerance for harassment and misogyny"
+        },
+        {
+          "value": "Courage to rebuild after adversity",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Transformed early tech industry friction into an iconic global company"
+        }
+      ],
+      "communication_style": {
+        "value": "Warm, empathetic, articulate, and magnetic",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Empowering keynote speaker and authentic interviewer"
+      },
+      "lifestyle": {
+        "value": "Global company governance balanced by early morning riding and quiet family evenings in Austin",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Executive boardroom meetings paired with country riding"
+      },
+      "ambitions": {
+        "value": "Making the entire internet and physical world safer for equitable love while nurturing a happy family",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "Leading dating revolution while living intentionally in Austin"
+      },
+      "deal_breakers": [
+        "Misogyny or casual sexism",
+        "Disrespectful digital communication",
+        "Arrogant entitlement"
+      ],
+      "conversation_hooks": [
+        "What horses teach you about human leadership",
+        "Why she insisted on women making the first move in 2014"
+      ]
+    }
+  },
+  {
+    "id": "person_21",
+    "name": "Nikita Bier",
+    "age": 34,
+    "city": "Miami, FL",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Fun, loyal, and loving relationship with an intelligent woman who loves laughs and sunshine",
+    "linkedin_url": "https://www.linkedin.com/in/nikitabier/",
+    "instagram_url": "https://www.instagram.com/nikitabier/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Product Architect | Founder at tbh & Gas (Acquired by Meta & Discord)",
+        "about": "Consumer app viral growth specialist. Founded tbh (acquired by Meta) and Gas (acquired by Discord), both reaching #1 on the App Store. UC Berkeley Haas graduate.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Gas App",
+            "duration": "2022 - 2023",
+            "description": "Built viral positivity app that reached #1 on App Store; acquired by Discord."
+          },
+          {
+            "role": "Product Manager",
+            "company": "Meta",
+            "duration": "2017 - 2021",
+            "description": "Led growth and experimentation initiatives across youth consumer apps."
+          }
+        ],
+        "skills": [
+          "Viral Consumer Growth",
+          "Product Psychology",
+          "Mobile UX",
+          "App Store Optimization",
+          "Humor"
+        ],
+        "education": [
+          {
+            "school": "UC Berkeley (Haas School of Business)",
+            "degree": "BS in Business Administration"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Consumer app viral growth · Miami sunshine · Tennis player & espresso connoisseur · Miami 🎾☕",
+        "postsCount": 380,
+        "followersCount": 45000,
+        "captions": [
+          "Sunday morning tennis drill session in Key Biscayne. Getting that topspin backhand dialed in 🎾🌴",
+          "Cortado on the patio in South Beach before testing new consumer mobile prototypes ☕☀️",
+          "Best lesson from shipping 14 failed apps before 2 hit #1: persistence and humor are your best friends 🚀😄"
+        ],
+        "hashtags": [
+          "#tennisdrill",
+          "#miamilife",
+          "#keybiscayne",
+          "#productgrowth"
+        ],
+        "locations": [
+          "Miami, FL",
+          "Key Biscayne, FL",
+          "South Beach"
+        ]
+      },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "Miami, FL",
+        "relationship_goal": "Long-term relationship with someone who is warm, sharp, playful, and emotionally genuine"
+      }
+    },
+    "analysis": {
+      "summary": "Nikita is the consumer mobile mastermind behind tbh and Gas (acquired by Meta and Discord), pairing unrivaled viral product psychology with Key Biscayne tennis and playful humor.",
+      "needs": [
+        {
+          "value": "Quick wit and shared sense of playful humor",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Known for sharp comedic timing and uplifting positive apps"
+        },
+        {
+          "value": "Active sunny outdoor lifestyle",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Key Biscayne tennis drills and South Beach walks"
+        },
+        {
+          "value": "Grounded authenticity away from tech hype",
+          "confidence": 0.9,
+          "source": "cross-source",
+          "snippet": "Relentless persistence over 14 failures before success"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Tennis training and matches in Key Biscayne",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Topspin backhand training and Sunday tennis sets"
+        },
+        {
+          "value": "Espresso tasting and Miami cafe hopping",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "South Beach cortados and outdoor patio working"
+        },
+        {
+          "value": "Rapid mobile UI prototyping",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Rapidly creating consumer micro-interactions that go viral"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Adolescent and consumer social psychology",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Designed positive peer affirmation mechanics in tbh and Gas"
+        },
+        {
+          "value": "App Store algorithm dynamics and viral distribution loops",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Reached #1 on iOS App Store across multiple distinct apps"
+        }
+      ],
+      "values": [
+        {
+          "value": "Spreading genuine positivity and anti-bullying culture",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Both hit apps built around anonymous compliments and uplifting peers"
+        },
+        {
+          "value": "Resilience and self-deprecating optimism",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Openly talking about failing dozens of times before hitting gold"
+        }
+      ],
+      "communication_style": {
+        "value": "Humorous, sharp, candid, and self-aware",
+        "confidence": 0.95,
+        "source": "cross-source",
+        "snippet": "Famous witty social posts and insightful product teardowns"
+      },
+      "lifestyle": {
+        "value": "Miami coastal living alternating between intense prototyping sprints and tennis sets",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Building apps while enjoying Florida sunshine and ocean air"
+      },
+      "ambitions": {
+        "value": "Inventing social products that bring genuine joy to millions while building a loving, joyful home",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Consumer innovation combined with personal life fulfillment"
+      },
+      "deal_breakers": [
+        "Lack of humor or taking oneself too seriously",
+        "Manipulative mind games",
+        "Dislike of sunshine/outdoor sports"
+      ],
+      "conversation_hooks": [
+        "The craziest notification message that drove 10M downloads",
+        "His tennis rivalry in Key Biscayne"
+      ]
+    }
+  },
+  {
+    "id": "person_22",
+    "name": "Julia Hartz",
+    "age": 44,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Long-term partnership with a kind, grounded, and emotionally open-hearted man",
+    "linkedin_url": "https://www.linkedin.com/in/juliahartz/",
+    "instagram_url": "https://www.instagram.com/juliahartz/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder & CEO at Eventbrite | Bringing People Together",
+        "about": "Co-founder and CEO of Eventbrite. Dedicated to fueling the human desire for shared, live experiences. Passionate about empowering independent event creators globally. Pepperdine graduate.",
+        "positions": [
+          {
+            "role": "Co-founder & CEO",
+            "company": "Eventbrite",
+            "duration": "2006 - Present",
+            "description": "Scaled global ticketing platform processing hundreds of millions of live events worldwide."
+          }
+        ],
+        "skills": [
+          "Executive Leadership",
+          "Live Event Experience",
+          "Customer Culture",
+          "Public Company Leadership",
+          "Community Gatherings"
+        ],
+        "education": [
+          {
+            "school": "Pepperdine University",
+            "degree": "BA in Telecommunications"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Gathering communities through live experiences · Morning yoga & coastal hikes in Marin · SF 🧘‍♀️🌿",
+        "postsCount": 540,
+        "followersCount": 24000,
+        "captions": [
+          "Nothing replaces the electrical energy of humans gathering in one room for music or ideas 🎶✨",
+          "Morning yoga flow followed by tea on the patio. Grounding into what truly matters 🧘‍♀️🍵",
+          "Marin Headlands hike with ocean vistas. Salt air and rolling green ridges 🌊🌲"
+        ],
+        "hashtags": [
+          "#liveexperiences",
+          "#eventbrite",
+          "#marinhikes",
+          "#mindfulliving"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Marin Headlands",
+          "Nashville, TN"
+        ]
+      },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Compassionate, joyful, and equal partnership with an authentic and grounded partner"
+      }
+    },
+    "analysis": {
+      "summary": "Julia is the co-founder and CEO of Eventbrite, passionate about bringing people together for live events while grounding her personal life in morning yoga, coastal Marin hikes, and family warmth.",
+      "needs": [
+        {
+          "value": "Shared belief in community and live human connection",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Life mission of bringing people together through live experiences"
+        },
+        {
+          "value": "Emotional steadiness and grounded calm",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Daily morning yoga and intentional grounding rituals"
+        },
+        {
+          "value": "Love of nature and hiking",
+          "confidence": 0.91,
+          "source": "instagram",
+          "snippet": "Marin Headlands ocean trail hiking"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Vinyasa yoga and breathwork",
+          "confidence": 0.95,
+          "source": "instagram",
+          "snippet": "Morning yoga flows and tea on the patio"
+        },
+        {
+          "value": "Coastal hiking across Marin County",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Marin Headlands salt air and ridge trails"
+        },
+        {
+          "value": "Attending live music concerts and indie festivals",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Lifelong passion for live community event energy"
+        }
+      ],
+      "interests": [
+        {
+          "value": "The psychology of live gatherings and social belonging",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Ticketing and event technology empowering creators"
+        },
+        {
+          "value": "Independent creator economies and music venues",
+          "confidence": 0.91,
+          "source": "cross-source",
+          "snippet": "Advocacy for independent live performance venues"
+        }
+      ],
+      "values": [
+        {
+          "value": "Human connection as the antidote to loneliness",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Belief that live shared experiences are fundamental to human wellbeing"
+        },
+        {
+          "value": "Empathy and collaborative servant leadership",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Built famous positive team culture recognized across tech"
+        }
+      ],
+      "communication_style": {
+        "value": "Warm, gracious, articulate, and deeply present",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Empathetic public addresses and human-centric corporate messaging"
+      },
+      "lifestyle": {
+        "value": "Public company governance balanced with outdoor hikes, yoga, and calm family evenings",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Guiding global platform while maintaining grounding morning practices"
+      },
+      "ambitions": {
+        "value": "Enabling a billion live human gatherings while cultivating deep love, peace, and family joy",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Eventbrite mission paired with harmonious personal life"
+      },
+      "deal_breakers": [
+        "Cold cynicism about gatherings",
+        "Inability to connect emotionally",
+        "Arrogant selfishness"
+      ],
+      "conversation_hooks": [
+        "The most electric live concert she ever attended",
+        "Her favorite ridge hike overlooking the Golden Gate Bridge"
+      ]
+    }
+  },
+  {
+    "id": "person_23",
+    "name": "Steven Bartlett",
+    "age": 32,
+    "city": "London, UK",
+    "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Deep, honest, and loving partnership with an intellectually curious and emotionally healthy woman",
+    "linkedin_url": "https://www.linkedin.com/in/steven-bartlett-56986834/",
+    "instagram_url": "https://www.instagram.com/steven/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Host at The Diary of A CEO | Founder at Flight Story & thirdweb",
+        "about": "Host of Europe's #1 podcast The Diary of A CEO. Dragon on BBC's Dragons' Den. Founder of Flight Story and thirdweb. Passionate about human psychology, health, and business strategy.",
+        "positions": [
+          {
+            "role": "Host & Executive Producer",
+            "company": "The Diary of A CEO",
+            "duration": "2017 - Present",
+            "description": "Interviewing world leaders in science, business, and psychology reaching millions monthly."
+          },
+          {
+            "role": "Co-founder",
+            "company": "Flight Story",
+            "duration": "2021 - Present",
+            "description": "Next-generation marketing, communications, and media company."
+          }
+        ],
+        "skills": [
+          "Interviewing & Podcasting",
+          "Human Psychology",
+          "Media Strategy",
+          "Brand Innovation",
+          "Health & Fitness"
+        ],
+        "education": [
+          {
+            "school": "Manchester Metropolitan University",
+            "degree": "Business Management (dropped out after 1 lecture)"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Curious interviewer & speaker · Fitness obsessive & electronic music producer · London 🎙️💪",
+        "postsCount": 1540,
+        "followersCount": 3800000,
+        "captions": [
+          "Pre-interview prep on circadian biology and emotional resilience. Curiosity is a superpower 🎙️📖",
+          "Heavy morning leg day session in the gym. Discipline is choosing between what you want now and what you want most 💪🔥",
+          "Working on deep house music tracks late into the night. Sound engineering resets my creative soul 🎧🎹"
+        ],
+        "hashtags": [
+          "#diaryofaceo",
+          "#gymdiscipline",
+          "#musicproducer",
+          "#curiosityfirst"
+        ],
+        "locations": [
+          "London, UK",
+          "Manchester, UK",
+          "Los Angeles, CA"
+        ]
+      },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "London, UK",
+        "relationship_goal": "High-intimacy, loyal relationship with someone who values personal growth, health, and vulnerability"
+      }
+    },
+    "analysis": {
+      "summary": "Steven is the host of The Diary of A CEO and BBC Dragon, blending world-class curiosity and interviewing mastery with intense fitness discipline and deep house music production.",
+      "needs": [
+        {
+          "value": "Deep vulnerability and emotional intelligence",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Dedicated hundreds of podcast hours to deep psychological exploration"
+        },
+        {
+          "value": "Commitment to physical fitness and healthy habits",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Daily rigorous weightlifting and health optimization"
+        },
+        {
+          "value": "Stimulating, open-ended intellectual inquiry",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Interviews world-leading neuroscientists, psychologists, and entrepreneurs"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Heavy weightlifting and metabolic conditioning",
+          "confidence": 0.97,
+          "source": "instagram",
+          "snippet": "Heavy morning leg days and daily gym discipline"
+        },
+        {
+          "value": "Electronic deep house music production and DJing",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Producing electronic house music tracks late at night"
+        },
+        {
+          "value": "Reading behavioral psychology and neuroscience research",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Extensive interview research into human habits and mindsets"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Neuroscience of human relationships and attachment",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Frequent deep-dive episodes with world leading attachment theorists"
+        },
+        {
+          "value": "Next-generation digital media distribution",
+          "confidence": 0.93,
+          "source": "linkedin",
+          "snippet": "Scaling Flight Story and multi-platform media engines"
+        }
+      ],
+      "values": [
+        {
+          "value": "Radical self-honesty and continuous self-improvement",
+          "confidence": 0.96,
+          "source": "cross-source",
+          "snippet": "Emphasizes owning mistakes and learning from failure over ego"
+        },
+        {
+          "value": "Discipline as the foundation of true freedom",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Choosing between what you want now and what you want most"
+        }
+      ],
+      "communication_style": {
+        "value": "Intensely attentive, empathetic, probing, and calm",
+        "confidence": 0.96,
+        "source": "cross-source",
+        "snippet": "Celebrated interviewing style that draws vulnerability out of guests"
+      },
+      "lifestyle": {
+        "value": "Rigorous routine: early morning gym, intense interview tapings, and late-night music production",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "High-discipline calendar balanced by creative sound design"
+      },
+      "ambitions": {
+        "value": "Building the world's most impactful education and media platform while building a strong, loving family",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Expanding DOAC while seeking an authentic life partner"
+      },
+      "deal_breakers": [
+        "Lack of self-awareness",
+        "Unwillingness to communicate emotions",
+        "Sedentary disregard for health"
+      ],
+      "conversation_hooks": [
+        "The single podcast interview that changed his mind the most",
+        "His favorite synthesizer synth plugin for deep house basslines"
+      ]
+    }
+  },
+  {
+    "id": "person_24",
+    "name": "Jessica Livingston",
+    "age": 53,
+    "city": "Palo Alto, CA",
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
+    "gender": "woman",
+    "seeking": "man",
+    "relationship_goal": "Lifelong, deeply committed partnership founded on kindness, quiet dignity, and mutual devotion",
+    "linkedin_url": "https://www.linkedin.com/in/jessicalivingston/",
+    "instagram_url": "https://www.instagram.com/jessicalivingstonyc/ ",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Co-founder at Y Combinator | Author of Founders at Work",
+        "about": "Co-founder of Y Combinator. Author of \"Founders at Work\". Host of The Social Radars podcast. The social glue and moral anchor of early Silicon Valley startup culture. Bucknell University graduate.",
+        "positions": [
+          {
+            "role": "Co-founder & Partner",
+            "company": "Y Combinator",
+            "duration": "2005 - Present",
+            "description": "Co-founded the defining startup accelerator and nurtured thousands of early founders."
+          }
+        ],
+        "skills": [
+          "Founder Psychology",
+          "Community Building",
+          "Oral History",
+          "Mentorship",
+          "Venture Ethics"
+        ],
+        "education": [
+          {
+            "school": "Bucknell University",
+            "degree": "BA in English"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Early champion of visionary founders · Podcaster (The Social Radars) · Garden enthusiast & bookworm · Palo Alto 🌿📖",
+        "postsCount": 320,
+        "followersCount": 14500,
+        "captions": [
+          "Pruning heritage English roses in the Palo Alto garden. Quiet mornings in the soil bring peace 🌿🌹",
+          "Recording The Social Radars: hearing how resilient women and men persevered when everyone said no 🎙️✨",
+          "Afternoon tea with an old book. The classics remind us that human nature never really changes ☕📚"
+        ],
+        "hashtags": [
+          "#foundersatwork",
+          "#gardeningjoy",
+          "#thesocialradars",
+          "#paloalto"
+        ],
+        "locations": [
+          "Palo Alto, CA",
+          "Cambridge, MA",
+          "Mountain View, CA"
+        ]
+      },
+      "self_declared": {
+        "gender": "woman",
+        "seeking": "man",
+        "city": "Palo Alto, CA",
+        "relationship_goal": "Peaceful, deeply rooted partnership with an honest, gentle, and intellectually thoughtful man"
+      }
+    },
+    "analysis": {
+      "summary": "Jessica is the legendary co-founder of Y Combinator, author of Founders at Work, and host of The Social Radars, revered for her social intuition, rose gardening, and quiet warmth.",
+      "needs": [
+        {
+          "value": "Gentle kindness and complete emotional honesty",
+          "confidence": 0.97,
+          "source": "cross-source",
+          "snippet": "Renowned as the moral heart and empathetic intuitive anchor of YC"
+        },
+        {
+          "value": "Love of domestic peace, reading, and gardens",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "English rose pruning and quiet afternoon tea with classic books"
+        },
+        {
+          "value": "Appreciation for people over superficial status",
+          "confidence": 0.95,
+          "source": "linkedin",
+          "snippet": "Championed early awkward founders who went on to change the world"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Heritage rose gardening and botanical pruning",
+          "confidence": 0.96,
+          "source": "instagram",
+          "snippet": "Pruning English roses in quiet Palo Alto morning garden"
+        },
+        {
+          "value": "Reading historical biographies and English literature",
+          "confidence": 0.92,
+          "source": "instagram",
+          "snippet": "Afternoon tea with classic books and history"
+        },
+        {
+          "value": "Oral history podcasting on entrepreneurship",
+          "confidence": 0.94,
+          "source": "linkedin",
+          "snippet": "Recording The Social Radars and Founders at Work interviews"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Founder psychology and human motivation under stress",
+          "confidence": 0.97,
+          "source": "linkedin",
+          "snippet": "Interviewed hundreds of legendary tech founders on inner resilience"
+        },
+        {
+          "value": "Landscape architecture and horticulture",
+          "confidence": 0.89,
+          "source": "instagram",
+          "snippet": "Palo Alto garden design and plant cultivation"
+        }
+      ],
+      "values": [
+        {
+          "value": "Kindness and earnest integrity above intellect alone",
+          "confidence": 0.98,
+          "source": "cross-source",
+          "snippet": "Famous YC selection filter: \"Are they earnestly good people?\""
+        },
+        {
+          "value": "Quiet loyalty and nurturing support",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Stood by early founders when they had zero traction and infinite doubt"
+        }
+      ],
+      "communication_style": {
+        "value": "Gentle, attentive, intuitive, and reassuring",
+        "confidence": 0.96,
+        "source": "cross-source",
+        "snippet": "Celebrated for making nervous founders feel safe, seen, and heard"
+      },
+      "lifestyle": {
+        "value": "Peaceful Silicon Valley garden living balanced with intimate podcast interviews and book reading",
+        "confidence": 0.93,
+        "source": "cross-source",
+        "snippet": "Quiet Palo Alto home life paired with podcast recording"
+      },
+      "ambitions": {
+        "value": "Preserving the authentic human stories of innovation while living a quiet, loving, and beautiful family life",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Documenting founder oral history while tending her garden and family"
+      },
+      "deal_breakers": [
+        "Arrogance or cruelty",
+        "Social climbing pretension",
+        "Cynical disregard for quiet virtues"
+      ],
+      "conversation_hooks": [
+        "Her secret for blooming fragrant heritage roses",
+        "The founder who surprised her most during Founders at Work"
+      ]
+    }
+  },
+  {
+    "id": "person_25",
+    "name": "Alexandr Wang",
+    "age": 27,
+    "city": "San Francisco, CA",
+    "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&auto=format&fit=crop&q=80",
+    "gender": "man",
+    "seeking": "woman",
+    "relationship_goal": "Committed, loving partnership with an ambitious, artistic, and kind-hearted woman",
+    "linkedin_url": "https://www.linkedin.com/in/alexandr-wang/",
+    "instagram_url": "https://www.instagram.com/alexandr_wang/",
+    "is_synthetic": false,
+    "consent_at": "2026-09-20T10:00:00Z",
+    "created_at": "2026-09-20T10:00:00Z",
+    "source_bundle": {
+      "linkedin": {
+        "headline": "Founder & CEO at Scale AI | Machine Learning Infrastructure",
+        "about": "Founder and CEO of Scale AI. Providing foundational data infrastructure for generative AI models, defense systems, and frontier labs. MIT mathematics background. Youngest self-made billionaire.",
+        "positions": [
+          {
+            "role": "Founder & CEO",
+            "company": "Scale AI",
+            "duration": "2016 - Present",
+            "description": "Built AI data platform valued at over $14B powering OpenAI, Meta, and US DoD."
+          }
+        ],
+        "skills": [
+          "Machine Learning Infrastructure",
+          "AI Data Curation",
+          "National Security Tech",
+          "Mathematical Modeling",
+          "Classical Violin"
+        ],
+        "education": [
+          {
+            "school": "MIT",
+            "degree": "Mathematics & Computer Science (left early to found Scale)"
+          }
+        ]
+      },
+      "instagram": {
+        "bio": "Building data foundations for AI · Classical violin player & mathematics nerd · SF 🎻🤖",
+        "postsCount": 260,
+        "followersCount": 38000,
+        "captions": [
+          "Practicing Bach Partita No. 2 in D minor on the violin. Mathematical architecture expressed through wood and gut strings 🎻✨",
+          "Scale Transform conference stage: the fuel of AI is high-quality human evaluation and reasoning 🤖💻",
+          "Late night run across the Golden Gate Bridge under the fog. Cold Pacific wind clears the mind completely 🌉🏃‍♂️"
+        ],
+        "hashtags": [
+          "#scaleai",
+          "#classicalviolin",
+          "#bachpartita",
+          "#sanfrancisco"
+        ],
+        "locations": [
+          "San Francisco, CA",
+          "Los Alamos, NM",
+          "MIT Cambridge"
+        ]
+      },
+      "self_declared": {
+        "gender": "man",
+        "seeking": "woman",
+        "city": "San Francisco, CA",
+        "relationship_goal": "Meaningful, high-trust partnership with someone who loves intellectual discovery and artistic beauty"
+      }
+    },
+    "analysis": {
+      "summary": "Alexandr is the founder and CEO of Scale AI, combining MIT mathematical brilliance and frontier AI infrastructure leadership with classical Bach violin playing and midnight bridge runs.",
+      "needs": [
+        {
+          "value": "Intellectual depth and respect for technical/mathematical rigor",
+          "confidence": 0.96,
+          "source": "linkedin",
+          "snippet": "MIT Mathematics and Founder/CEO of $14B Scale AI"
+        },
+        {
+          "value": "Appreciation for classical music and acoustic craft",
+          "confidence": 0.94,
+          "source": "instagram",
+          "snippet": "Daily practice of Bach violin partitas"
+        },
+        {
+          "value": "Calm emotional grounding amid massive global responsibility",
+          "confidence": 0.92,
+          "source": "cross-source",
+          "snippet": "Navigating frontier AI and defense partnerships with steady composure"
+        }
+      ],
+      "hobbies": [
+        {
+          "value": "Classical solo violin performance (Bach & Paganini)",
+          "confidence": 0.97,
+          "source": "instagram",
+          "snippet": "Practicing Bach Partita No. 2 in D minor"
+        },
+        {
+          "value": "Late night running across the Golden Gate Bridge",
+          "confidence": 0.93,
+          "source": "instagram",
+          "snippet": "Running across the bridge in cold Pacific fog"
+        },
+        {
+          "value": "Mathematical physics problem solving",
+          "confidence": 0.91,
+          "source": "linkedin",
+          "snippet": "MIT Mathematics and Los Alamos physics roots"
+        }
+      ],
+      "interests": [
+        {
+          "value": "Frontier AI alignment and human reinforcement data",
+          "confidence": 0.98,
+          "source": "linkedin",
+          "snippet": "Providing foundational training data for frontier frontier models"
+        },
+        {
+          "value": "National security and democratic technological supremacy",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Public testimony and partnerships with the Department of Defense"
+        }
+      ],
+      "values": [
+        {
+          "value": "Mission-driven patriotism and defense of open societies",
+          "confidence": 0.95,
+          "source": "cross-source",
+          "snippet": "Advocating for democratic technological leadership in AI"
+        },
+        {
+          "value": "Discipline and pursuit of absolute excellence",
+          "confidence": 0.94,
+          "source": "cross-source",
+          "snippet": "Mastering classical violin alongside building a generation-defining company"
+        }
+      ],
+      "communication_style": {
+        "value": "Precise, analytical, respectful, and articulate",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Direct, clear testimony before Congress and thoughtful industry keynotes"
+      },
+      "lifestyle": {
+        "value": "High-intensity tech and national security leadership balanced with late-night violin practice and fog runs",
+        "confidence": 0.92,
+        "source": "cross-source",
+        "snippet": "Intense company operations balanced by classical violin discipline"
+      },
+      "ambitions": {
+        "value": "Ensuring democratic leadership in the AI age while building an enduring, warm, and loving family",
+        "confidence": 0.94,
+        "source": "cross-source",
+        "snippet": "Scale AI global mission paired with personal joy and classical music"
+      },
+      "deal_breakers": [
+        "Intellectual dishonesty",
+        "Anti-American or cynical nihilism",
+        "Lack of personal discipline"
+      ],
+      "conversation_hooks": [
+        "Why Bach's Chaconne is the greatest piece of music ever written",
+        "Growing up in Los Alamos surrounded by physicists"
+      ]
+    }
+  }
 ];

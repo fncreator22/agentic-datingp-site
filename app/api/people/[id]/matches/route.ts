@@ -12,8 +12,10 @@ export async function GET(
   }
 
   const rankings = getRankingsForPerson(id);
+  const safePerson = { ...person };
+  delete (safePerson as Partial<typeof person>).consent_ip_hash;
   return NextResponse.json({
-    person,
+    person: safePerson,
     rankings,
     totalMatches: rankings.length,
   });

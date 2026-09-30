@@ -1,0 +1,170 @@
+[
+  {
+    "page": "home",
+    "url": "http://localhost:3000/",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/home_desktop.png"
+  },
+  {
+    "page": "people",
+    "url": "http://localhost:3000/people",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/people_desktop.png"
+  },
+  {
+    "page": "profile_elena",
+    "url": "http://localhost:3000/people/person_01",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/profile_elena_desktop.png"
+  },
+  {
+    "page": "matches_elena",
+    "url": "http://localhost:3000/people/person_01/matches",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/matches_elena_desktop.png"
+  },
+  {
+    "page": "demo",
+    "url": "http://localhost:3000/demo",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/demo_desktop.png"
+  },
+  {
+    "page": "date_replay",
+    "url": "http://localhost:3000/dates/date_person_01_person_02",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/date_replay_desktop.png"
+  },
+  {
+    "page": "missing_dates_hub",
+    "url": "http://localhost:3000/dates",
+    "viewport": "desktop",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/missing_dates_hub_desktop.png"
+  },
+  {
+    "page": "home",
+    "url": "http://localhost:3000/",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/home_tablet.png"
+  },
+  {
+    "page": "people",
+    "url": "http://localhost:3000/people",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/people_tablet.png"
+  },
+  {
+    "page": "profile_elena",
+    "url": "http://localhost:3000/people/person_01",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/profile_elena_tablet.png"
+  },
+  {
+    "page": "matches_elena",
+    "url": "http://localhost:3000/people/person_01/matches",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/matches_elena_tablet.png"
+  },
+  {
+    "page": "demo",
+    "url": "http://localhost:3000/demo",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/demo_tablet.png"
+  },
+  {
+    "page": "date_replay",
+    "url": "http://localhost:3000/dates/date_person_01_person_02",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/date_replay_tablet.png"
+  },
+  {
+    "page": "missing_dates_hub",
+    "url": "http://localhost:3000/dates",
+    "viewport": "tablet",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/missing_dates_hub_tablet.png"
+  },
+  {
+    "page": "home",
+    "url": "http://localhost:3000/",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/home_mobile.png"
+  },
+  {
+    "page": "people",
+    "url": "http://localhost:3000/people",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/people_mobile.png"
+  },
+  {
+    "page": "profile_elena",
+    "url": "http://localhost:3000/people/person_01",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/profile_elena_mobile.png"
+  },
+  {
+    "page": "matches_elena",
+    "url": "http://localhost:3000/people/person_01/matches",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/matches_elena_mobile.png"
+  },
+  {
+    "page": "demo",
+    "url": "http://localhost:3000/demo",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/demo_mobile.png"
+  },
+  {
+    "page": "date_replay",
+    "url": "http://localhost:3000/dates/date_person_01_person_02",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/date_replay_mobile.png"
+  },
+  {
+    "page": "missing_dates_hub",
+    "url": "http://localhost:3000/dates",
+    "viewport": "mobile",
+    "status_code": 200,
+    "has_horizontal_overflow": false,
+    "screenshot": "quality/audit_verification/screenshots/responsive_audit/missing_dates_hub_mobile.png"
+  }
+]

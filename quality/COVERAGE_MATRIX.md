@@ -25,4 +25,11 @@
 | **REQ-015** | Input Schema Validation & XSS | Tier 1 (Sec) | Ingestion API Contract | `app/api/people/route.ts`, `lib/validation.ts` | Zod schema validation & HTML stripping assertions | **Verified Pass** (BUG-020) |
 | **REQ-016** | HTTP Security Headers & CSP | Tier 2 (Sec) | Next.js Server Contract | `next.config.ts` | Header inspection on HTTP response (CSP, X-Frame-Options) | **Verified Pass** (BUG-021) |
 | **REQ-017** | Right to Erasure (GDPR) | Tier 2 (Sec) | Right to Erasure Contract | `app/api/people/[id]/route.ts`, `lib/db.ts` | `DELETE /api/people/:id` assertion (purges profile & dates) | **Verified Pass** (BUG-022) |
+| **REQ-018** | Seed Cohort Immutability Guard | Tier 1 (Sec) | Identity Protection Contract | `app/api/people/[id]/route.ts`, `lib/db.ts` | HTTP 403 on seed profile deletion attempt | **Verified Pass** (BUG-025) |
+| **REQ-019** | Evaluation Chamber Access Control | Tier 1 (Sec) | Privacy & Sealing Contract | `app/api/dates/route.ts`, `app/api/dates/[id]/route.ts` | Unauthenticated requests must not unseal verdicts | **Verified Pass** (BUG-026) |
+| **REQ-020** | Strict 10 KB Payload Bound | Tier 2 (Sec) | Request Bounds Contract | `app/api/people/route.ts`, `app/api/dates/route.ts` | HTTP 413 assertion when Content-Length > 10240 | **Verified Pass** (BUG-027) |
+| **REQ-021** | On-Demand Simulation Rate Limit | Tier 2 (Sec) | DoS & Quota Contract | `app/api/dates/route.ts` | HTTP 429 assertion when simulation quota exceeded | **Verified Pass** (BUG-028) |
+| **REQ-022** | Telemetry Projection Sanitization | Tier 3 (Sec) | Information Disclosure Contract | `app/api/people/[id]/route.ts` | Assert `consent_ip_hash` absent from public JSON | **Verified Pass** (BUG-029) |
+
+
 
