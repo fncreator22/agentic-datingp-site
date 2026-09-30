@@ -30,6 +30,9 @@
 | **REQ-020** | Strict 10 KB Payload Bound | Tier 2 (Sec) | Request Bounds Contract | `app/api/people/route.ts`, `app/api/dates/route.ts` | HTTP 413 assertion when Content-Length > 10240 | **Verified Pass** (BUG-027) |
 | **REQ-021** | On-Demand Simulation Rate Limit | Tier 2 (Sec) | DoS & Quota Contract | `app/api/dates/route.ts` | HTTP 429 assertion when simulation quota exceeded | **Verified Pass** (BUG-028) |
 | **REQ-022** | Telemetry Projection Sanitization | Tier 3 (Sec) | Information Disclosure Contract | `app/api/people/[id]/route.ts` | Assert `consent_ip_hash` absent from public JSON | **Verified Pass** (BUG-029) |
+| **REQ-023** | Centralized 156 Dates Hub | Tier 2 (UX) | Directory Contract | `app/dates/page.tsx`, `app/not-found.tsx` | All 156 dates browsable with search and filters | **Verified Pass** (BUG-030) |
+| **REQ-024** | Zero-Overflow Mobile Layout | Tier 2 (UX) | Responsive Contract | `components/Navbar.tsx`, `app/` | Playwright 375px audit: 0px horizontal overflow | **Verified Pass** (BUG-031) |
+
 
 
 
