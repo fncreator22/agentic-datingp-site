@@ -60,7 +60,9 @@ export default function DateSimulationPage() {
   const minScore = Math.min(verdictA?.score || 0, verdictB?.score || 0);
   const meanScore = ((verdictA?.score || 0) + (verdictB?.score || 0)) / 2;
   const bothWouldMeet = verdictA?.would_meet_again && verdictB?.would_meet_again;
-  const mutualScore = Math.round(0.6 * minScore + 0.4 * meanScore + (bothWouldMeet ? 5 : 0));
+  const redFlagsCount = (verdictA?.red_flags?.length || 0) + (verdictB?.red_flags?.length || 0);
+  const penalty = redFlagsCount * 8;
+  const mutualScore = Math.max(0, Math.min(100, Math.round(0.6 * minScore + 0.4 * meanScore + (bothWouldMeet ? 5 : 0)) - penalty));
 
   return (
     <div className="space-y-10 max-w-4xl mx-auto">
@@ -351,7 +353,7 @@ export default function DateSimulationPage() {
           Mutual Fit Formula Derivation:
         </h4>
         <p className="text-slate-400 leading-relaxed">
-          Mutual compatibility formula: <code className="text-rose-300">0.6 · min({verdictA?.score}, {verdictB?.score}) + 0.4 · mean({verdictA?.score}, {verdictB?.score}) {bothWouldMeet ? '+ 5 (mutual green flag bonus)' : ''}</code> = <strong className="text-white font-bold">{mutualScore}%</strong>. A match requires both sides to agree, so weighting is anchored on the lower verdict score.
+          Mutual compatibility formula: <code className="text-rose-300">0.6 · min({verdictA?.score}, {verdictB?.score}) + 0.4 · mean({verdictA?.score}, {verdictB?.score}) {bothWouldMeet ? '+ 5 (mutual green flag bonus)' : ''} {penalty > 0 ? `- ${penalty} (red flag penalty)` : ''}</code> = <strong className="text-white font-bold">{mutualScore}%</strong>. A match requires both sides to agree, so weighting is anchored on the lower verdict score.
         </p>
       </section>
     </div>

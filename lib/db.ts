@@ -198,19 +198,20 @@ export function saveDate(date: DateSimulation): void {
 }
 
 /**
- * Runs dates for a newly added person against all compatible existing profiles
+ * Runs dates for a newly added person against compatible existing profiles.
+ * Capped to top 2 by default to prevent quadratic latency spikes during intake (REQ-014).
  */
-export async function runDatesForPerson(personId: string): Promise<DateSimulation[]> {
+export async function runDatesForPerson(personId: string, limit: number = 2): Promise<DateSimulation[]> {
   const person = getPersonById(personId);
   if (!person) return [];
 
   const allPeople = getAllPeople();
   const createdDates: DateSimulation[] = [];
+  const compatibleCandidates = allPeople.filter(
+    (candidate) => candidate.id !== personId && areCompatible(person, candidate)
+  );
 
-  for (const candidate of allPeople) {
-    if (candidate.id === personId) continue;
-    if (!areCompatible(person, candidate)) continue;
-
+  for (const candidate of compatibleCandidates.slice(0, limit)) {
     // Check if date already exists
     const existing = (global.__datingDbDates || []).find(
       (d) =>

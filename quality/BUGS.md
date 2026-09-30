@@ -3,14 +3,34 @@
 > **Project:** Kindred (Agentic Dating Network)  
 > **Source:** `quality-playbook` Phases 3–5 Security & Specification Audit  
 > **Rule:** Every bug must have reproduction steps, spec basis, vulnerability classification, and remediation disposition.  
-> **Total Logged Defects:** 22  
-> **Resolved & Mechanically Verified:** 22 (100% of all defects)  
-> **Active Open Defects:** 0  
+> **Total Logged Defects:** 24  
+> **Resolved & Mechanically Verified:** 23  
+> **Active Open Defects:** 1 (BUG-024 / SPEC-01: Synthetic Cohort Divergence)  
 > **Deferred:** 0  
 
 ---
 
-## 1. Resolved & Mechanically Verified Defects (22 Closed)
+## 1. Active Open Defects (1 Open — Awaiting Terminal Ingestion Agent)
+
+### BUG-024 / SPEC-01: Seeded Cohort Uses Fictional Archetypes & Stock Photography Instead of 25 Real Verified People [OPEN]
+- **Location:** `data/seeds.ts`, `PLAYBOOK.md: Section 3`, `lib/scrapers/linkedin.ts`, `lib/scrapers/instagram.ts`
+- **Severity:** CRITICAL / BLOCKER (Core Specification Divergence)
+- **Spec Basis:** Core Thesis: *"Find at least 25 real people. Each person is two official links: their LinkedIn, and the Instagram that belongs to them. Only public Instagram profiles."* & REQ-001.
+- **Physical Verification Audit:** Performed Playwright & HTTP inspection across the 25 profiles on 2026-09-30.
+  - **Instagram Finding:** Evaluated seeded Instagram URLs (e.g., `https://www.instagram.com/marcus.runs.trails/`, `https://www.instagram.com/elena.visuals/`). All return HTTP "Profile isn't available - The link may be broken, or the profile may have been removed" and redirect to authwalls/error screens. Visual screenshot evidence captured in `quality/audit_verification/screenshots/external_profiles/person_02_instagram.png`.
+  - **LinkedIn Finding:** Evaluated seeded LinkedIn URLs (e.g., `https://www.linkedin.com/in/elena-rostova-design`, `https://www.linkedin.com/in/marcus-vance-ai`). All redirect to generic login/authwalls (`Join LinkedIn`) or do not exist as public members. Visual screenshot evidence captured in `quality/audit_verification/screenshots/external_profiles/person_01_linkedin.png`, `person_03_linkedin.png`.
+  - **Avatar Finding:** All avatars are sourced from `images.unsplash.com` stock model photography rather than the actual individuals' Instagram/LinkedIn media.
+  - **Flag Contradiction:** Profiles in `data/seeds.ts` have `is_synthetic: false` set, which directly contradicts reality and masks synthetic generation.
+  - **Scraper Fallback:** Both `lib/scrapers/linkedin.ts` and `lib/scrapers/instagram.ts` contain deterministic mock payload generators when `APIFY_API_TOKEN` is unset.
+- **Remediation Plan for Downstream Agents:**
+  1. Obtain a list of 25 real-world individuals with verified, active public LinkedIn profiles and matching public Instagram accounts (e.g., founders, designers, content creators, researchers).
+  2. Use Apify actors (`apify/instagram-scraper` and `harvestapi/linkedin-profile-scraper`) via `APIFY_API_TOKEN` (or direct Playwright browser sessions) to extract live bios, posts, and work histories.
+  3. Replace the mock payloads in `data/seeds.ts` with authentic scraped bundles and real profile avatars.
+  4. Ensure `is_synthetic: false` is accompanied by verifiable public URLs.
+
+---
+
+## 2. Resolved & Mechanically Verified Defects (23 Closed)
 
 ### BUG-001: Raw HTML Link Element in Global Layout [RESOLVED]
 - **Location:** `app/layout.tsx:36` | **Severity:** High | **Resolution:** Replaced `<a href>` with Next.js `<Link>`. Verified exits 0.
@@ -92,3 +112,9 @@
 ### BUG-022 / SEC-12: Missing Consent Audit Trail & Right to Erasure [RESOLVED]
 - **Location:** `app/api/people/[id]/route.ts`, `lib/db.ts:170-180` | **Severity:** MEDIUM
 - **Resolution:** Implemented `DELETE /api/people/[id]` with cascading purge of date simulations and rankings in `db.ts`. Stored SHA-256 consent IP hash.
+
+### BUG-023: Compiler Regression (TS2304: Cannot find name 'Link') in Profile Details Page [RESOLVED]
+- **Location:** `app/people/[id]/page.tsx:3` | **Severity:** HIGH (Compile/Lint Blocker)
+- **Resolution:** Restored `import Link from 'next/link';` alongside `import Image from 'next/image';`. Verified `npx tsc --noEmit` and `npx eslint . --quiet` exit 0.
+
+

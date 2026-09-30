@@ -42,7 +42,7 @@ export default function RootLayout({
               </Link>
               <span>·</span>
               <a
-                href="https://github.com/fncreator22/agentic-datingp-site"
+                href="https://github.com/fncreator22/agentic-dating-site"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-rose-400 transition-colors"

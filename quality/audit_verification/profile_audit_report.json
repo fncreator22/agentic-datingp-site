@@ -1,0 +1,296 @@
+{
+  "total_profiles_in_seed": 25,
+  "total_audited_sample": 12,
+  "synthetic_count": 12,
+  "real_verified_count": 0,
+  "profiles_audit": [
+    {
+      "id": "person_01",
+      "name": "Elena Rostova",
+      "linkedin_url": "https://www.linkedin.com/in/elena-rostova-design",
+      "instagram_url": "https://www.instagram.com/elena.visuals/",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "LinkedIn: Log In or Sign Up",
+        "final_url": "https://www.linkedin.com/",
+        "is_authwalled_or_fictional": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_01_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/elena.visuals/\", waiting until \"domcontentloaded\"\n",
+        "is_unavailable_or_unverified": true
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Elena Rostova (person_01) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-153452...). LinkedIn handle 'https://www.linkedin.com/in/elena-rostova-design' and Instagram handle 'https://www.instagram.com/elena.visuals/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_02",
+      "name": "Marcus Vance",
+      "linkedin_url": "https://www.linkedin.com/in/marcus-vance-ai",
+      "instagram_url": "https://www.instagram.com/marcus.runs.trails/",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "error": "Page.content: Unable to retrieve content because the page is navigating and changing the content.",
+        "is_authwalled_or_fictional": true
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/marcus.runs.trails/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_02_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Marcus Vance (person_02) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-150700...). LinkedIn handle 'https://www.linkedin.com/in/marcus-vance-ai' and Instagram handle 'https://www.instagram.com/marcus.runs.trails/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_03",
+      "name": "Maya Lin Chen",
+      "linkedin_url": "https://www.linkedin.com/in/mayachen-architect",
+      "instagram_url": "https://www.instagram.com/maya.builds.spaces/",
+      "avatar_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH0DC57-5E1QQAAAaDy_afosLuN86HsB-x9Fg6jKDxKqLs-Gu5NvYvrVRgfHQbPeOGuPOHyyCUaZas5_yT7dvOWedzOtfItLeX7vi0VUN-BVOf_tJioA-qvN4p9QzW5-hxTTik=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmayachen-architect",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_03_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/maya.builds.spaces/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_03_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Maya Lin Chen (person_03) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-151784...). LinkedIn handle 'https://www.linkedin.com/in/mayachen-architect' and Instagram handle 'https://www.instagram.com/maya.builds.spaces/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_04",
+      "name": "Julian Mercer",
+      "linkedin_url": "https://www.linkedin.com/in/julian-mercer-writer",
+      "instagram_url": "https://www.instagram.com/julian.mercer.reads/",
+      "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQFE-x6wEMoVVgAAAaDy_c74wJcqENHqxEKI3nTCZdLycnHG6Fs0IEIdQ8oL56iNAgGnhhehm_9HxtqpOQnNZheL6Gk3GFAvkrf_Aq-0zXGKJpoJOpAs6Q3juF8GVmMyClu1QLw=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fjulian-mercer-writer",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_04_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/julian.mercer.reads/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_04_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Julian Mercer (person_04) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-150064...). LinkedIn handle 'https://www.linkedin.com/in/julian-mercer-writer' and Instagram handle 'https://www.instagram.com/julian.mercer.reads/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_05",
+      "name": "Aria Sterling",
+      "linkedin_url": "https://www.linkedin.com/in/aria-sterling-bio",
+      "instagram_url": "https://www.instagram.com/aria.in.the.pines/",
+      "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQE8rF0RF-tA0AAAAaDy_fIgKNdfiFlJ5VsoIanZ2knj1eqdo6Jm9gI8pxwJbbm_2OFaVQx4pCPkZpR4w9bTLbyIPDkW-V6hGjEK8l-Z1t2M_ESDfN1ZAJosTpdnlra1JJi5qLQ=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faria-sterling-bio",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_05_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/aria.in.the.pines/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_05_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Aria Sterling (person_05) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-154400...). LinkedIn handle 'https://www.linkedin.com/in/aria-sterling-bio' and Instagram handle 'https://www.instagram.com/aria.in.the.pines/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_06",
+      "name": "David Thorne",
+      "linkedin_url": "https://www.linkedin.com/in/david-thorne-cleanenergy",
+      "instagram_url": "https://www.instagram.com/thorne.outdoors/",
+      "avatar_url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "error": "Page.content: Unable to retrieve content because the page is navigating and changing the content.",
+        "is_authwalled_or_fictional": true
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/thorne.outdoors/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_06_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "David Thorne (person_06) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-151908...). LinkedIn handle 'https://www.linkedin.com/in/david-thorne-cleanenergy' and Instagram handle 'https://www.instagram.com/thorne.outdoors/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_07",
+      "name": "Zara Al-Mansoor",
+      "linkedin_url": "https://www.linkedin.com/in/zara-almansoor-vc",
+      "instagram_url": "https://www.instagram.com/zara.austin.eats/",
+      "avatar_url": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "",
+        "final_url": "https://www.linkedin.com/in/zara-almansoor-vc",
+        "is_authwalled_or_fictional": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_07_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.instagram.com/zara.austin.eats/\", waiting until \"domcontentloaded\"\n",
+        "is_unavailable_or_unverified": true
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Zara Al-Mansoor (person_07) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-152450...). LinkedIn handle 'https://www.linkedin.com/in/zara-almansoor-vc' and Instagram handle 'https://www.instagram.com/zara.austin.eats/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_08",
+      "name": "Liam Gallagher",
+      "linkedin_url": "https://www.linkedin.com/in/liam-gallagher-audio",
+      "instagram_url": "https://www.instagram.com/liam.soundscapes/",
+      "avatar_url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQF7Ug-b5q38EgAAAaDy_sj43YXudO66-8KMtE6gv0tg9y6IBVE9Oe_lS8yPP0IHDh9SNYaUVaFc9P2wsKBufZsnDTYOTpFhU1C6-bg-boZH6yLDmpc6ZMAq-G_X3ZDSiEv0tWQ=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fliam-gallagher-audio",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_08_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/liam.soundscapes/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_08_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Liam Gallagher (person_08) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-150679...). LinkedIn handle 'https://www.linkedin.com/in/liam-gallagher-audio' and Instagram handle 'https://www.instagram.com/liam.soundscapes/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_11",
+      "name": "Chloe Takahashi",
+      "linkedin_url": "https://www.linkedin.com/in/chloe-takahashi-vr",
+      "instagram_url": "https://www.instagram.com/chloe.creates.art/",
+      "avatar_url": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHVndyJS90jsgAAAaDy_v-olJnOzQUwyTyYKL79-AUSmCMHtrGg6u1tJDRCYmheDNXppqUghSXChoyW0p041RzV9WWrX2c0jrX2UWI95l9KcdlOklP_LGjMbF9Wq1k_A92oLgk=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fchloe-takahashi-vr",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_11_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Chloe (@chloe.creates.art) \u2022 Instagram photos and videos",
+        "final_url": "https://www.instagram.com/chloe.creates.art/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_11_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Chloe Takahashi (person_11) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-151784...). LinkedIn handle 'https://www.linkedin.com/in/chloe-takahashi-vr' and Instagram handle 'https://www.instagram.com/chloe.creates.art/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_16",
+      "name": "Isabella Rossi",
+      "linkedin_url": "https://www.linkedin.com/in/isabella-rossi-design",
+      "instagram_url": "https://www.instagram.com/isabella.chicago.art/",
+      "avatar_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "",
+        "final_url": "https://www.linkedin.com/in/isabella-rossi-design",
+        "is_authwalled_or_fictional": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_16_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/isabella.chicago.art/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_16_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Isabella Rossi (person_16) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-154400...). LinkedIn handle 'https://www.linkedin.com/in/isabella-rossi-design' and Instagram handle 'https://www.instagram.com/isabella.chicago.art/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_21",
+      "name": "Gabriel Martinez",
+      "linkedin_url": "https://www.linkedin.com/in/gabriel-martinez-geo",
+      "instagram_url": "https://www.instagram.com/gabriel.surfs.ob/",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGIYcOZ9ozkCAAAAaDy_z4oxt8svzTuIXtfRWLv-SYTJ9hKavVfHdQ8WDlyrQx7nDhVRmkS_6XIAkryHVq7HUQPHF7UwlrSJ6WxHd-0U7sH-7qjks-mwjoSfpMlAesy05Ho14Q=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fgabriel-martinez-geo",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_21_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/gabriel.surfs.ob/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_21_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Gabriel Martinez (person_21) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-150700...). LinkedIn handle 'https://www.linkedin.com/in/gabriel-martinez-geo' and Instagram handle 'https://www.instagram.com/gabriel.surfs.ob/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    },
+    {
+      "id": "person_25",
+      "name": "Leo Van Der Beek",
+      "linkedin_url": "https://www.linkedin.com/in/leo-vanderbeek-ai",
+      "instagram_url": "https://www.instagram.com/leo.sails.thebay/",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
+      "is_synthetic_in_code": false,
+      "linkedin_check": {
+        "title": "Sign Up | LinkedIn",
+        "final_url": "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQH-beJ5FEpX2AAAAaDy_3yoS1vXiqLHuUi6OzVq0oWxipoDFf2axEhJADTLykRG8JEFvZ54KXtRhzYpOHYD0JBg871tvmgU3rgA_zcPMxXRopMlyv3btgrG-3LIA-B_ZImgM00=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fleo-vanderbeek-ai",
+        "is_authwalled_or_fictional": true,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_25_linkedin.png",
+        "evidence": "LinkedIn redirects to authwall/login or handle is an unverified fictional vanity URL without public anchor."
+      },
+      "instagram_check": {
+        "title": "Profile isn't available \u2022 Instagram",
+        "final_url": "https://www.instagram.com/leo.sails.thebay/",
+        "is_unavailable_or_unverified": false,
+        "screenshot": "quality/audit_verification/screenshots/external_profiles/person_25_instagram.png",
+        "evidence": "Accessible"
+      },
+      "verdict": "SYNTHETIC_FICTIONAL_PROFILE",
+      "avatar_is_unsplash_stock": true,
+      "audit_summary": "Leo Van Der Beek (person_25) is an AI-generated fictional persona. Avatar is a stock photo from Unsplash (https://images.unsplash.com/photo-150700...). LinkedIn handle 'https://www.linkedin.com/in/leo-vanderbeek-ai' and Instagram handle 'https://www.instagram.com/leo.sails.thebay/' are synthetic placeholders that do not resolve to a real human. The codebase flags 'is_synthetic: false' in seeds.ts, which is a specification contradiction."
+    }
+  ]
+}

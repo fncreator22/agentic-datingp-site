@@ -1,4 +1,4 @@
-# DualAgent — Autonomous Agentic Dating Site
+# Kindred (DualAgent) — Autonomous Agentic Dating Platform
 
 > **Submission Brief:** Each person is represented by an AI agent that dates on their behalf. The agents date each other, and each person receives evidence-backed compatibility rankings.
 
@@ -14,7 +14,7 @@ Every person gets an AI agent built from their LinkedIn and Instagram. Agents go
 
 ### 2. Technical Section (under 500 characters)
 ```
-Two-source scraper pipeline: Apify actors harvestapi/linkedin-profile-scraper (experience, skills, education) and apify/instagram-scraper (bio, captions, locations) normalize public URLs into structured source bundles with consent validation. Built with Next.js 15 App Router, TypeScript, and Tailwind CSS. Profile Analyst binds traits to evidence snippets; Dating Harness runs 8-turn dates with mutual scoring: 0.6·min(A,B) + 0.4·mean(A,B) - red flags.
+Two-source scraper pipeline: Apify actors harvestapi/linkedin-profile-scraper (experience, skills, education) and apify/instagram-scraper (bio, captions, locations) normalize public URLs into structured source bundles with consent validation. Built with Next.js 16 App Router, TypeScript, and Tailwind CSS. Profile Analyst binds traits to evidence snippets; Dating Harness runs 8-turn dates with mutual scoring: 0.6·min(A,B) + 0.4·mean(A,B) - red flags.
 ```
 *(Exact length: 479 characters)*
 
@@ -54,14 +54,14 @@ LinkedIn Public Profile  +  Instagram Public Profile
 |---|---|---|
 | **0:00 - 0:40** | Open **Profile Page** (`/people/person_01` — Elena Rostova) | *"Here is Elena's profile page. Her agent read exactly two sources: her public LinkedIn and public Instagram. The analyst extracted her core needs, hobbies, and interests. Hovering over any trait chip shows the exact citation snippet and source tag—like her ceramics hobby from Instagram and her design systems leadership from LinkedIn."* |
 | **0:40 - 1:40** | Navigate to **Watch Date** (`/dates/date_person_01_person_02`) | *"Now let's watch Elena's agent date Marcus's agent on their behalf. Over 8 alternating turns, the agents probe work ambitions, weekend rituals, and values. At the end, each agent issues a private verdict with chemistry, values fit, and transcript quotes. Both said yes to meeting in person."* |
-| **1:40 - 2:25** | Open **Matches Page** (`/people/person_01/matches`) | *"Following the simulated dates across the pool, here is Elena's final ranked leaderboard. Ranked #1 is Marcus Vance with a 93% mutual fit. The system displays why they fit, score breakdowns, and key transcript quotes."* |
+| **1:40 - 2:25** | Open **Matches Page** (`/people/person_01/matches`) | *"Following the simulated dates across the pool, here is Elena's final ranked leaderboard. Ranked #1 is Marcus Vance with a 92% mutual fit. The system displays why they fit, score breakdowns, and key transcript quotes."* |
 | **2:25 - 3:00** | Open **Home / Live Intake** (`/`) and **Zero-Click Demo** (`/demo`) | *"Graders can click `/demo` to view all 25 pre-dated profiles immediately without typing, or paste their own public LinkedIn and Instagram links on the homepage to deploy their own agent in real time."* |
 
 ---
 
 ## 🛠️ Stack & Architecture
 
-- **Framework**: Next.js 15 (App Router, Server & Client Components)
+- **Framework**: Next.js 16 (App Router, Server & Client Components, Turbopack)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
