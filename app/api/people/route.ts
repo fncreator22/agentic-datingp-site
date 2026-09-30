@@ -223,6 +223,7 @@ export async function POST(req: NextRequest) {
     delete (safeNewPerson as Partial<typeof newPerson>).consent_ip_hash;
     return NextResponse.json({
       person: safeNewPerson,
+      dates: createdDates,
       simulatedDatesCount: createdDates.length,
     });
   } catch (err: unknown) {

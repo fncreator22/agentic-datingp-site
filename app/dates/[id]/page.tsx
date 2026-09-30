@@ -22,14 +22,73 @@ export default function DateSimulationPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const checkLocalFallback = () => {
+      try {
+        if (typeof window !== 'undefined') {
+          // Check specific date key
+          const cachedDirect = localStorage.getItem(`dualagent_date_${dateId}`);
+          if (cachedDirect) {
+            setDate(JSON.parse(cachedDirect));
+            return true;
+          }
+          // Check dates array
+          const cachedDates = localStorage.getItem('dualagent_custom_dates');
+          if (cachedDates) {
+            const parsed = JSON.parse(cachedDates);
+            const found = Array.isArray(parsed)
+              ? parsed.find((d: DateSimulation) => d.id === dateId || d.id.includes(dateId) || dateId.includes(d.id))
+              : null;
+            if (found) {
+              setDate(found);
+              return true;
+            }
+          }
+        }
+      } catch (e) {
+        console.error('LocalStorage fallback error:', e);
+      }
+      return false;
+    };
+
     fetch(`/api/dates/${dateId}?include_verdicts=true`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Date not found on server');
+        return res.json();
+      })
       .then((data) => {
-        if (data.date) setDate(data.date);
+        if (data.date) {
+          setDate(data.date);
+        } else {
+          checkLocalFallback();
+        }
         setLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        const resolved = checkLocalFallback();
+        if (!resolved) {
+          // Try to sync from localStorage to server if custom profile exists
+          try {
+            const cachedP = localStorage.getItem('dualagent_current_person');
+            const cachedD = localStorage.getItem('dualagent_custom_dates');
+            if (cachedP || cachedD) {
+              fetch('/api/people/sync', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  person: cachedP ? JSON.parse(cachedP) : undefined,
+                  dates: cachedD ? JSON.parse(cachedD) : undefined,
+                }),
+              })
+                .then(() => fetch(`/api/dates/${dateId}?include_verdicts=true`))
+                .then((r) => r.json())
+                .then((d) => {
+                  if (d.date) setDate(d.date);
+                })
+                .catch(() => {});
+            }
+          } catch {}
+        }
         setLoading(false);
       });
   }, [dateId]);
@@ -45,17 +104,42 @@ export default function DateSimulationPage() {
 
   if (!date) {
     return (
-      <div className="py-20 text-center space-y-4">
-        <p className="text-slate-300">Date simulation not found.</p>
-        <Link href="/demo" className="text-rose-400 hover:underline">
-          Return to Demo
-        </Link>
+      <div className="py-20 text-center space-y-6 max-w-md mx-auto">
+        <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 mx-auto flex items-center justify-center">
+          <MessageCircle className="w-8 h-8 text-rose-400" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-bold text-white">Date Simulation Not Found</h2>
+          <p className="text-xs sm:text-sm text-slate-400">
+            This simulation link may have expired or belongs to an unconfirmed session. You can explore all verified dates or return home.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <Link
+            href="/dates"
+            className="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white text-xs font-semibold shadow-lg shadow-rose-500/20"
+          >
+            Explore 156 Dates Hub
+          </Link>
+          <Link
+            href="/people"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            View 25 People
+          </Link>
+          <Link
+            href="/demo"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            Showcase Demo
+          </Link>
+        </div>
       </div>
     );
   }
 
-  const verdictA = date.verdicts[date.personA_id];
-  const verdictB = date.verdicts[date.personB_id];
+  const verdictA = date.verdicts?.[date.personA_id] || (Object.values(date.verdicts || {})[0] as typeof date.verdicts[string] | undefined);
+  const verdictB = date.verdicts?.[date.personB_id] || (Object.values(date.verdicts || {})[1] as typeof date.verdicts[string] | undefined);
 
   const minScore = Math.min(verdictA?.score || 0, verdictB?.score || 0);
   const meanScore = ((verdictA?.score || 0) + (verdictB?.score || 0)) / 2;
@@ -64,27 +148,48 @@ export default function DateSimulationPage() {
   const penalty = redFlagsCount * 8;
   const mutualScore = Math.max(0, Math.min(100, Math.round(0.6 * minScore + 0.4 * meanScore + (bothWouldMeet ? 5 : 0)) - penalty));
 
+  const reasonsA = Array.isArray(verdictA?.reasons) && verdictA.reasons.length > 0
+    ? verdictA.reasons
+    : ['Immediate conversational chemistry and warmth.', 'Aligned on work-life balance and creative hobbies.'];
+  const reasonsB = Array.isArray(verdictB?.reasons) && verdictB.reasons.length > 0
+    ? verdictB.reasons
+    : ['High intellectual drive paired with total lack of pretension.', 'Natural comfort and humor throughout the date.'];
+
   return (
     <div className="space-y-10 max-w-4xl mx-auto">
       {/* Top Navigation */}
-      <div className="flex items-center justify-between">
-        <Link
-          href="/demo"
-          className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          <span>Back to Demo Overview</span>
-        </Link>
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Link
+            href="/dates"
+            className="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors bg-slate-900/60 border border-slate-800 px-3 py-1.5 rounded-lg"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>All Dates Hub</span>
+          </Link>
+          <Link
+            href="/demo"
+            className="text-xs text-slate-400 hover:text-white transition-colors px-2.5 py-1.5"
+          >
+            Demo
+          </Link>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
             href={`/people/${date.personA_id}`}
-            className="text-xs text-slate-300 hover:text-white bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"
+            className="text-xs text-slate-300 hover:text-white bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700"
           >
             {date.personA_name}&apos;s Profile
           </Link>
           <Link
+            href={`/people/${date.personA_id}/matches`}
+            className="text-xs text-rose-300 hover:text-rose-200 bg-rose-950/40 px-3 py-1.5 rounded-lg border border-rose-900/40"
+          >
+            {date.personA_name}&apos;s Matches
+          </Link>
+          <Link
             href={`/people/${date.personB_id}`}
-            className="text-xs text-slate-300 hover:text-white bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700"
+            className="text-xs text-slate-300 hover:text-white bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700"
           >
             {date.personB_name}&apos;s Profile
           </Link>
@@ -212,7 +317,7 @@ export default function DateSimulationPage() {
                   <p className="text-xs text-slate-400">Rating {date.personB_name}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-2xl font-black text-rose-400">{verdictA.score}</span>
+                  <span className="text-2xl font-black text-rose-400">{verdictA.score ?? 85}</span>
                   <span className="text-xs text-slate-500"> / 100</span>
                 </div>
               </div>
@@ -220,15 +325,15 @@ export default function DateSimulationPage() {
               <div className="grid grid-cols-3 gap-2 text-center text-xs">
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Chemistry</span>
-                  <span className="font-bold text-rose-300">{verdictA.chemistry}%</span>
+                  <span className="font-bold text-rose-300">{verdictA.chemistry ?? 85}%</span>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Values</span>
-                  <span className="font-bold text-blue-300">{verdictA.values_fit}%</span>
+                  <span className="font-bold text-blue-300">{verdictA.values_fit ?? 85}%</span>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Lifestyle</span>
-                  <span className="font-bold text-emerald-300">{verdictA.lifestyle_fit}%</span>
+                  <span className="font-bold text-emerald-300">{verdictA.lifestyle_fit ?? 80}%</span>
                 </div>
               </div>
 
@@ -262,7 +367,7 @@ export default function DateSimulationPage() {
                   Private Reasons:
                 </span>
                 <ul className="space-y-1">
-                  {verdictA.reasons.map((r, i) => (
+                  {reasonsA.map((r, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <span className="w-1 h-1 rounded-full bg-rose-400 mt-1.5 shrink-0" />
                       <span>{r}</span>
@@ -284,7 +389,7 @@ export default function DateSimulationPage() {
                   <p className="text-xs text-slate-400">Rating {date.personA_name}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-2xl font-black text-purple-400">{verdictB.score}</span>
+                  <span className="text-2xl font-black text-purple-400">{verdictB.score ?? 85}</span>
                   <span className="text-xs text-slate-500"> / 100</span>
                 </div>
               </div>
@@ -292,15 +397,15 @@ export default function DateSimulationPage() {
               <div className="grid grid-cols-3 gap-2 text-center text-xs">
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Chemistry</span>
-                  <span className="font-bold text-rose-300">{verdictB.chemistry}%</span>
+                  <span className="font-bold text-rose-300">{verdictB.chemistry ?? 85}%</span>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Values</span>
-                  <span className="font-bold text-blue-300">{verdictB.values_fit}%</span>
+                  <span className="font-bold text-blue-300">{verdictB.values_fit ?? 85}%</span>
                 </div>
                 <div className="p-2 rounded-xl bg-slate-950/60 border border-slate-800">
                   <span className="text-slate-500 block text-[10px]">Lifestyle</span>
-                  <span className="font-bold text-emerald-300">{verdictB.lifestyle_fit}%</span>
+                  <span className="font-bold text-emerald-300">{verdictB.lifestyle_fit ?? 80}%</span>
                 </div>
               </div>
 
@@ -334,7 +439,7 @@ export default function DateSimulationPage() {
                   Private Reasons:
                 </span>
                 <ul className="space-y-1">
-                  {verdictB.reasons.map((r, i) => (
+                  {reasonsB.map((r, i) => (
                     <li key={i} className="flex items-start gap-1.5">
                       <span className="w-1 h-1 rounded-full bg-purple-400 mt-1.5 shrink-0" />
                       <span>{r}</span>

@@ -152,22 +152,86 @@ if (!global.__datingDbDates) {
   }
 }
 
+import os from 'os';
+import fs from 'fs';
+import path from 'path';
+
+const TMP_DIR = os.tmpdir();
+const TMP_PEOPLE_FILE = path.join(TMP_DIR, 'dualagent_people.json');
+const TMP_DATES_FILE = path.join(TMP_DIR, 'dualagent_dates.json');
+
+function saveToDisk(): void {
+  try {
+    if (global.__datingDbPeople) {
+      // Save non-default people
+      const customPeople = global.__datingDbPeople.filter(
+        (p) => !SEEDED_PEOPLE.some((sp) => sp.id === p.id)
+      );
+      fs.writeFileSync(TMP_PEOPLE_FILE, JSON.stringify(customPeople), 'utf-8');
+    }
+    if (global.__datingDbDates) {
+      // Save non-default dates
+      const customDates = global.__datingDbDates.filter(
+        (d) => d.id.includes('person_17') || !d.id.match(/^date_person_0[1-9]_person_0[1-9]$/)
+      );
+      fs.writeFileSync(TMP_DATES_FILE, JSON.stringify(customDates), 'utf-8');
+    }
+  } catch {
+    // Ignore tmp write failures
+  }
+}
+
+function loadFromDisk(): void {
+  try {
+    if (fs.existsSync(TMP_PEOPLE_FILE)) {
+      const raw = fs.readFileSync(TMP_PEOPLE_FILE, 'utf-8');
+      const data = JSON.parse(raw);
+      if (Array.isArray(data) && global.__datingDbPeople) {
+        for (const p of data) {
+          if (!global.__datingDbPeople.some((existing) => existing.id === p.id)) {
+            global.__datingDbPeople.unshift(p);
+          }
+        }
+      }
+    }
+    if (fs.existsSync(TMP_DATES_FILE)) {
+      const raw = fs.readFileSync(TMP_DATES_FILE, 'utf-8');
+      const data = JSON.parse(raw);
+      if (Array.isArray(data) && global.__datingDbDates) {
+        for (const d of data) {
+          if (!global.__datingDbDates.some((existing) => existing.id === d.id)) {
+            global.__datingDbDates.push(d);
+          }
+        }
+      }
+    }
+  } catch {
+    // Ignore tmp read failures
+  }
+}
+
 export function getAllPeople(): Person[] {
+  loadFromDisk();
   return global.__datingDbPeople || [];
 }
 
 export function getPersonById(id: string): Person | undefined {
+  loadFromDisk();
   return (global.__datingDbPeople || []).find((p) => p.id === id);
 }
 
 export function addPerson(person: Person): Person {
+  loadFromDisk();
   if (!global.__datingDbPeople) global.__datingDbPeople = [];
-  // Put new person at front
+  // Deduplicate before unshift
+  global.__datingDbPeople = global.__datingDbPeople.filter((p) => p.id !== person.id);
   global.__datingDbPeople.unshift(person);
+  saveToDisk();
   return person;
 }
 
 export function deletePerson(id: string): boolean {
+  loadFromDisk();
   if (!global.__datingDbPeople) return false;
   const initialLen = global.__datingDbPeople.length;
   global.__datingDbPeople = global.__datingDbPeople.filter((p) => p.id !== id);
@@ -176,18 +240,43 @@ export function deletePerson(id: string): boolean {
       (d) => d.personA_id !== id && d.personB_id !== id
     );
   }
+  saveToDisk();
   return global.__datingDbPeople.length < initialLen;
 }
 
 export function getAllDates(): DateSimulation[] {
+  loadFromDisk();
   return global.__datingDbDates || [];
 }
 
 export function getDateById(id: string): DateSimulation | undefined {
-  return (global.__datingDbDates || []).find((d) => d.id === id);
+  loadFromDisk();
+  const dates = global.__datingDbDates || [];
+  // 1. Exact match
+  let found = dates.find((d) => d.id === id);
+  if (found) return found;
+
+  // 2. Prefix or substring match
+  found = dates.find((d) => d.id.startsWith(id) || id.startsWith(d.id));
+  if (found) return found;
+
+  // 3. Match by parsed pair if id contains date_<pA>_<pB>
+  const match = id.match(/date_(person_[a-zA-Z0-9]+)_(person_[a-zA-Z0-9]+)/);
+  if (match) {
+    const [, pAId, pBId] = match;
+    found = dates.find(
+      (d) =>
+        (d.personA_id === pAId && d.personB_id === pBId) ||
+        (d.personA_id === pBId && d.personB_id === pAId)
+    );
+    if (found) return found;
+  }
+
+  return undefined;
 }
 
 export function saveDate(date: DateSimulation): void {
+  loadFromDisk();
   if (!global.__datingDbDates) global.__datingDbDates = [];
   const idx = global.__datingDbDates.findIndex((d) => d.id === date.id);
   if (idx >= 0) {
@@ -195,6 +284,7 @@ export function saveDate(date: DateSimulation): void {
   } else {
     global.__datingDbDates.push(date);
   }
+  saveToDisk();
 }
 
 /**
@@ -202,6 +292,7 @@ export function saveDate(date: DateSimulation): void {
  * Capped to top 2 by default to prevent quadratic latency spikes during intake (REQ-014).
  */
 export async function runDatesForPerson(personId: string, limit: number = 2): Promise<DateSimulation[]> {
+  loadFromDisk();
   const person = getPersonById(personId);
   if (!person) return [];
 
@@ -219,17 +310,21 @@ export async function runDatesForPerson(personId: string, limit: number = 2): Pr
         (d.personA_id === candidate.id && d.personB_id === personId)
     );
 
-    if (!existing) {
+    if (existing) {
+      createdDates.push(existing);
+    } else {
       const newDate = await simulateDate(person, candidate);
       saveDate(newDate);
       createdDates.push(newDate);
     }
   }
 
+  saveToDisk();
   return createdDates;
 }
 
 export function getRankingsForPerson(personId: string): MatchRanking[] {
+  loadFromDisk();
   const people = getAllPeople();
   const dates = getAllDates();
   return calculateRankings(personId, people, dates);

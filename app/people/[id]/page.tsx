@@ -31,14 +31,54 @@ export default function ProfilePage() {
   const [activeEvidence, setActiveEvidence] = useState<TraitWithEvidence | null>(null);
 
   useEffect(() => {
+    const checkLocalFallback = () => {
+      try {
+        if (typeof window !== 'undefined') {
+          const direct = localStorage.getItem(`dualagent_person_${personId}`);
+          if (direct) {
+            const parsed = JSON.parse(direct);
+            setPerson(parsed);
+            return parsed;
+          }
+          const current = localStorage.getItem('dualagent_current_person');
+          if (current) {
+            const parsed = JSON.parse(current);
+            if (parsed.id === personId) {
+              setPerson(parsed);
+              return parsed;
+            }
+          }
+        }
+      } catch (e) {
+        console.error('LocalStorage profile fallback error:', e);
+      }
+      return null;
+    };
+
     fetch(`/api/people/${personId}`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Person not found on server');
+        return res.json();
+      })
       .then((data) => {
-        if (data.person) setPerson(data.person);
+        if (data.person) {
+          setPerson(data.person);
+        } else {
+          checkLocalFallback();
+        }
         setLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        const resolved = checkLocalFallback();
+        if (resolved) {
+          // Re-hydrate serverless container in background
+          fetch('/api/people/sync', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ person: resolved }),
+          }).catch(() => {});
+        }
         setLoading(false);
       });
   }, [personId]);
@@ -46,6 +86,10 @@ export default function ProfilePage() {
   const handleDelete = async () => {
     if (confirm('Are you sure you want to delete this profile? (Consent revocation / GDPR)')) {
       const res = await fetch(`/api/people/${personId}`, { method: 'DELETE' });
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem(`dualagent_person_${personId}`);
+        localStorage.removeItem('dualagent_current_person');
+      }
       if (res.ok) {
         router.push('/people');
       }
@@ -63,11 +107,36 @@ export default function ProfilePage() {
 
   if (!person) {
     return (
-      <div className="py-20 text-center space-y-4">
-        <p className="text-slate-300">Person not found.</p>
-        <Link href="/people" className="text-rose-400 hover:underline">
-          Return to People Directory
-        </Link>
+      <div className="py-20 text-center space-y-6 max-w-md mx-auto">
+        <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 mx-auto flex items-center justify-center">
+          <AlertTriangle className="w-8 h-8 text-rose-400" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-bold text-white">Profile Not Found</h2>
+          <p className="text-xs sm:text-sm text-slate-400">
+            This profile could not be located in our active network. You can explore all 25 leaders in the directory or create a new profile.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <Link
+            href="/people"
+            className="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white text-xs font-semibold shadow-lg shadow-rose-500/20"
+          >
+            People Directory (25 Profiles)
+          </Link>
+          <Link
+            href="/#calibrate"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            Calibrate New Agent
+          </Link>
+          <Link
+            href="/"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            Return Home
+          </Link>
+        </div>
       </div>
     );
   }

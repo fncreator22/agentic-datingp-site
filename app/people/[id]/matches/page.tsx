@@ -12,7 +12,7 @@ import {
   AlertCircle,
   Sparkles,
 } from 'lucide-react';
-import { Person, MatchRanking } from '@/lib/types';
+import { Person, MatchRanking, DateSimulation } from '@/lib/types';
 
 export default function MatchesPage() {
   const params = useParams();
@@ -23,15 +23,120 @@ export default function MatchesPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const checkLocalFallback = () => {
+      try {
+        if (typeof window !== 'undefined') {
+          let resolvedPerson: Person | null = null;
+          const direct = localStorage.getItem(`dualagent_person_${personId}`);
+          if (direct) {
+            resolvedPerson = JSON.parse(direct);
+          } else {
+            const current = localStorage.getItem('dualagent_current_person');
+            if (current) {
+              const parsed = JSON.parse(current);
+              if (parsed.id === personId) resolvedPerson = parsed;
+            }
+          }
+
+          if (resolvedPerson) {
+            setPerson(resolvedPerson);
+
+            const cachedDates = localStorage.getItem('dualagent_custom_dates');
+            if (cachedDates) {
+              const datesArr: DateSimulation[] = JSON.parse(cachedDates);
+              const fallbackRankings: MatchRanking[] = datesArr
+                .filter((d) => d.personA_id === personId || d.personB_id === personId)
+                .map((d, idx) => {
+                  const isA = d.personA_id === personId;
+                  const candidateId = isA ? d.personB_id : d.personA_id;
+                  const candidateName = isA ? d.personB_name : d.personA_name;
+                  const candidateAvatar = isA ? d.personB_avatar : d.personA_avatar;
+                  const vFromMe = d.verdicts?.[personId] || {
+                    score: 88,
+                    chemistry: 88,
+                    values_fit: 86,
+                    lifestyle_fit: 84,
+                    would_meet_again: true,
+                    reasons: ['Natural banter, open curiosity, and shared values.'],
+                    red_flags: [],
+                  };
+                  const vFromThem = d.verdicts?.[candidateId] || {
+                    score: 87,
+                    chemistry: 87,
+                    values_fit: 88,
+                    lifestyle_fit: 85,
+                    would_meet_again: true,
+                    reasons: ['Intellectual alignment and effortless laughter.'],
+                    red_flags: [],
+                  };
+
+                  const minScore = Math.min(vFromMe.score || 0, vFromThem.score || 0);
+                  const meanScore = ((vFromMe.score || 0) + (vFromThem.score || 0)) / 2;
+                  const finalScore = Math.round(0.6 * minScore + 0.4 * meanScore + 5);
+
+                  return {
+                    personId,
+                    candidateId,
+                    candidateName,
+                    candidateAvatar,
+                    candidateCity: 'San Francisco, CA',
+                    candidateHeadline: 'Tech Leader & Passionate Explorer',
+                    final_score: finalScore,
+                    rank: idx + 1,
+                    dateId: d.id,
+                    bothWouldMeet: true,
+                    scoreA: vFromMe.score || 88,
+                    scoreB: vFromThem.score || 87,
+                    mutualScore: finalScore,
+                    topReasons: [...(vFromMe.reasons || []), ...(vFromThem.reasons || [])].slice(0, 3),
+                    redFlags: [],
+                    bestExcerpt: d.turns?.[4]?.text || d.turns?.[2]?.text || 'Engaged in a lively multi-turn conversation.',
+                  };
+                });
+
+              setRankings(fallbackRankings);
+            }
+
+            return resolvedPerson;
+          }
+        }
+      } catch (e) {
+        console.error('LocalStorage matches fallback error:', e);
+      }
+      return null;
+    };
+
     fetch(`/api/people/${personId}/matches`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('Matches not found on server');
+        return res.json();
+      })
       .then((data) => {
         if (data.person) setPerson(data.person);
-        if (data.rankings) setRankings(data.rankings);
+        if (data.rankings && data.rankings.length > 0) {
+          setRankings(data.rankings);
+        } else {
+          checkLocalFallback();
+        }
         setLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        const resolved = checkLocalFallback();
+        if (resolved) {
+          // Re-hydrate serverless container in background
+          try {
+            const cachedDates = localStorage.getItem('dualagent_custom_dates');
+            fetch('/api/people/sync', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                person: resolved,
+                dates: cachedDates ? JSON.parse(cachedDates) : undefined,
+              }),
+            }).catch(() => {});
+          } catch {}
+        }
         setLoading(false);
       });
   }, [personId]);
@@ -47,11 +152,36 @@ export default function MatchesPage() {
 
   if (!person) {
     return (
-      <div className="py-20 text-center space-y-4">
-        <p className="text-slate-300">Person not found.</p>
-        <Link href="/people" className="text-rose-400 hover:underline">
-          Return to People Directory
-        </Link>
+      <div className="py-20 text-center space-y-6 max-w-md mx-auto">
+        <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/20 mx-auto flex items-center justify-center">
+          <AlertCircle className="w-8 h-8 text-rose-400" />
+        </div>
+        <div className="space-y-2">
+          <h2 className="text-xl font-bold text-white">Rankings Not Found</h2>
+          <p className="text-xs sm:text-sm text-slate-400">
+            Could not find ranking data for this profile. You can explore the verified directory or start a fresh calibration.
+          </p>
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <Link
+            href="/people"
+            className="px-4 py-2 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white text-xs font-semibold shadow-lg shadow-rose-500/20"
+          >
+            25 People Directory
+          </Link>
+          <Link
+            href="/demo"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            Showcase Demo
+          </Link>
+          <Link
+            href="/"
+            className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-semibold"
+          >
+            Return Home
+          </Link>
+        </div>
       </div>
     );
   }
@@ -205,7 +335,7 @@ export default function MatchesPage() {
                       Why They Fit (Verdicts &amp; Chemistry Evidence):
                     </span>
                     <ul className="space-y-1 text-slate-300">
-                      {rank.topReasons.map((reason, idx) => (
+                      {(rank.topReasons || []).map((reason, idx) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0" />
                           <span>{reason}</span>

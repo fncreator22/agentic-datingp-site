@@ -324,6 +324,25 @@ export default function HomePage() {
       }
 
       const data = await res.json();
+      if (typeof window !== 'undefined') {
+        try {
+          if (data.person) {
+            localStorage.setItem('dualagent_current_person', JSON.stringify(data.person));
+            localStorage.setItem(`dualagent_person_${data.person.id}`, JSON.stringify(data.person));
+          }
+          if (data.dates && Array.isArray(data.dates)) {
+            localStorage.setItem('dualagent_custom_dates', JSON.stringify(data.dates));
+            for (const d of data.dates) {
+              if (d && d.id) {
+                localStorage.setItem(`dualagent_date_${d.id}`, JSON.stringify(d));
+              }
+            }
+          }
+        } catch (storageErr) {
+          console.error('LocalStorage write error:', storageErr);
+        }
+      }
+
       setStatusMsg(`Agent calibrated! Simulated ${data.simulatedDatesCount || 2} dates across compatible candidates.`);
       await new Promise((r) => setTimeout(r, 500));
 
